@@ -480,11 +480,11 @@ table {
   gap: 46px;
   padding: 16px 0 44px;
 }
-.page .section-light {
+.page .section-logos {
   background-color: #FDF0E9;
   padding: 47px 49px 71px 30px;
 }
-.page .section-light__box-logos {
+.page .section-logos__box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -493,7 +493,135 @@ table {
   border-bottom: 1px solid #F3D1BF;
   padding-bottom: 50px;
 }
-.page .section-light__box-logos__logo {
+.page .section-logos__box__logo {
   max-width: 147px;
   width: 100%;
+}
+.page .section-light {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 23px;
+  background-color: #FDF0E9;
+}
+.page .section-light__img {
+  max-width: 329px;
+  width: 100%;
+  margin: 0 auto;
+}
+.page .section-light__caption {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #EF6D58;
+}
+.page .section-light__title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #391400;
+}
+.page .section-light__txt--black {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #391400;
+}
+.page .section-light__txt--shadow {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}
+.page .section-light__btn--white {
+  background: #ffffff;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #391400;
+  padding: 18px 33px 16px;
+  max-width: 138px;
+  border: none;
+}
+.page .section-light__list {
+  border-bottom: 1px solid #F3D1BF;
+  padding-bottom: 71px;
+  margin: 77px 0 63px;
+}
+.page .section-light__list__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.page .section-light__list__box__number {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  color: #391400;
+}
+.page .section-light__list__box__txt {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #391400;
+  max-width: 257px;
+}
+.page .section-light .mb-15 {
+  margin-bottom: 15px;
+}
+.page .section-light .mb-16 {
+  margin-bottom: 16px;
+}
+.page .section-light .mb-17 {
+  margin-bottom: 17px;
+}
+.page .section-light .mb-29 {
+  margin-bottom: 29px;
+}
+.page .section-light .mb-32 {
+  margin-bottom: 32px;
+}
+.page .section-light .mt-18 {
+  margin-top: 18px;
+}
+.page .section-light .mt-32 {
+  margin-top: 32px;
+}
+.page .section-box {
+  background-color: #FDF0E9;
+  padding: 112px 23px 94px;
+}
+.page .section-box__cell {
+  border: 1px solid #F3D1BF;
+  border-radius: 6px 6px 0px 0px;
+  padding: 48px 0 38px 48px;
+}
+.page .section-box__cell__number {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #391400;
+  margin-bottom: 13px;
+}
+.page .section-box__cell__txt--black {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #391400;
 }/*# sourceMappingURL=style.css.map */

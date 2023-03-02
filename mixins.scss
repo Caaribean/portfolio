@@ -72,6 +72,14 @@
   color: v.$white;
 }
 
+@mixin title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: v.$brown;
+}
+
 @mixin txt-light {
   font-style: normal;
   font-weight: 400;
@@ -88,6 +96,22 @@
   color: v.$white;
 }
 
+@mixin txt-black {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: v.$brown;
+}
+
+@mixin txt-shadow {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: v.$shadow-brown;
+}
+
 @mixin btn-orange {
   background-color: v.$orange;
   border-radius: 6px;
@@ -99,4 +123,38 @@
   text-align: center;
   text-transform: uppercase;
   color: v.$white;
+}
+
+@mixin btn-white {
+  background: v.$white;
+  box-shadow: v.$shadow;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: v.$brown;
+  padding: 18px 33px 16px;
+  max-width: 138px;
+  border: none;
+}
+
+@mixin number {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  color: v.$brown;
+}
+
+@mixin list-txt {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: v.$brown;
+  max-width: 257px;
 }

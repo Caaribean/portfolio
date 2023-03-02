@@ -110,22 +110,124 @@
     }
   }
 
-  .section-light {
+  .section-logos {
     background-color: v.$beige;
     padding: 47px 49px 71px 30px;
 
-    &__box-logos { 
+    &__box {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 41px; 
-      border-bottom: 1px solid #F3D1BF;
+      gap: 41px;
+      border-bottom: 1px solid v.$lightorange;
       padding-bottom: 50px;
 
       &__logo {
         max-width: 147px;
         width: 100%;
+      }
+    }
+  }
+
+  .section-light {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 23px;
+    background-color: v.$beige;
+
+    &__img {
+      max-width: 329px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__caption {
+      @include m.caption;
+    }
+
+    &__title {
+      @include m.title;
+    }
+
+    &__txt--black {
+      @include m.txt-black;
+    }
+
+    &__txt--shadow {
+      @include m.txt-shadow;
+    }
+
+    &__btn--white {
+      @include m.btn-white;
+    }
+
+    &__list {
+      border-bottom: 1px solid v.$lightorange;
+      padding-bottom: 71px;
+      margin: 77px 0 63px;
+
+      &__box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &__number {
+          @include m.number;
+        }
+
+        &__txt {
+          @include m.list-txt;
+        }
+      }
+    }
+
+    .mb-15 {
+      margin-bottom: 15px;
+    }
+
+    .mb-16 {
+      margin-bottom: 16px;
+    }
+
+    .mb-17 {
+      margin-bottom: 17px;
+    }
+
+    .mb-29 {
+      margin-bottom: 29px;
+    }
+
+    .mb-32 {
+      margin-bottom: 32px;
+    }
+
+    .mt-18 {
+      margin-top: 18px;
+    }
+
+    .mt-32 {
+      margin-top: 32px;
+    }
+  }
+
+  .section-box {
+    background-color: v.$beige;
+    padding: 112px 23px 94px;
+
+    &__cell {
+      border: 1px solid v.$lightorange;
+      border-radius: 6px 6px 0px 0px;
+      padding: 48px 0 38px 48px;
+
+      &__number {
+        @include m.title;
+        margin-bottom: 13px;
+      }
+
+      &__txt--black {
+        @include m.txt-black;
       }
     }
   }

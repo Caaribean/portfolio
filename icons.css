@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?jc66y4");
+  src: url("fonts/icomoon.ttf?jc66y4") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-address:before {
+  content: "\e900";
+  color: #fff;
+}
+
+.icon-arrow-left:before {
+  content: "\e901";
+  color: #fff;
+}
+
+.icon-arrow-right:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.icon-board:before {
+  content: "\e903";
+  color: #fff;
+}
+
+.icon-briefcase:before {
+  content: "\e904";
+  color: #fff;
+}
+
+.icon-check:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.icon-check-oval .path1:before {
+  content: "\e906";
+  color: rgb(239, 108, 87);
+}
+
+.icon-check-oval .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-clock:before {
+  content: "\e908";
+  color: #ef6d58;
+}
+
+.icon-down .path1:before {
+  content: "\e909";
+  color: rgb(239, 109, 88);
+}
+
+.icon-down .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-email:before {
+  content: "\e90b";
+  color: #fff;
+}
+
+.icon-facebook:before {
+  content: "\e90c";
+  color: #fff;
+}
+
+.icon-gear:before {
+  content: "\e90d";
+  color: #fff;
+}
+
+.icon-gift:before {
+  content: "\e90e";
+  color: #fff;
+}
+
+.icon-instagram:before {
+  content: "\e90f";
+  color: #fff;
+}
+
+.icon-minus .path1:before {
+  content: "\e910";
+  color: rgb(246, 218, 202);
+}
+
+.icon-minus .path2:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-oval:before {
+  content: "\e912";
+  color: #ef6d58;
+}
+
+.icon-path:before {
+  content: "\e913";
+}
+
+.icon-phone:before {
+  content: "\e914";
+  color: #fff;
+}
+
+.icon-pin .path1:before {
+  content: "\e915";
+  color: rgb(239, 109, 88);
+}
+
+.icon-pin .path2:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-pinterest:before {
+  content: "\e917";
+  color: #fff;
+}
+
+.icon-plus .path1:before {
+  content: "\e918";
+  color: rgb(239, 109, 88);
+}
+
+.icon-plus .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-polygon:before {
+  content: "\e91a";
+}
+
+.icon-quote:before {
+  content: "\e91b";
+  color: #494a69;
+}
+
+.icon-shape:before {
+  content: "\e91c";
+  color: #fff;
+}
+
+.icon-star:before {
+  content: "\e91d";
+  color: #ef6d58;
+}
+
+.icon-star-gift .path1:before {
+  content: "\e91e";
+  color: rgb(239, 109, 88);
+}
+
+.icon-star-gift .path2:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-star-small:before {
+  content: "\e920";
+  color: #f6d021;
+}
+
+.icon-triangle:before {
+  content: "\e921";
+  color: #ef6d58;
+}
+
+.icon-twitter:before {
+  content: "\e922";
+  color: #fff;
+}
+
+.icon-up .path1:before {
+  content: "\e923";
+  color: rgb(239, 109, 88);
+}
+
+.icon-up .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=icons.css.map */

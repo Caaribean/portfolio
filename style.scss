@@ -1,4 +1,9 @@
 @use "mixins.scss" as m;
 @use "variables.scss" as v;
 @use "icons.scss"; 
-/*  @use "reset.scss";   */     
+@use "reset.scss";       
+
+* {
+    font-family: v.$epilogue;
+    font-size: 16px;
+}

@@ -1,9 +1,132 @@
 @use "mixins.scss" as m;
 @use "variables.scss" as v;
-@use "icons.scss"; 
-@use "reset.scss";       
+@use "icons.scss";
+@use "reset.scss";
 
 * {
-    font-family: v.$epilogue;
-    font-size: 16px;
+  font-family: v.$epilogue;
+  font-size: 16px;
+}
+
+.page {
+  /* padding: 0 23px; */
+
+  .header {
+    @include m.header;
+
+    &__logo {
+      display: flex;
+      &__img {
+        width: 48px;
+        height: 48px;
+        margin-right: 14px;
+      }
+      &__txt {
+        @include m.header-logo-txt;
+      }
+    }
+
+    &__navmenu {
+      display: none;
+    }
+
+    &__hamburger {
+      display: flex;
+      align-items: center;
+      &__img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .section-main {
+    background-color: v.$navyblue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 23px;
+
+    &__img {
+      max-width: 329px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__caption {
+      @include m.caption;
+    }
+
+    &__title {
+      @include m.title-main;
+      padding: 20px 0 12px;
+      max-width: 329px;
+    }
+
+    &__txt--light {
+      @include m.txt-light;
+      max-width: 329px;
+    }
+
+    &__txt {
+      @include m.txt;
+    }
+
+    &__btn {
+      @include m.btn-orange;
+    }
+
+    &__quote {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+      }
+
+      &__txt--light {
+        @include m.txt-light;
+        margin-bottom: 4px;
+        max-width: 265px;
+      }
+
+      &__txt {
+        @include m.txt;
+      }
+
+      .quote-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+
+    .btn-box {
+      display: flex;
+      gap: 46px;
+      padding: 16px 0 44px;
+    }
+  }
+
+  .section-light {
+    background-color: v.$beige;
+    padding: 47px 49px 71px 30px;
+
+    &__box-logos { 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 41px; 
+      border-bottom: 1px solid #F3D1BF;
+      padding-bottom: 50px;
+
+      &__logo {
+        max-width: 147px;
+        width: 100%;
+      }
+    }
+  }
 }

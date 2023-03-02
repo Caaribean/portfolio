@@ -35,3 +35,68 @@
 
 //
 
+@mixin header {
+  background-color: v.$navyblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px 23px;
+}
+
+@mixin header-logo-txt {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: v.$white;
+  display: flex;
+  align-items: center;
+}
+
+@mixin caption {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: v.$orange;
+}
+
+@mixin title-main {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: v.$white;
+}
+
+@mixin txt-light {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: v.$shadow-white;
+}
+
+@mixin txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: v.$white;
+}
+
+@mixin btn-orange {
+  background-color: v.$orange;
+  border-radius: 6px;
+  padding: 18px 23px 16px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: v.$white;
+}

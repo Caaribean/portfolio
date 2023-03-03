@@ -360,6 +360,14 @@ table {
   margin-bottom: 17px;
 }
 
+.mb-19 {
+  margin-bottom: 19px;
+}
+
+.mb-26 {
+  margin-bottom: 26px;
+}
+
 .mb-29 {
   margin-bottom: 29px;
 }
@@ -378,6 +386,10 @@ table {
 
 .mb-36 {
   margin-bottom: 36px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
 }
 
 .mb-48 {
@@ -512,6 +524,7 @@ table {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  border: none;
 }
 .page .section-main__quote {
   display: flex;
@@ -870,9 +883,69 @@ table {
   padding: 18px 30px 16px;
   background-color: transparent;
 }
+.page .section-dark__box {
+  margin-bottom: 100px;
+}
+.page .section-dark__box__cell {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid #3A3C56;
+  border-radius: 6px;
+  padding: 41px 28px 36px;
+}
+.page .section-dark__box__cell__date {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page .section-dark__box__cell__date__number {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  color: #ffffff;
+  margin-right: 12px;
+}
+.page .section-dark__box__cell__date__title--small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  max-width: 127px;
+}
+.page .section-dark__box__cell__txt--light {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.page .section-dark__box__cell__txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.page .section-dark__box__cell__title--small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.page .section-dark__box .border {
+  border-bottom: 1px solid #3A3C56;
+  padding-bottom: 36px;
+}
 .page .section-dark.portfolio {
   padding-top: 55px;
   padding-bottom: 144px;
+}
+.page .section-dark.events {
+  padding-bottom: 124px;
 }
 .page .section-banner {
   padding: 0 7px 140px 39px;
@@ -916,6 +989,7 @@ table {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  border: none;
   max-width: 154px;
   margin-bottom: 29px;
 }

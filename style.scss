@@ -357,6 +357,10 @@
       @include m.title-white;
     }
 
+    &__title--left {
+      @include m.title-left;
+    }
+
     &__btn--black {
       @include m.btn-black;
     }
@@ -406,6 +410,47 @@
       }
     }
 
+    &__container {
+      &__person {
+        &__img {
+          border: 1px solid v.$blue;
+          border-radius: 6px;
+          max-width: 270px; 
+          padding: 0 37px;
+          margin-bottom: 26px; 
+
+          .avatar {
+            max-width: 196px;
+          }
+        }
+
+        &__title--small {
+          @include m.title-small;
+        }
+
+        &__txt--light {
+          @include m.txt-light;
+        }
+      }
+    }
+
+    &__name {
+      @include m.name;
+      margin-bottom: 6px; 
+    }
+
+    &__name--small {
+      @include m.name-small; 
+    }
+
+    &__img {
+      max-width: 329px;
+    }
+
+    &__title--small {
+      @include m.title-small; 
+    }
+
     &.portfolio {
       padding-top: 55px;
       padding-bottom: 144px;
@@ -413,6 +458,18 @@
 
     &.events {
       padding-bottom: 124px;
+    }
+
+    &.ourteam {
+      justify-content: start;
+      align-items: start;
+      padding-bottom: 116px;
+    }
+
+    &.founder {
+      justify-content: start;
+      align-items: start;
+      padding-bottom: 118px; 
     }
   }
 

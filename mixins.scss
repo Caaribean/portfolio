@@ -89,6 +89,15 @@
   color: v.$white;
 }
 
+@mixin title-left {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: left;
+  color: v.$white;
+}
+
 @mixin title-small {
   font-style: normal;
   font-weight: 700;
@@ -224,4 +233,20 @@
   line-height: 80px;
   letter-spacing: -2px;
   color: v.$white;
+}
+
+@mixin name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: v.$white;
+}
+
+@mixin name-small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: v.$shadow-white;
 }

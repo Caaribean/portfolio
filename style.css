@@ -344,6 +344,10 @@ table {
   border-spacing: 0;
 }
 
+.mb-3 {
+  margin-bottom: 3px;
+}
+
 .mb-13 {
   margin-bottom: 13px;
 }
@@ -362,6 +366,10 @@ table {
 
 .mb-19 {
   margin-bottom: 19px;
+}
+
+.mb-23 {
+  margin-bottom: 23px;
 }
 
 .mb-26 {
@@ -870,6 +878,14 @@ table {
   text-align: center;
   color: #ffffff;
 }
+.page .section-dark__title--left {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: left;
+  color: #ffffff;
+}
 .page .section-dark__btn--black {
   border: 1px solid rgba(255, 255, 255, 0.295743);
   border-radius: 6px;
@@ -940,12 +956,71 @@ table {
   border-bottom: 1px solid #3A3C56;
   padding-bottom: 36px;
 }
+.page .section-dark__container__person__img {
+  border: 1px solid #3A3C56;
+  border-radius: 6px;
+  max-width: 270px;
+  padding: 0 37px;
+  margin-bottom: 26px;
+}
+.page .section-dark__container__person__img .avatar {
+  max-width: 196px;
+}
+.page .section-dark__container__person__title--small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.page .section-dark__container__person__txt--light {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.page .section-dark__name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+.page .section-dark__name--small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.page .section-dark__img {
+  max-width: 329px;
+}
+.page .section-dark__title--small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
 .page .section-dark.portfolio {
   padding-top: 55px;
   padding-bottom: 144px;
 }
 .page .section-dark.events {
   padding-bottom: 124px;
+}
+.page .section-dark.ourteam {
+  justify-content: start;
+  align-items: start;
+  padding-bottom: 116px;
+}
+.page .section-dark.founder {
+  justify-content: start;
+  align-items: start;
+  padding-bottom: 118px;
 }
 .page .section-banner {
   padding: 0 7px 140px 39px;

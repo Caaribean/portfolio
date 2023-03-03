@@ -80,6 +80,15 @@
   color: v.$brown;
 }
 
+@mixin title-white {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: v.$white;
+}
+
 @mixin txt-light {
   font-style: normal;
   font-weight: 400;
@@ -157,6 +166,20 @@
   border: none;
 }
 
+@mixin btn-black {
+  border: 1px solid v.$shadow-btn;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: v.$white;
+  padding: 18px 30px 16px;
+  background-color: transparent;
+}
+
 @mixin number {
   font-style: normal;
   font-weight: 800;
@@ -173,4 +196,14 @@
   line-height: 32px;
   color: v.$brown;
   max-width: 257px;
+}
+
+@mixin input {
+  background: v.$white;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: v.$shadow-brown;
 }

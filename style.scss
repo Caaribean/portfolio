@@ -2,6 +2,7 @@
 @use "variables.scss" as v;
 @use "icons.scss";
 @use "reset.scss";
+@use "layout.scss";
 
 * {
   font-family: v.$epilogue;
@@ -159,11 +160,15 @@
       @include m.txt-shadow;
     }
 
+    &__txt--small {
+      @include m.txt-small;
+    }
+
     &__btn--white {
       @include m.btn-white;
     }
 
-    &__list {
+    &__numbers {
       border-bottom: 1px solid v.$lightorange;
       padding-bottom: 71px;
       margin: 77px 0 63px;
@@ -183,32 +188,123 @@
       }
     }
 
-    .mb-15 {
-      margin-bottom: 15px;
+    &__list {
+      &__item {
+        @include m.txt-shadow;
+
+        &::before {
+          content: "";
+          width: 32px;
+          height: 32px;
+          background-image: url("./images/check-orange.png");
+          background-size: contain;
+          display: inline-block;
+          margin-right: 16px;
+        }
+      }
     }
 
-    .mb-16 {
-      margin-bottom: 16px;
+    &__box {
+      padding-bottom: 112px;
+
+      &__cell--white {
+        background: v.$white;
+        border: 1px solid v.$lightorange;
+        box-shadow: v.$shadow-cell;
+        border-radius: 6px 6px 0px 0px;
+        padding: 48px 41px 46px 48px;
+
+        &__icon {
+          width: 80px;
+          height: 80px;
+        }
+
+        &__title {
+          @include m.list-txt;
+          margin-top: 41px;
+          margin-bottom: 19px;
+        }
+
+        &__txt {
+          @include m.txt-shadow;
+        }
+      }
+
+      &__cell {
+        border: 1px solid v.$lightorange;
+        border-radius: 0px 0px 6px 6px;
+        padding: 105px 41px 46px 48px;
+
+        &__title {
+          @include m.list-txt;
+        }
+
+        &__txt {
+          @include m.txt-shadow;
+        }
+      }
     }
 
-    .mb-17 {
-      margin-bottom: 17px;
+    &__quote {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      &__avatar {
+        width: 64px;
+        height: 64px;
+        margin-right: 20px;
+      }
+
+      &__txt--quote {
+        @include m.txt-quote;
+        max-width: 245px;
+      }
+
+      &__txt--small {
+        @include m.txt-small;
+      }
+
+      .quote-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
     }
 
-    .mb-29 {
-      margin-bottom: 29px;
+    &__container {
+      &__cell {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 1px solid v.$lightorange;
+        border-radius: 0px 0px 6px 6px;
+        padding: 48px 35px 52px 28px;
+
+        &__icon {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 41px;
+        }
+
+        &__title {
+          @include m.list-txt;
+          margin-bottom: 19px;
+        }
+
+        &__txt {
+          @include m.txt-shadow;
+          margin-bottom: 26px;
+        }
+
+        &__txt--small {
+          @include m.txt-small;
+        }
+      }
     }
 
-    .mb-32 {
-      margin-bottom: 32px;
-    }
-
-    .mt-18 {
-      margin-top: 18px;
-    }
-
-    .mt-32 {
-      margin-top: 32px;
+    &.service {
+      padding-bottom: 124px;
     }
   }
 

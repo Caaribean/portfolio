@@ -490,7 +490,7 @@
         border: 1px solid v.$lightorange;
         box-shadow: v.$shadow-cell;
         border-radius: 6px 6px 0px 0px;
-        padding: 41px 28px 38px; 
+        padding: 41px 28px 38px;
         max-width: 329px;
 
         &__img {
@@ -500,7 +500,6 @@
 
         &__title {
           @include m.list-txt;
-          margin-right: 15px;
           margin-bottom: 19px;
         }
 
@@ -511,19 +510,20 @@
 
       &__tab {
         display: flex;
-        flex-wrap: no-wrap; 
+        flex-wrap: no-wrap;
         border: 1px solid v.$lightorange;
         max-width: 329px;
-        padding: 41px 28px 39px; 
+        padding: 41px 28px 39px;
 
         &__img {
           width: 32px;
-          height: 32px; 
+          height: 32px;
         }
 
         &__title {
           @include m.list-txt;
-          margin-right: 15px;
+          max-width: 0;
+          min-width: 219px;
         }
       }
 
@@ -540,18 +540,23 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-bottom: 1px solid v.$lightorange;
+        padding-bottom: 20px;
 
         &__img {
           width: 120px;
           height: 80px;
+          margin-bottom: 26px;
         }
 
         &__txt--black {
           @include m.txt-black;
+          margin-bottom: 2px;
         }
 
         &__txt--shadow {
           @include m.txt-shadow;
+          margin-bottom: 16px;
         }
 
         &__txt--small {
@@ -563,6 +568,53 @@
           height: 48px;
         }
       }
+    }
+
+    &__box-text {
+      margin: 0 auto;
+      margin-top: 43px;
+
+      &__txt--shadow {
+        @include m.txt-shadow;
+        margin-right: 8px;
+      }
+
+      &__txt--small {
+        @include m.txt-small;
+      }
+    }
+
+    &__box-blog {
+      margin-top: 48px;
+
+      &__post {
+        margin-bottom: 52px;
+
+        &__img {
+          max-width: 370px;
+          margin-bottom: 26px;
+        }
+
+        &__txt--black {
+          @include m.txt-black;
+        }
+
+        &__title--black {
+          @include m.title-black;
+          margin: 15px 0;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+        }
+      }
+
+      .border {
+        border-bottom: 1px solid v.$lightorange;
+        padding-bottom: 52px; 
+        margin-bottom: 0px; 
+      }
+
     }
 
     &.service {
@@ -587,6 +639,17 @@
     &.awards {
       padding-top: 92px;
       padding-bottom: 96px;
+
+      .section-light__title {
+        text-align: center;
+        border-bottom: 1px solid v.$lightorange;
+        padding-bottom: 35px;
+        margin-bottom: 31px;
+      }
+    }
+
+    &.blog {
+      padding-bottom: 76px; 
     }
 
     .btn-center {

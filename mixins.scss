@@ -180,7 +180,7 @@
   text-transform: uppercase;
   color: v.$brown;
   padding: 18px 33px 16px;
-  max-width: 138px;
+  max-width: 154px;
   border: none;
 }
 
@@ -249,4 +249,17 @@
   font-size: 14px;
   line-height: 24px;
   color: v.$shadow-white;
+}
+
+@mixin input-orange {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+  background: #ef6d58;
+  border-radius: 19px;
+  max-width: 92px;
+  text-align: center;
+  border: none; 
 }

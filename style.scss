@@ -303,12 +303,294 @@
       }
     }
 
+    &__box-opinions {
+      margin-bottom: 50px;
+
+      &__opinion--white {
+        background: v.$white;
+        border: 1px solid v.$lightorange;
+        box-shadow: v.$shadow-cell;
+        border-radius: 6px 6px 0px 0px;
+        padding: 49px 28px 48px;
+        max-width: 329px;
+      }
+
+      &__opinion {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 1px solid v.$lightorange;
+        border-radius: 6px;
+        padding: 49px 28px 48px;
+        max-width: 329px;
+
+        &__stars {
+          margin-bottom: 36px;
+          display: flex;
+          gap: 8px;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+        }
+
+        &__quote {
+          display: flex;
+          flex-wrap: no-wrap;
+          margin-top: 31px;
+
+          &__avatar {
+            width: 80px;
+            height: 80px;
+            margin-right: 24px;
+          }
+          &__name {
+            @include m.list-txt;
+            margin-bottom: 3px;
+          }
+
+          &__name--small {
+            @include m.txt-small;
+          }
+        }
+      }
+    }
+
+    &__box-offer {
+      &__beige {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 1px solid v.$lightorange;
+        border-radius: 6px 6px 0px 0px;
+        padding: 44px 28px 47px;
+        max-width: 329px;
+
+        &__caption {
+          @include m.caption;
+          margin-bottom: 17px;
+        }
+
+        &__title {
+          @include m.title;
+          margin-bottom: 15px;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+          margin-bottom: 27px;
+        }
+
+        &__plus {
+          @include m.txt-small;
+
+          &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-image: url("./images/icon-plus");
+            background-size: contain;
+            display: inline-block;
+            margin-right: 16px;
+          }
+        }
+
+        &__minus {
+          @include m.txt-shadow;
+
+          &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-image: url("./images/icon-minus");
+            background-size: contain;
+            display: inline-block;
+            margin-right: 16px;
+          }
+        }
+
+        &__btn--white {
+          @include m.btn-white;
+          margin-top: 36px;
+        }
+      }
+
+      &__white {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: v.$white;
+        border: 1px solid v.$lightorange;
+        box-shadow: v.$shadow-cell;
+        padding: 33px 28px 48px;
+        max-width: 329px;
+
+        &__caption {
+          @include m.caption;
+          margin-bottom: 17px;
+        }
+
+        &__title {
+          @include m.title;
+          margin-bottom: 15px;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+          margin-bottom: 27px;
+        }
+
+        &__plus {
+          @include m.txt-small;
+
+          &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-image: url("./images/icon-plus");
+            background-size: contain;
+            display: inline-block;
+            margin-right: 16px;
+          }
+        }
+
+        &__minus {
+          @include m.txt-shadow;
+
+          &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-image: url("./images/icon-minus");
+            background-size: contain;
+            display: inline-block;
+            margin-right: 16px;
+          }
+        }
+
+        &__btn--orange {
+          @include m.btn-orange;
+          max-width: 154px;
+          margin-top: 36px;
+        }
+
+        &__input {
+          @include m.input-orange;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &__tabs {
+      &__tab--big {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: v.$white;
+        border: 1px solid v.$lightorange;
+        box-shadow: v.$shadow-cell;
+        border-radius: 6px 6px 0px 0px;
+        padding: 41px 28px 38px; 
+        max-width: 329px;
+
+        &__img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &__title {
+          @include m.list-txt;
+          margin-right: 15px;
+          margin-bottom: 19px;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+        }
+      }
+
+      &__tab {
+        display: flex;
+        flex-wrap: no-wrap; 
+        border: 1px solid v.$lightorange;
+        max-width: 329px;
+        padding: 41px 28px 39px; 
+
+        &__img {
+          width: 32px;
+          height: 32px; 
+        }
+
+        &__title {
+          @include m.list-txt;
+          margin-right: 15px;
+        }
+      }
+
+      .tabs-box {
+        display: flex;
+        flex-wrap: no-wrap;
+      }
+    }
+
+    &__box-awards {
+      &__award {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+          width: 120px;
+          height: 80px;
+        }
+
+        &__txt--black {
+          @include m.txt-black;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+        }
+
+        &__txt--small {
+          @include m.txt-small;
+        }
+
+        &__logo {
+          width: 38px;
+          height: 48px;
+        }
+      }
+    }
+
     &.service {
       padding-bottom: 124px;
     }
 
     &.agency {
       padding-bottom: 283px;
+    }
+
+    &.testominals {
+      justify-content: start;
+      align-items: start;
+      padding-top: 92px;
+      padding-bottom: 124px;
+    }
+
+    &.pricing {
+      padding-bottom: 92px;
+    }
+
+    &.awards {
+      padding-top: 92px;
+      padding-bottom: 96px;
+    }
+
+    .btn-center {
+      margin: 0 auto;
     }
   }
 
@@ -415,9 +697,9 @@
         &__img {
           border: 1px solid v.$blue;
           border-radius: 6px;
-          max-width: 270px; 
+          max-width: 270px;
           padding: 0 37px;
-          margin-bottom: 26px; 
+          margin-bottom: 26px;
 
           .avatar {
             max-width: 196px;
@@ -436,11 +718,11 @@
 
     &__name {
       @include m.name;
-      margin-bottom: 6px; 
+      margin-bottom: 6px;
     }
 
     &__name--small {
-      @include m.name-small; 
+      @include m.name-small;
     }
 
     &__img {
@@ -448,7 +730,7 @@
     }
 
     &__title--small {
-      @include m.title-small; 
+      @include m.title-small;
     }
 
     &.portfolio {
@@ -469,7 +751,7 @@
     &.founder {
       justify-content: start;
       align-items: start;
-      padding-bottom: 118px; 
+      padding-bottom: 118px;
     }
   }
 

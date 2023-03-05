@@ -168,6 +168,16 @@
       @include m.btn-white;
     }
 
+    &__input-newsletter {
+      @include m.input-newsletter;
+      margin-top: 35px;
+      margin-bottom: 16px;
+    }
+
+    &__btn-newsletter {
+      @include m.btn-newsletter;
+    }
+
     &__numbers {
       border-bottom: 1px solid v.$lightorange;
       padding-bottom: 71px;
@@ -611,10 +621,95 @@
 
       .border {
         border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 52px; 
-        margin-bottom: 0px; 
+        padding-bottom: 52px;
+        margin-bottom: 0px;
+      }
+    }
+
+    &__form {
+      background: v.$white;
+      border-radius: 6px;
+      max-width: 329px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 57px 28px 48px;
+      margin-bottom: 65px;
+
+      &__title--black {
+        @include m.title-black;
+        margin-bottom: 23px;
       }
 
+      &__input {
+        @include m.input-newsletter;
+        width: 273px;
+
+        &:nth-child(4) {
+          padding-bottom: 55px;
+        }
+      }
+
+      &__btn--orange {
+        @include m.btn-orange;
+        margin-left: 147px;
+      }
+    }
+
+    &__map {
+      position: relative;
+      margin-bottom: 32px;
+
+      &__img {
+        width: 375px;
+        height: 719px;
+        object-fit: cover;
+      }
+
+      &__icon {
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    &__box-contact {
+      &__cell {
+        border: 1px solid v.$lightorange;
+        border-radius: 6px 6px 0px 0px;
+        padding: 32px 0 37px 28px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        &__icon {
+          width: 64px;
+          height: 64px;
+          margin-right: 24px;
+        }
+
+        &__caption {
+          @include m.caption;
+          margin: auto 0;
+        }
+
+        &__txt--black {
+          @include m.txt-black;
+        }
+
+        .box {
+          display: flex;
+          flex-wrap: no-wrap;
+          margin-bottom: 26px;
+        }
+      }
     }
 
     &.service {
@@ -649,7 +744,15 @@
     }
 
     &.blog {
-      padding-bottom: 76px; 
+      padding-bottom: 76px;
+    }
+
+    &.newsletter {
+      padding-bottom: 128px;
+    }
+
+    &.contact {
+      padding-bottom: 128px;
     }
 
     .btn-center {
@@ -855,6 +958,37 @@
         margin: 0 auto;
         max-width: 191px;
       }
+    }
+  }
+
+  .banner-orange {
+    background: v.$orange;
+    border-radius: 6px;
+    padding: 32px 28px 48px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+
+    &__img {
+      max-width: 273px;
+      margin-bottom: 37px; 
+    }
+
+    &__title--white {
+      @include m.title-white;
+      text-align: left; 
+      margin-bottom: 15px; 
+      max-width: 274px;
+    }
+
+    &__txt--light {
+      @include m.txt-light;
+      margin-bottom: 21px; 
+      max-width: 273px;
+    }
+
+    &__btn--white {
+      @include m.btn-white;
     }
   }
 }

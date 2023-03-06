@@ -737,6 +737,7 @@ table {
   height: 32px;
   background-image: url("./images/check-orange.png");
   background-size: contain;
+  background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
 }
@@ -962,8 +963,9 @@ table {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("./images/icon-plus");
+  background-image: url("./images/icon-plus.png");
   background-size: contain;
+  background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
 }
@@ -978,8 +980,9 @@ table {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("./images/icon-minus");
+  background-image: url("./images/icon-minus.png");
   background-size: contain;
+  background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
 }
@@ -1046,8 +1049,9 @@ table {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("./images/icon-plus");
+  background-image: url("./images/icon-plus.png");
   background-size: contain;
+  background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
 }
@@ -1062,8 +1066,9 @@ table {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("./images/icon-minus");
+  background-image: url("./images/icon-minus.png");
   background-size: contain;
+  background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
 }

@@ -208,6 +208,7 @@
           height: 32px;
           background-image: url("./images/check-orange.png");
           background-size: contain;
+          background-repeat: no-repeat;
           display: inline-block;
           margin-right: 16px;
         }
@@ -380,7 +381,7 @@
           @include m.caption;
           margin-bottom: 17px;
         }
-
+ 
         &__title {
           @include m.title;
           margin-bottom: 15px;
@@ -391,15 +392,16 @@
           margin-bottom: 27px;
         }
 
-        &__plus {
+        &__plus { 
           @include m.txt-small;
-
+  
           &::before {
             content: "";
             width: 16px;
             height: 16px;
-            background-image: url("./images/icon-plus");
+            background-image: url("./images/icon-plus.png");
             background-size: contain;
+            background-repeat: no-repeat;
             display: inline-block;
             margin-right: 16px;
           }
@@ -412,8 +414,9 @@
             content: "";
             width: 16px;
             height: 16px;
-            background-image: url("./images/icon-minus");
+            background-image: url("./images/icon-minus.png");
             background-size: contain;
+            background-repeat: no-repeat;
             display: inline-block;
             margin-right: 16px;
           }
@@ -457,8 +460,9 @@
             content: "";
             width: 16px;
             height: 16px;
-            background-image: url("./images/icon-plus");
+            background-image: url("./images/icon-plus.png");
             background-size: contain;
+            background-repeat: no-repeat;
             display: inline-block;
             margin-right: 16px;
           }
@@ -471,8 +475,9 @@
             content: "";
             width: 16px;
             height: 16px;
-            background-image: url("./images/icon-minus");
+            background-image: url("./images/icon-minus.png");
             background-size: contain;
+            background-repeat: no-repeat;
             display: inline-block;
             margin-right: 16px;
           }

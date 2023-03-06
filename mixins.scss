@@ -281,7 +281,7 @@
   font-size: 16px;
   line-height: 32px;
   color: v.$shadow-brown;
-  padding: 9px 0 7px 16px; 
+  padding: 9px 0 7px 16px;
 }
 
 @mixin btn-newsletter {
@@ -295,6 +295,28 @@
   text-align: center;
   text-transform: uppercase;
   color: v.$brown;
-  padding: 18px 124px 16px; 
+  padding: 18px 124px 16px;
   border: none;
+}
+
+@mixin btn-small {
+  background: v.$white;
+  border-radius: 19px;
+  padding: 5px 15px 1px;
+  max-width: 84px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: v.$brown;
+  border: none; 
+}
+
+@mixin title-tag {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: v.$white;
+  text-transform: uppercase;
 }

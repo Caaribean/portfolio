@@ -263,13 +263,18 @@
         <span class="section-dark__caption mb-17">Portfolio</span>
         <h4 class="section-dark__title--white mb-35">Latest Work</h4>
         <input class="section-dark__input mb-48" value="Show All" />
-        <img class="section-dark__img mb-32" src="./images/sofa.png" />
+        <div class="box-img">
+          <img class="section-dark__img mb-32" src="./images/sofa.png" />
+          <button class="section-dark__btn--small">Design</button>
+          <h3 class="section-dark__title--tag">Sofa</h3>
+        </div>
         <img class="section-dark__img mb-32" src="./images/keyboard.png" />
         <img class="section-dark__img mb-48" src="./images/workmedia.png" />
         <button class="section-dark__btn--black">Explore More</button>
       </div>
 
       <div class="section-banner">
+        <img class="section-banner__icon" src="./images/icon-gift.png">
         <div class="section-banner__box">
           <span class="section-banner__box__caption">Get Started</span>
           <h4 class="section-banner__box__title">
@@ -298,7 +303,7 @@
               </h4>
             </div>
             <span class="section-dark__box__cell__txt--light border mb-40"
-              >9:00 am - 3:00 pm</span
+              ><span class="icon-clock"></span>9:00 am - 3:00 pm</span
             >
             <h4 class="section-dark__box__cell__title--small mb-19">
               Design Weeks
@@ -317,7 +322,7 @@
               </h4>
             </div>
             <span class="section-dark__box__cell__txt--light border mb-40"
-              >1:00 pm – 8:00 pm</span
+              ><span class="icon-clock"></span>1:00 pm – 8:00 pm</span
             >
             <h4 class="section-dark__box__cell__title--small mb-19">
               Interior Design
@@ -335,7 +340,7 @@
               </h4>
             </div>
             <span class="section-dark__box__cell__txt--light border mb-40"
-              >10:00 am – 2:00 pm</span
+              ><span class="icon-clock"></span>10:00 am – 2:00 pm</span
             >
             <h4 class="section-dark__box__cell__title--small mb-19">
               The F design events
@@ -405,7 +410,8 @@
 
       <div class="section-dark founder">
         <img class="section-dark__img mb-40" src="./images/man-glasses.png" />
-        <span class="section-dark__caption mb-29">Founder Words</span>
+        <div class="quote-box"><span class="section-dark__caption mb-29">Founder Words</span>
+        <span class="icon-quote"></span></div>
         <h4 class="section-dark__title--small mb-23">
           Digital agency is a business you hire to outsource your digital
           marketing efforts
@@ -709,6 +715,8 @@
             </div>
 
             <banner-component></banner-component>
+
+            <footer-component></footer-component>
 
         </div>
     </body>

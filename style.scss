@@ -104,7 +104,7 @@
       }
     }
 
-    &.aboutus {
+    &.main-box {
       text-align: center;
       justify-content: center;
       align-items: center;
@@ -120,7 +120,6 @@
   }
 
   .section-logos {
-
     &__box {
       display: flex;
       flex-wrap: wrap;
@@ -138,7 +137,7 @@
       background-color: v.$navyblue;
       padding: 0 49px 130px 30px;
     }
- 
+
     &.light {
       background-color: v.$beige;
       padding: 47px 49px 71px 30px;
@@ -169,6 +168,10 @@
 
     &__title {
       @include m.title;
+    }
+
+    &__title--black {
+      @include m.title-black;
     }
 
     &__txt--black {
@@ -214,6 +217,12 @@
         &__txt {
           @include m.list-txt;
         }
+      }
+
+      &.services {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin: 77px 0 103px; 
       }
     }
 
@@ -747,6 +756,32 @@
       }
     }
 
+    &__icon-tab {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: v.$beige; 
+      border-bottom: 1px solid v.$lightorange;
+      border-top: 1px solid v.$lightorange;
+      padding-bottom: 32px;
+      padding-top: 32px; 
+
+      &__title {
+        @include m.title;
+        max-width: 150px; 
+      }
+
+      &__icon--big {
+        width: 80px;
+        height: 80px;
+      }
+
+      &__icon--small {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
     &.service {
       padding-bottom: 124px;
     }
@@ -810,6 +845,42 @@
 
       .section-light__txt--shadow {
         max-width: 329px;
+      }
+    }
+
+    &.howwork {
+      padding-top: 91px; 
+
+      .section-light__txt--shadow {
+        max-width: 329px;
+      }
+    }
+
+    &.list {
+      padding-top: 72px; 
+      padding-bottom: 84px;
+
+      .section-light__title--black {
+        max-width: 329px; 
+        margin-bottom: 28px; 
+      }
+
+      .section-light__txt--shadow {
+        max-width: 329px; 
+        margin-bottom: 42px; 
+      }
+
+      .section-light__txt--small {
+        &::before {
+          content: "";
+          width: 32px;
+          height: 32px;
+          background-image: url("./images/check-orange.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: inline-block;
+          margin-right: 16px;
+        }
       }
     }
 

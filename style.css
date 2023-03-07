@@ -589,7 +589,7 @@ table {
   flex-wrap: wrap;
   flex-direction: column;
 }
-.page .section-main.aboutus {
+.page .section-main.main-box {
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -650,6 +650,13 @@ table {
   font-weight: 800;
   font-size: 40px;
   line-height: 48px;
+  color: #391400;
+}
+.page .section-light__title--black {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
   color: #391400;
 }
 .page .section-light__txt--black {
@@ -740,6 +747,11 @@ table {
   line-height: 32px;
   color: #391400;
   max-width: 257px;
+}
+.page .section-light__numbers.services {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 77px 0 103px;
 }
 .page .section-light__list__item {
   font-style: normal;
@@ -1382,6 +1394,32 @@ table {
 .page .section-light__box-img__img-small {
   max-width: 156px;
 }
+.page .section-light__icon-tab {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FDF0E9;
+  border-bottom: 1px solid #F3D1BF;
+  border-top: 1px solid #F3D1BF;
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+.page .section-light__icon-tab__title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #391400;
+  max-width: 150px;
+}
+.page .section-light__icon-tab__icon--big {
+  width: 80px;
+  height: 80px;
+}
+.page .section-light__icon-tab__icon--small {
+  width: 32px;
+  height: 32px;
+}
 .page .section-light.service {
   padding-bottom: 124px;
 }
@@ -1431,6 +1469,34 @@ table {
 }
 .page .section-light.about .section-light__txt--shadow {
   max-width: 329px;
+}
+.page .section-light.howwork {
+  padding-top: 91px;
+}
+.page .section-light.howwork .section-light__txt--shadow {
+  max-width: 329px;
+}
+.page .section-light.list {
+  padding-top: 72px;
+  padding-bottom: 84px;
+}
+.page .section-light.list .section-light__title--black {
+  max-width: 329px;
+  margin-bottom: 28px;
+}
+.page .section-light.list .section-light__txt--shadow {
+  max-width: 329px;
+  margin-bottom: 42px;
+}
+.page .section-light.list .section-light__txt--small::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url("./images/check-orange.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 16px;
 }
 .page .section-light .btn-center {
   margin: 0 auto;

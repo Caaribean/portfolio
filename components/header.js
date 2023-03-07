@@ -4,7 +4,6 @@ class Header extends HTMLElement {
     }
 
     connectedCallback() {
-        //poniżej podajemy kod HTML naszego componentu
         this.innerHTML = `
         <header class="header">
         <div class="header__logo">
@@ -28,5 +27,3 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
-//pierwszy argument to nazwa twojego componentu, którą będziesz używać w HTML
-//drugi argument to nazwa klasy twojego componentu (jest powyżej)

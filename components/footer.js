@@ -4,7 +4,6 @@ class Footer extends HTMLElement {
     }
 
     connectedCallback() {
-        //poniżej podajemy kod HTML naszego componentu
         this.innerHTML = `
         <footer class="footer">
               <div class="footer__navfooter">
@@ -46,5 +45,3 @@ class Footer extends HTMLElement {
 }
 
 customElements.define('footer-component', Footer);
-//pierwszy argument to nazwa twojego componentu, którą będziesz używać w HTML
-//drugi argument to nazwa klasy twojego componentu (jest powyżej)

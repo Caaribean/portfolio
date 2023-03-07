@@ -4,7 +4,6 @@ class Banner extends HTMLElement {
     }
 
     connectedCallback() {
-        //poniżej podajemy kod HTML naszego componentu
         this.innerHTML = `
         <div class="banner-orange">
               <img class="banner-orange__img" src="./images/block-man.png">
@@ -19,5 +18,3 @@ class Banner extends HTMLElement {
 }
 
 customElements.define('banner-component', Banner);
-//pierwszy argument to nazwa twojego componentu, którą będziesz używać w HTML
-//drugi argument to nazwa klasy twojego componentu (jest powyżej)

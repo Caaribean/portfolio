@@ -1445,11 +1445,24 @@ table {
   padding-bottom: 35px;
   margin-bottom: 31px;
 }
-.page .section-light.blog {
+.page .section-light.ourblog {
+  padding-bottom: 76px;
+}
+.page .section-light.ourblog .section-light__box-blog__post__title--black {
+  max-width: 329px;
+}
+.page .section-light.ourblog.blog {
+  padding-top: 80px;
   padding-bottom: 76px;
 }
 .page .section-light.newsletter {
   padding-bottom: 128px;
+}
+.page .section-light.newsletter-blog {
+  border-bottom: 1px solid #F3D1BF;
+  border-top: 1px solid #F3D1BF;
+  padding-top: 76px;
+  padding-bottom: 80px;
 }
 .page .section-light.contact {
   padding-bottom: 128px;
@@ -1497,6 +1510,9 @@ table {
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
+}
+.page .section-light.empty {
+  padding-top: 79px;
 }
 .page .section-light .btn-center {
   margin: 0 auto;
@@ -1940,6 +1956,7 @@ table {
   border: none;
 }
 .page .footer {
+  background-color: #FDF0E9;
   padding: 121px 23px 30px;
 }
 .page .footer__navfooter {

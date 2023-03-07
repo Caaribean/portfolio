@@ -222,7 +222,7 @@
       &.services {
         border-bottom: none;
         padding-bottom: 0;
-        margin: 77px 0 103px; 
+        margin: 77px 0 103px;
       }
     }
 
@@ -760,15 +760,15 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-color: v.$beige; 
+      background-color: v.$beige;
       border-bottom: 1px solid v.$lightorange;
       border-top: 1px solid v.$lightorange;
       padding-bottom: 32px;
-      padding-top: 32px; 
+      padding-top: 32px;
 
       &__title {
         @include m.title;
-        max-width: 150px; 
+        max-width: 150px;
       }
 
       &__icon--big {
@@ -813,12 +813,28 @@
       }
     }
 
-    &.blog {
+    &.ourblog {
       padding-bottom: 76px;
+
+      .section-light__box-blog__post__title--black {
+        max-width: 329px;
+      }
+
+      &.blog {
+        padding-top: 80px;
+        padding-bottom: 76px; 
+      }
     }
 
     &.newsletter {
       padding-bottom: 128px;
+    }
+
+    &.newsletter-blog {
+      border-bottom: 1px solid v.$lightorange;
+      border-top: 1px solid v.$lightorange;
+      padding-top: 76px;
+      padding-bottom: 80px; 
     }
 
     &.contact {
@@ -849,7 +865,7 @@
     }
 
     &.howwork {
-      padding-top: 91px; 
+      padding-top: 91px;
 
       .section-light__txt--shadow {
         max-width: 329px;
@@ -857,17 +873,17 @@
     }
 
     &.list {
-      padding-top: 72px; 
+      padding-top: 72px;
       padding-bottom: 84px;
 
       .section-light__title--black {
-        max-width: 329px; 
-        margin-bottom: 28px; 
+        max-width: 329px;
+        margin-bottom: 28px;
       }
 
       .section-light__txt--shadow {
-        max-width: 329px; 
-        margin-bottom: 42px; 
+        max-width: 329px;
+        margin-bottom: 42px;
       }
 
       .section-light__txt--small {
@@ -882,6 +898,10 @@
           margin-right: 16px;
         }
       }
+    }
+
+    &.empty {
+      padding-top: 79px; 
     }
 
     .btn-center {
@@ -1241,6 +1261,7 @@
   }
 
   .footer {
+    background-color: v.$beige;
     padding: 121px 23px 30px;
 
     &__navfooter {

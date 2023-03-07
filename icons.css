@@ -6,7 +6,8 @@
   font-style: normal;
   font-display: block;
 }
-[class^=icon-], [class*=" icon-"] {
+[class^=icon-],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
@@ -64,6 +65,7 @@
 .icon-clock:before {
   content: "\e908";
   color: #ef6d58;
+  margin-right: 8px;
 }
 
 .icon-down .path1:before {
@@ -161,6 +163,9 @@
 .icon-quote:before {
   content: "\e91b";
   color: #494a69;
+  font-size: 6rem;
+  position: absolute;
+  left: 250;
 }
 
 .icon-shape:before {

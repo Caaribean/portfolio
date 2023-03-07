@@ -1,15 +1,19 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?jc66y4');
-  src: url('fonts/icomoon.ttf?jc66y4') format('truetype');
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?jc66y4");
+  src: url("fonts/icomoon.ttf?jc66y4") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -24,65 +28,67 @@
 
 .icon-address:before {
   content: "\e900";
-  color: #fff;
+  color: v.$white;
 }
 .icon-arrow-left:before {
   content: "\e901";
-  color: #fff;
+  color: v.$white;
 }
 .icon-arrow-right:before {
   content: "\e902";
-  color: #fff;
+  color: v.$white;
 }
 .icon-board:before {
   content: "\e903";
-  color: #fff;
+  color:v.$white;
 }
 .icon-briefcase:before {
   content: "\e904";
-  color: #fff;
+  color: v.$white;
 }
 .icon-check:before {
   content: "\e905";
-  color: #fff;
+  color: v.$white;
 }
+
 .icon-check-oval .path1:before {
   content: "\e906";
-  color: rgb(239, 108, 87);
+  color: v.$rgb-orange;
 }
 .icon-check-oval .path2:before {
   content: "\e907";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: v.$rgb-white;
 }
 .icon-clock:before {
   content: "\e908";
-  color: #ef6d58;
+  color: v.$orange;
+  margin-right: 8px;
 }
 .icon-down .path1:before {
   content: "\e909";
-  color: rgb(239, 109, 88);
+  color: v.$rgb-orange2;
 }
 .icon-down .path2:before {
   content: "\e90a";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: v.$rgb-white;
 }
 .icon-email:before {
   content: "\e90b";
-  color: #fff;
+  color: v.$white;
 }
 .icon-facebook:before {
   content: "\e90c";
-  color: #fff;
+  color: v.$white;
 }
 .icon-gear:before {
   content: "\e90d";
-  color: #fff;
+  color: v.$white;
 }
 .icon-gift:before {
   content: "\e90e";
-  color: #fff;
+  color: v.$white;
 }
 .icon-instagram:before {
   content: "\e90f";
@@ -90,56 +96,59 @@
 }
 .icon-minus .path1:before {
   content: "\e910";
-  color: rgb(246, 218, 202);
+  color: v.$rgb-lightorange;
 }
 .icon-minus .path2:before {
   content: "\e911";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: v.$rgb-white;
 }
 .icon-oval:before {
   content: "\e912";
-  color: #ef6d58;
+  color: v.$orange;
 }
 .icon-path:before {
   content: "\e913";
 }
 .icon-phone:before {
   content: "\e914";
-  color: #fff;
+  color: v.$white;
 }
 .icon-pin .path1:before {
   content: "\e915";
-  color: rgb(239, 109, 88);
+  color: v.$rgb-orange2;
 }
 .icon-pin .path2:before {
   content: "\e916";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: v.$rgb-white;
 }
 .icon-pinterest:before {
   content: "\e917";
-  color: #fff;
+  color: v.$white;
 }
 .icon-plus .path1:before {
   content: "\e918";
-  color: rgb(239, 109, 88);
+  color: v.$rgb-orange2;
 }
 .icon-plus .path2:before {
   content: "\e919";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
+  color: v.$rgb-white;
+} 
 .icon-polygon:before {
   content: "\e91a";
 }
 .icon-quote:before {
   content: "\e91b";
-  color: #494a69;
+  color: v.$pomegranate;
+  font-size: 6rem;
+  position: absolute;
+  left: 250;
 }
 .icon-shape:before {
   content: "\e91c";
-  color: #fff;
+  color: v.$white;
 }
 .icon-star:before {
   content: "\e91d";
@@ -147,31 +156,31 @@
 }
 .icon-star-gift .path1:before {
   content: "\e91e";
-  color: rgb(239, 109, 88);
+  color: v.$rgb-orange2;
 }
 .icon-star-gift .path2:before {
   content: "\e91f";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: v.$rgb-white;
 }
 .icon-star-small:before {
   content: "\e920";
-  color: #f6d021;
+  color: v.$yellow;
 }
 .icon-triangle:before {
   content: "\e921";
-  color: #ef6d58;
+  color: v.$orange;
 }
 .icon-twitter:before {
   content: "\e922";
-  color: #fff;
+  color: v.$white;
 }
 .icon-up .path1:before {
   content: "\e923";
-  color: rgb(239, 109, 88);
+  color: v.$rgb-orange2;
 }
 .icon-up .path2:before {
   content: "\e924";
   margin-left: -1em;
-  color: rgb(255, 255, 255);
+  color: v.$rgb-white;
 }

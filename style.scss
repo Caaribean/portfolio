@@ -104,6 +104,14 @@
       }
     }
 
+    &.aboutus {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 87px;
+    }
+
     .btn-box {
       display: flex;
       gap: 46px;
@@ -112,8 +120,6 @@
   }
 
   .section-logos {
-    background-color: v.$beige;
-    padding: 47px 49px 71px 30px;
 
     &__box {
       display: flex;
@@ -121,12 +127,25 @@
       justify-content: center;
       align-items: center;
       gap: 41px;
-      border-bottom: 1px solid v.$lightorange;
-      padding-bottom: 50px;
 
       &__logo {
         max-width: 147px;
         width: 100%;
+      }
+    }
+
+    &.dark {
+      background-color: v.$navyblue;
+      padding: 0 49px 130px 30px;
+    }
+ 
+    &.light {
+      background-color: v.$beige;
+      padding: 47px 49px 71px 30px;
+
+      .section-logos__box {
+        border-bottom: 1px solid v.$lightorange;
+        padding-bottom: 50px;
       }
     }
   }
@@ -216,8 +235,6 @@
     }
 
     &__box {
-      padding-bottom: 112px;
-
       &__cell--white {
         background: v.$white;
         border: 1px solid v.$lightorange;
@@ -381,7 +398,7 @@
           @include m.caption;
           margin-bottom: 17px;
         }
- 
+
         &__title {
           @include m.title;
           margin-bottom: 15px;
@@ -392,9 +409,9 @@
           margin-bottom: 27px;
         }
 
-        &__plus { 
+        &__plus {
           @include m.txt-small;
-  
+
           &::before {
             content: "";
             width: 16px;
@@ -717,6 +734,19 @@
       }
     }
 
+    &__box-img {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 17px;
+      margin-top: 17px;
+
+      &__img-small {
+        max-width: 156px;
+      }
+    }
+
     &.service {
       padding-bottom: 124px;
     }
@@ -762,7 +792,24 @@
 
     &.faq {
       .section-light__title {
-        max-width: 329px; 
+        max-width: 329px;
+      }
+    }
+
+    &.features {
+      padding-bottom: 112px;
+    }
+
+    &.features2 {
+      padding-bottom: 81px;
+    }
+
+    &.about {
+      padding-top: 76px;
+      padding-bottom: 88px;
+
+      .section-light__txt--shadow {
+        max-width: 329px;
       }
     }
 
@@ -773,7 +820,6 @@
 
   .section-box {
     background-color: v.$beige;
-    padding: 112px 23px 94px;
 
     &__cell {
       border: 1px solid v.$lightorange;
@@ -788,6 +834,14 @@
       &__txt--black {
         @include m.txt-black;
       }
+    }
+
+    &.box-main {
+      padding: 112px 23px 94px;
+    }
+
+    &.box-aboutus {
+      padding: 0 23px 98px;
     }
   }
 
@@ -834,6 +888,14 @@
 
     &__title--left {
       @include m.title-left;
+    }
+
+    &__txt--light {
+      @include m.txt-light;
+    }
+
+    &__txt {
+      @include m.txt;
     }
 
     &__btn--black {
@@ -893,12 +955,12 @@
           max-width: 270px;
           padding: 0 37px;
           margin-bottom: 26px;
- 
+
           .avatar {
             max-width: 196px;
           }
         }
- 
+
         &__title--small {
           @include m.title-small;
         }
@@ -919,12 +981,64 @@
     }
 
     &__img {
-      max-width: 329px;   
+      max-width: 329px;
     }
 
     &__title--small {
       @include m.title-small;
-      max-width: 329px; 
+      max-width: 329px;
+    }
+
+    &__tabs {
+      &__tab--big {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: v.$white;
+        border: 1px solid v.$blue;
+        box-shadow: v.$shadow-tab;
+        border-radius: 6px 6px 0px 0px;
+        padding: 41px 28px 38px;
+        max-width: 329px;
+
+        &__img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &__title {
+          @include m.list-txt;
+          margin-bottom: 19px;
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+        }
+      }
+
+      &__tab {
+        display: flex;
+        flex-wrap: no-wrap;
+        border: 1px solid v.$blue;
+        max-width: 329px;
+        padding: 41px 28px 39px;
+
+        &__img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &__title--small {
+          @include m.title-small;
+          max-width: 0;
+          min-width: 219px;
+        }
+      }
+
+      .tabs-box {
+        display: flex;
+        flex-wrap: no-wrap;
+      }
     }
 
     &.portfolio {
@@ -939,7 +1053,14 @@
     &.ourteam {
       justify-content: start;
       align-items: start;
-      padding-bottom: 116px;
+      padding-top: 116px;
+      padding-bottom: 35px;
+    }
+
+    &.ourteam-aboutus {
+      justify-content: start;
+      align-items: start;
+      padding-top: 108px;
     }
 
     &.founder {
@@ -947,14 +1068,25 @@
       align-items: start;
       padding-bottom: 118px;
     }
- 
+
+    &.faq {
+      justify-content: start;
+      align-items: start;
+      padding-top: 112px;
+      padding-bottom: 118px;
+
+      .section-light__title {
+        max-width: 329px;
+      }
+    }
+
     .box-img {
       position: relative;
     }
-    
+
     .quote-box {
-      position: relative; 
-      margin-bottom: 29px; 
+      position: relative;
+      margin-bottom: 29px;
     }
   }
 
@@ -964,11 +1096,11 @@
     position: relative;
 
     &__icon {
-      width: 148px; 
+      width: 148px;
       height: 148px;
       position: absolute;
       top: -75;
-    }    
+    }
 
     &__box {
       display: flex;

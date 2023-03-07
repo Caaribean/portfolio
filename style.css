@@ -23,32 +23,32 @@
 
 .icon-address:before {
   content: "\e900";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-arrow-left:before {
   content: "\e901";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-arrow-right:before {
   content: "\e902";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-board:before {
   content: "\e903";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-briefcase:before {
   content: "\e904";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-check:before {
   content: "\e905";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-check-oval .path1:before {
@@ -64,7 +64,7 @@
 
 .icon-clock:before {
   content: "\e908";
-  color: #ef6d58;
+  color: #EF6D58;
   margin-right: 8px;
 }
 
@@ -81,22 +81,22 @@
 
 .icon-email:before {
   content: "\e90b";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-facebook:before {
   content: "\e90c";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-gear:before {
   content: "\e90d";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-gift:before {
   content: "\e90e";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-instagram:before {
@@ -117,7 +117,7 @@
 
 .icon-oval:before {
   content: "\e912";
-  color: #ef6d58;
+  color: #EF6D58;
 }
 
 .icon-path:before {
@@ -126,7 +126,7 @@
 
 .icon-phone:before {
   content: "\e914";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-pin .path1:before {
@@ -142,7 +142,7 @@
 
 .icon-pinterest:before {
   content: "\e917";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-plus .path1:before {
@@ -170,7 +170,7 @@
 
 .icon-shape:before {
   content: "\e91c";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-star:before {
@@ -196,12 +196,12 @@
 
 .icon-triangle:before {
   content: "\e921";
-  color: #ef6d58;
+  color: #EF6D58;
 }
 
 .icon-twitter:before {
   content: "\e922";
-  color: #fff;
+  color: #ffffff;
 }
 
 .icon-up .path1:before {
@@ -387,6 +387,10 @@ table {
 
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.mb-31 {
+  margin-bottom: 31px;
 }
 
 .mb-32 {
@@ -585,14 +589,17 @@ table {
   flex-wrap: wrap;
   flex-direction: column;
 }
+.page .section-main.aboutus {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 87px;
+}
 .page .section-main .btn-box {
   display: flex;
   gap: 46px;
   padding: 16px 0 44px;
-}
-.page .section-logos {
-  background-color: #FDF0E9;
-  padding: 47px 49px 71px 30px;
 }
 .page .section-logos__box {
   display: flex;
@@ -600,12 +607,22 @@ table {
   justify-content: center;
   align-items: center;
   gap: 41px;
-  border-bottom: 1px solid #F3D1BF;
-  padding-bottom: 50px;
 }
 .page .section-logos__box__logo {
   max-width: 147px;
   width: 100%;
+}
+.page .section-logos.dark {
+  background-color: #28293E;
+  padding: 0 49px 130px 30px;
+}
+.page .section-logos.light {
+  background-color: #FDF0E9;
+  padding: 47px 49px 71px 30px;
+}
+.page .section-logos.light .section-logos__box {
+  border-bottom: 1px solid #F3D1BF;
+  padding-bottom: 50px;
 }
 .page .section-light {
   display: flex;
@@ -740,9 +757,6 @@ table {
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
-}
-.page .section-light__box {
-  padding-bottom: 112px;
 }
 .page .section-light__box__cell--white {
   background: #ffffff;
@@ -1357,6 +1371,17 @@ table {
   flex-wrap: no-wrap;
   margin-bottom: 26px;
 }
+.page .section-light__box-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-top: 17px;
+}
+.page .section-light__box-img__img-small {
+  max-width: 156px;
+}
 .page .section-light.service {
   padding-bottom: 124px;
 }
@@ -1394,12 +1419,24 @@ table {
 .page .section-light.faq .section-light__title {
   max-width: 329px;
 }
+.page .section-light.features {
+  padding-bottom: 112px;
+}
+.page .section-light.features2 {
+  padding-bottom: 81px;
+}
+.page .section-light.about {
+  padding-top: 76px;
+  padding-bottom: 88px;
+}
+.page .section-light.about .section-light__txt--shadow {
+  max-width: 329px;
+}
 .page .section-light .btn-center {
   margin: 0 auto;
 }
 .page .section-box {
   background-color: #FDF0E9;
-  padding: 112px 23px 94px;
 }
 .page .section-box__cell {
   border: 1px solid #F3D1BF;
@@ -1420,6 +1457,12 @@ table {
   font-size: 20px;
   line-height: 32px;
   color: #391400;
+}
+.page .section-box.box-main {
+  padding: 112px 23px 94px;
+}
+.page .section-box.box-aboutus {
+  padding: 0 23px 98px;
 }
 .page .section-dark {
   display: flex;
@@ -1493,6 +1536,20 @@ table {
   font-size: 40px;
   line-height: 48px;
   text-align: left;
+  color: #ffffff;
+}
+.page .section-dark__txt--light {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.page .section-dark__txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
   color: #ffffff;
 }
 .page .section-dark__btn--black {
@@ -1615,6 +1672,61 @@ table {
   color: #ffffff;
   max-width: 329px;
 }
+.page .section-dark__tabs__tab--big {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #3A3C56;
+  box-shadow: 0px 32px 64px rgba(57, 20, 0, 0.04);
+  border-radius: 6px 6px 0px 0px;
+  padding: 41px 28px 38px;
+  max-width: 329px;
+}
+.page .section-dark__tabs__tab--big__img {
+  width: 32px;
+  height: 32px;
+}
+.page .section-dark__tabs__tab--big__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #391400;
+  max-width: 257px;
+  margin-bottom: 19px;
+}
+.page .section-dark__tabs__tab--big__txt--shadow {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}
+.page .section-dark__tabs__tab {
+  display: flex;
+  flex-wrap: no-wrap;
+  border: 1px solid #3A3C56;
+  max-width: 329px;
+  padding: 41px 28px 39px;
+}
+.page .section-dark__tabs__tab__img {
+  width: 32px;
+  height: 32px;
+}
+.page .section-dark__tabs__tab__title--small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  max-width: 0;
+  min-width: 219px;
+}
+.page .section-dark__tabs .tabs-box {
+  display: flex;
+  flex-wrap: no-wrap;
+}
 .page .section-dark.portfolio {
   padding-top: 55px;
   padding-bottom: 144px;
@@ -1625,12 +1737,27 @@ table {
 .page .section-dark.ourteam {
   justify-content: start;
   align-items: start;
-  padding-bottom: 116px;
+  padding-top: 116px;
+  padding-bottom: 35px;
+}
+.page .section-dark.ourteam-aboutus {
+  justify-content: start;
+  align-items: start;
+  padding-top: 108px;
 }
 .page .section-dark.founder {
   justify-content: start;
   align-items: start;
   padding-bottom: 118px;
+}
+.page .section-dark.faq {
+  justify-content: start;
+  align-items: start;
+  padding-top: 112px;
+  padding-bottom: 118px;
+}
+.page .section-dark.faq .section-light__title {
+  max-width: 329px;
 }
 .page .section-dark .box-img {
   position: relative;

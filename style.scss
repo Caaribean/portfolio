@@ -841,6 +841,10 @@
       padding-bottom: 128px;
     }
 
+    &.contact-sub {
+      padding-bottom: 108px; 
+    }
+
     &.faq {
       .section-light__title {
         max-width: 329px;
@@ -902,6 +906,10 @@
 
     &.empty {
       padding-top: 79px; 
+    }
+
+    &.map {
+      padding-top: 64px; 
     }
 
     .btn-center {

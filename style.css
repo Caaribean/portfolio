@@ -1467,6 +1467,9 @@ table {
 .page .section-light.contact {
   padding-bottom: 128px;
 }
+.page .section-light.contact-sub {
+  padding-bottom: 108px;
+}
 .page .section-light.faq .section-light__title {
   max-width: 329px;
 }
@@ -1513,6 +1516,9 @@ table {
 }
 .page .section-light.empty {
   padding-top: 79px;
+}
+.page .section-light.map {
+  padding-top: 64px;
 }
 .page .section-light .btn-center {
   margin: 0 auto;

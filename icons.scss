@@ -145,6 +145,10 @@
   font-size: 6rem;
   position: absolute;
   left: 250;
+
+  @include m.sm {
+    left: 300; 
+  }
 }
 .icon-shape:before {
   content: "\e91c";

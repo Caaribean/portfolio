@@ -17,6 +17,7 @@
 
     &__logo {
       display: flex;
+
       &__img {
         width: 48px;
         height: 48px;
@@ -48,10 +49,18 @@
     flex-direction: column;
     padding: 0 23px;
 
+    @include m.sm {
+      padding: 60px 23px;
+    }
+
     &__img {
       max-width: 329px;
       width: 100%;
       margin: 0 auto;
+
+      @include m.sm {
+        max-width: 529px;
+      }
     }
 
     &__caption {
@@ -62,11 +71,19 @@
       @include m.title-main;
       padding: 20px 0 12px;
       max-width: 329px;
+
+      @include m.sm {
+        max-width: 100%;
+      }
     }
 
     &__txt--light {
       @include m.txt-light;
       max-width: 329px;
+
+      @include m.sm {
+        max-width: 100%;
+      }
     }
 
     &__txt {
@@ -91,6 +108,10 @@
         @include m.txt-light;
         margin-bottom: 4px;
         max-width: 265px;
+
+        @include m.sm {
+          max-width: 100%;
+        }
       }
 
       &__txt {
@@ -108,13 +129,17 @@
       text-align: center;
       justify-content: center;
       align-items: center;
-      padding: 80px 0 87px; 
+      padding: 80px 0 87px;
     }
 
     .btn-box {
       display: flex;
       gap: 46px;
       padding: 16px 0 44px;
+
+      @include m.sm {
+        gap: 380px;
+      }
     }
   }
 
@@ -159,6 +184,10 @@
       max-width: 329px;
       width: 100%;
       margin: 0 auto;
+
+      @include m.sm {
+        max-width: 529px;
+      }
     }
 
     &__caption {
@@ -193,10 +222,18 @@
       @include m.input-newsletter;
       margin-top: 35px;
       margin-bottom: 16px;
+
+      @include m.sm {
+        max-width: 80%;
+      }
     }
 
     &__btn-newsletter {
       @include m.btn-newsletter;
+
+      @include m.sm {
+        max-width: 80%;
+      }
     }
 
     &__numbers {
@@ -295,6 +332,10 @@
       &__txt--quote {
         @include m.txt-quote;
         max-width: 245px;
+
+        @include m.sm {
+          max-width: 100%;
+        }
       }
 
       &__txt--small {
@@ -349,6 +390,10 @@
         border-radius: 6px 6px 0px 0px;
         padding: 49px 28px 48px;
         max-width: 329px;
+
+        @include m.sm {
+          max-width: 529px;
+        }
       }
 
       &__opinion {
@@ -359,6 +404,10 @@
         border-radius: 6px;
         padding: 49px 28px 48px;
         max-width: 329px;
+
+        @include m.sm {
+          max-width: 529px;
+        }
 
         &__stars {
           margin-bottom: 36px;
@@ -401,6 +450,10 @@
         border-radius: 6px 6px 0px 0px;
         padding: 44px 28px 47px;
         max-width: 329px;
+
+        @include m.sm {
+          max-width: 529px;
+        }
 
         &__caption {
           @include m.caption;
@@ -462,6 +515,10 @@
         box-shadow: v.$shadow-cell;
         padding: 33px 28px 48px;
         max-width: 329px;
+
+        @include m.sm {
+          max-width: 529px;
+        }
 
         &__caption {
           @include m.caption;
@@ -533,6 +590,10 @@
         padding: 41px 28px 38px;
         max-width: 329px;
 
+        @include m.sm {
+          max-width: 529px;
+        }
+
         &__img {
           width: 32px;
           height: 32px;
@@ -549,11 +610,13 @@
       }
 
       &__tab {
-        display: flex;
-        flex-wrap: no-wrap;
         border: 1px solid v.$lightorange;
         max-width: 329px;
         padding: 41px 28px 39px;
+
+        @include m.sm {
+          max-width: 529px;
+        }
 
         &__img {
           width: 32px;
@@ -570,6 +633,7 @@
       .tabs-box {
         display: flex;
         flex-wrap: no-wrap;
+        justify-content: space-between;
       }
     }
 
@@ -630,9 +694,19 @@
       &__post {
         margin-bottom: 52px;
 
+        @include m.sm {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+
         &__img {
           max-width: 370px;
           margin-bottom: 26px;
+
+          @include m.sm {
+            max-width: 600px;
+          }
         }
 
         &__txt--black {
@@ -791,11 +865,21 @@
     &.testominals {
       justify-content: start;
       align-items: start;
-      padding: 92px 0 124px; 
+      padding: 92px 23px 124px;
+
+      @include m.sm {
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     &.pricing {
       padding-bottom: 92px;
+
+      @include m.sm {
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     &.awards {
@@ -817,12 +901,12 @@
       }
 
       &.blog {
-        padding: 80px 0 76px; 
+        padding: 80px 0 76px;
       }
     }
 
     &.newsletter {
-      padding-bottom: 128px;
+      padding: 76px 23px 128px;
     }
 
     &.newsletter-blog {
@@ -836,12 +920,22 @@
     }
 
     &.contact-sub {
-      padding-bottom: 108px; 
+      padding-bottom: 108px;
     }
 
     &.faq {
+      @include m.sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .section-light__title {
         max-width: 329px;
+
+        @include m.sm {
+          max-width: 100%;
+        }
       }
     }
 
@@ -854,7 +948,7 @@
     }
 
     &.about {
-      padding: 76px 0 88px; 
+      padding: 76px 0 88px;
 
       .section-light__txt--shadow {
         max-width: 329px;
@@ -897,11 +991,11 @@
     }
 
     &.empty {
-      padding-top: 79px; 
+      padding-top: 79px;
     }
 
     &.map {
-      padding-top: 64px; 
+      padding-top: 64px;
     }
 
     .btn-center {
@@ -953,6 +1047,10 @@
       @include m.input;
       padding: 9px 0 7px 16px;
       width: 100%;
+
+      @include m.sm {
+        width: 80%;
+      }
     }
 
     &__btn--small {
@@ -960,6 +1058,10 @@
       position: absolute;
       left: 50%;
       transform: translate(-180%, 400%);
+
+      @include m.sm {
+        transform: translate(-280%, 700%);
+      }
     }
 
     &__title--tag {
@@ -967,6 +1069,10 @@
       position: absolute;
       left: 50%;
       transform: translate(-155%, -230%);
+
+      @include m.sm {
+        transform: translate(-235%, -300%);
+      }
     }
 
     &__caption {
@@ -1073,11 +1179,19 @@
 
     &__img {
       max-width: 329px;
+
+      @include m.sm {
+        max-width: 529px;
+      }
     }
 
     &__title--small {
       @include m.title-small;
       max-width: 329px;
+
+      @include m.sm {
+        max-width: 529px;
+      }
     }
 
     &__tabs {
@@ -1143,7 +1257,12 @@
     &.ourteam {
       justify-content: start;
       align-items: start;
-      padding: 116px 0 35px;
+      padding: 116px 23px 35px;
+
+      @include m.sm {
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     &.ourteam-aboutus {
@@ -1156,12 +1275,17 @@
       justify-content: start;
       align-items: start;
       padding-bottom: 118px;
+
+      @include m.sm {
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     &.faq {
       justify-content: start;
       align-items: start;
-      padding: 112px 0 118px; 
+      padding: 112px 0 118px;
 
       .section-light__title {
         max-width: 329px;
@@ -1182,6 +1306,12 @@
     padding: 0 7px 140px 39px;
     background-color: v.$navyblue;
     position: relative;
+
+    @include m.sm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     &__icon {
       width: 148px;
@@ -1234,9 +1364,18 @@
     flex-wrap: wrap;
     flex-direction: column;
 
+    @include m.sm {
+      justify-content: center;
+      align-items: center;
+    }
+
     &__img {
       max-width: 273px;
       margin-bottom: 37px;
+
+      @include m.sm {
+        max-width: 523px;
+      }
     }
 
     &__title--white {
@@ -1244,12 +1383,22 @@
       text-align: left;
       margin-bottom: 15px;
       max-width: 274px;
+
+      @include m.sm {
+        max-width: 523px;
+        text-align: center;
+      }
     }
 
     &__txt--light {
       @include m.txt-light;
       margin-bottom: 21px;
       max-width: 273px;
+
+      @include m.sm {
+        text-align: center;
+        max-width: 523px;
+      }
     }
 
     &__btn--white {

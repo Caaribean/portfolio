@@ -222,6 +222,10 @@
   line-height: 32px;
   color: v.$brown;
   max-width: 257px;
+
+  @include sm {
+    max-width: 100%; 
+  }
 }
 
 @mixin input {

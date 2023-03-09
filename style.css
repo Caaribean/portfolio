@@ -1462,11 +1462,21 @@ table {
   position: relative;
   margin-bottom: 32px;
 }
+@media (min-width: 768px) {
+  .page .section-light__map {
+    margin: 0 auto 32px;
+  }
+}
 .page .section-light__map__img {
   width: 375px;
   height: 719px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .page .section-light__map__img {
+    width: 750px;
+  }
 }
 .page .section-light__map__icon {
   width: 72px;
@@ -1590,8 +1600,13 @@ table {
 .page .section-light.ourblog .section-light__box-blog__post__title--black {
   max-width: 329px;
 }
+@media (min-width: 768px) {
+  .page .section-light.ourblog .section-light__box-blog__post__title--black {
+    max-width: 100%;
+  }
+}
 .page .section-light.ourblog.blog {
-  padding: 80px 0 76px;
+  padding: 80px 23px 76px;
 }
 .page .section-light.newsletter {
   padding: 76px 23px 128px;
@@ -1599,7 +1614,7 @@ table {
 .page .section-light.newsletter-blog {
   border-bottom: 1px solid #F3D1BF;
   border-top: 1px solid #F3D1BF;
-  padding: 76px 0 80px 0;
+  padding: 76px 23px 80px;
 }
 .page .section-light.contact {
   padding-bottom: 128px;
@@ -1629,10 +1644,15 @@ table {
   padding-bottom: 81px;
 }
 .page .section-light.about {
-  padding: 76px 0 88px;
+  padding: 76px 23px 88px;
 }
 .page .section-light.about .section-light__txt--shadow {
   max-width: 329px;
+}
+@media (min-width: 768px) {
+  .page .section-light.about .section-light__txt--shadow {
+    max-width: 100%;
+  }
 }
 .page .section-light.howwork {
   padding-top: 91px;
@@ -1640,16 +1660,31 @@ table {
 .page .section-light.howwork .section-light__txt--shadow {
   max-width: 329px;
 }
+@media (min-width: 768px) {
+  .page .section-light.howwork .section-light__txt--shadow {
+    max-width: 100%;
+  }
+}
 .page .section-light.list {
-  padding: 72px 0 84px;
+  padding: 72px 23px 84px;
 }
 .page .section-light.list .section-light__title--black {
   max-width: 329px;
   margin-bottom: 28px;
 }
+@media (min-width: 768px) {
+  .page .section-light.list .section-light__title--black {
+    max-width: 100%;
+  }
+}
 .page .section-light.list .section-light__txt--shadow {
   max-width: 329px;
   margin-bottom: 42px;
+}
+@media (min-width: 768px) {
+  .page .section-light.list .section-light__txt--shadow {
+    max-width: 100%;
+  }
 }
 .page .section-light.list .section-light__txt--small::before {
   content: "";
@@ -1943,6 +1978,11 @@ table {
   padding: 41px 28px 38px;
   max-width: 329px;
 }
+@media (min-width: 768px) {
+  .page .section-dark__tabs__tab--big {
+    max-width: 529px;
+  }
+}
 .page .section-dark__tabs__tab--big__img {
   width: 32px;
   height: 32px;
@@ -1969,11 +2009,14 @@ table {
   color: rgba(57, 20, 0, 0.64);
 }
 .page .section-dark__tabs__tab {
-  display: flex;
-  flex-wrap: no-wrap;
   border: 1px solid #3A3C56;
   max-width: 329px;
   padding: 41px 28px 39px;
+}
+@media (min-width: 768px) {
+  .page .section-dark__tabs__tab {
+    max-width: 529px;
+  }
 }
 .page .section-dark__tabs__tab__img {
   width: 32px;
@@ -1988,9 +2031,15 @@ table {
   max-width: 0;
   min-width: 219px;
 }
+@media (min-width: 768px) {
+  .page .section-dark__tabs__tab__title--small {
+    max-width: 100%;
+  }
+}
 .page .section-dark__tabs .tabs-box {
   display: flex;
   flex-wrap: no-wrap;
+  justify-content: space-between;
 }
 .page .section-dark.portfolio {
   padding: 55px 0 144px;
@@ -2014,6 +2063,12 @@ table {
   align-items: start;
   padding-top: 108px;
 }
+@media (min-width: 768px) {
+  .page .section-dark.ourteam-aboutus {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .page .section-dark.founder {
   justify-content: start;
   align-items: start;
@@ -2028,10 +2083,21 @@ table {
 .page .section-dark.faq {
   justify-content: start;
   align-items: start;
-  padding: 112px 0 118px;
+  padding: 112px 23px 118px;
 }
 .page .section-dark.faq .section-light__title {
   max-width: 329px;
+}
+@media (min-width: 768px) {
+  .page .section-dark.faq {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .page .section-dark.banner {
+    padding-bottom: 60px;
+  }
 }
 .page .section-dark .box-img {
   position: relative;

@@ -312,7 +312,7 @@
       margin-bottom: 16px;
 
       @include m.sm {
-        max-width: 80%; 
+        max-width: 80%;
       }
     }
 
@@ -330,7 +330,9 @@
       margin: 77px 0 63px;
 
       @include m.md {
-        margin: auto; 
+        margin: auto;
+        border-bottom: none;
+        padding-bottom: 0; 
       }
 
       &__box {
@@ -339,7 +341,7 @@
         justify-content: space-between;
 
         @include m.md {
-          gap: 30px; 
+          gap: 30px;
         }
 
         &__number {
@@ -348,6 +350,7 @@
 
         &__txt {
           @include m.list-txt;
+          margin: auto 0;
         }
       }
 
@@ -376,12 +379,21 @@
     }
 
     &__box {
+      @include m.md {
+        display:flex;
+      }
+
       &__cell--white {
         background: v.$white;
         border: 1px solid v.$lightorange;
         box-shadow: v.$shadow-cell;
         border-radius: 6px 6px 0px 0px;
         padding: 48px 41px 46px 48px;
+
+        @include m.md {
+          border-radius: 6px 6px 0px 6px;
+          padding: 48px 48px 46px;
+        }
 
         &__icon {
           width: 80px;
@@ -403,6 +415,11 @@
         border: 1px solid v.$lightorange;
         border-radius: 0px 0px 6px 6px;
         padding: 105px 41px 46px 48px;
+
+        @include m.md {
+          border-radius: 0px 6px 6px 0px;
+          padding: 105px 48px 46px;
+        }
 
         &__title {
           @include m.list-txt;
@@ -1049,6 +1066,11 @@
 
     &.features {
       padding-bottom: 112px;
+
+      @include m.md {
+        padding: 202px 23px 213px;
+        gap: 130px; 
+      }
     }
 
     &.features2 {
@@ -1064,6 +1086,21 @@
         @include m.sm {
           max-width: 100%;
         }
+      }
+    }
+
+    &.aboutus {
+      .section-light__title {
+        @include m.md {
+          @include m.title-big;
+        }
+      }
+    }
+
+    &.howwework {
+      @include m.md {
+        border-bottom: 1px solid v.$lightorange;
+        padding-bottom: 108px; 
       }
     }
 
@@ -1114,6 +1151,12 @@
       }
     }
 
+    &.video {
+      @include m.md {
+        padding: 127px 23px 215px; 
+      }
+    }
+
     &.empty {
       padding-top: 79px;
     }
@@ -1159,10 +1202,10 @@
       @include m.md {
         border-radius: 6px 0px 0px 0px;
         padding: 45px 105px 38px 48px;
-      } 
+      }
 
       @include m.lg {
-        padding-right: 145px; 
+        padding-right: 145px;
       }
 
       &__number {
@@ -1181,6 +1224,7 @@
       @include m.md {
         display: flex;
         justify-content: center;
+        padding: 161px 23px 140px;
       }
     }
 

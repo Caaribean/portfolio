@@ -898,6 +898,8 @@ table {
 @media (min-width: 1152px) {
   .page .section-light__numbers {
     margin: auto;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
 .page .section-light__numbers__box {
@@ -925,6 +927,7 @@ table {
   line-height: 32px;
   color: #391400;
   max-width: 257px;
+  margin: auto 0;
 }
 @media (min-width: 768px) {
   .page .section-light__numbers__box__txt {
@@ -953,12 +956,23 @@ table {
   display: inline-block;
   margin-right: 16px;
 }
+@media (min-width: 1152px) {
+  .page .section-light__box {
+    display: flex;
+  }
+}
 .page .section-light__box__cell--white {
   background: #ffffff;
   border: 1px solid #F3D1BF;
   box-shadow: 0px 32px 64px rgba(57, 20, 0, 0.04);
   border-radius: 6px 6px 0px 0px;
   padding: 48px 41px 46px 48px;
+}
+@media (min-width: 1152px) {
+  .page .section-light__box__cell--white {
+    border-radius: 6px 6px 0px 6px;
+    padding: 48px 48px 46px;
+  }
 }
 .page .section-light__box__cell--white__icon {
   width: 80px;
@@ -990,6 +1004,12 @@ table {
   border: 1px solid #F3D1BF;
   border-radius: 0px 0px 6px 6px;
   padding: 105px 41px 46px 48px;
+}
+@media (min-width: 1152px) {
+  .page .section-light__box__cell {
+    border-radius: 0px 6px 6px 0px;
+    padding: 105px 48px 46px;
+  }
 }
 .page .section-light__box__cell__title {
   font-style: normal;
@@ -1769,6 +1789,12 @@ table {
 .page .section-light.features {
   padding-bottom: 112px;
 }
+@media (min-width: 1152px) {
+  .page .section-light.features {
+    padding: 202px 23px 213px;
+    gap: 130px;
+  }
+}
 .page .section-light.features2 {
   padding-bottom: 81px;
 }
@@ -1781,6 +1807,22 @@ table {
 @media (min-width: 768px) {
   .page .section-light.about .section-light__txt--shadow {
     max-width: 100%;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-light.aboutus .section-light__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: #391400;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-light.howwework {
+    border-bottom: 1px solid #F3D1BF;
+    padding-bottom: 108px;
   }
 }
 .page .section-light.howwork {
@@ -1824,6 +1866,11 @@ table {
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 16px;
+}
+@media (min-width: 1152px) {
+  .page .section-light.video {
+    padding: 127px 23px 215px;
+  }
 }
 .page .section-light.empty {
   padding-top: 79px;
@@ -1895,6 +1942,7 @@ table {
   .page .section-box.box-main {
     display: flex;
     justify-content: center;
+    padding: 161px 23px 140px;
   }
 }
 .page .section-box.box-aboutus {

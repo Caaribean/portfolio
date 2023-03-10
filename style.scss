@@ -30,11 +30,43 @@
 
     &__navmenu {
       display: none;
+
+      @include m.md {
+        display: flex;
+
+        &__list {
+          display: flex;
+          gap: 100px;
+
+          &__txt {
+            @include m.txt;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &__btn--black {
+      display: none;
+
+      @include m.md {
+        display: block;
+        @include m.btn-black;
+      }
+
+      .nav-text {
+        color: white;
+        text-decoration: none;
+      }
     }
 
     &__hamburger {
       display: flex;
       align-items: center;
+
+      @include m.md {
+        display: none;
+      }
       &__img {
         width: 48px;
         height: 48px;
@@ -50,7 +82,12 @@
     padding: 0 23px;
 
     @include m.sm {
-      padding: 60px 23px;
+      padding: 114px 23px 56px;
+    }
+
+    @include m.md {
+      flex-wrap: nowrap;
+      flex-direction: unset;
     }
 
     &__img {
@@ -61,6 +98,16 @@
       @include m.sm {
         max-width: 529px;
       }
+
+      @include m.md {
+        max-width: 500px;
+        object-fit: contain;
+        order: 2;
+      }
+
+      @include m.lg {
+        max-width: 570px;
+      }
     }
 
     &__caption {
@@ -69,11 +116,15 @@
 
     &__title {
       @include m.title-main;
-      padding: 20px 0 12px;
+      margin: 20px 0 12px;
       max-width: 329px;
 
       @include m.sm {
         max-width: 100%;
+      }
+
+      @include m.md {
+        margin: 24px 0;
       }
     }
 
@@ -125,6 +176,18 @@
       }
     }
 
+    .block-txt {
+      @include m.md {
+        order: 1;
+        margin-right: 47px;
+        max-width: 513px;
+      }
+
+      @include m.lg {
+        margin-right: 87px;
+      }
+    }
+
     &.main-box {
       text-align: center;
       justify-content: center;
@@ -135,10 +198,15 @@
     .btn-box {
       display: flex;
       gap: 46px;
-      padding: 16px 0 44px;
+      margin: 16px 0 44px;
 
       @include m.sm {
         gap: 380px;
+      }
+
+      @include m.md {
+        gap: 46px;
+        margin: 34px 0 112px;
       }
     }
   }
@@ -767,7 +835,7 @@
       margin-bottom: 32px;
 
       @include m.sm {
-        margin: 0 auto 32px; 
+        margin: 0 auto 32px;
       }
 
       &__img {
@@ -908,7 +976,7 @@
         max-width: 329px;
 
         @include m.sm {
-          max-width: 100%; 
+          max-width: 100%;
         }
       }
 
@@ -978,7 +1046,7 @@
         max-width: 329px;
 
         @include m.sm {
-          max-width: 100%; 
+          max-width: 100%;
         }
       }
     }
@@ -991,7 +1059,7 @@
         margin-bottom: 28px;
 
         @include m.sm {
-          max-width: 100%; 
+          max-width: 100%;
         }
       }
 
@@ -1000,7 +1068,7 @@
         margin-bottom: 42px;
 
         @include m.sm {
-          max-width: 100%; 
+          max-width: 100%;
         }
       }
 
@@ -1235,7 +1303,7 @@
         max-width: 329px;
 
         @include m.sm {
-          max-width: 529px; 
+          max-width: 529px;
         }
 
         &__img {
@@ -1259,7 +1327,7 @@
         padding: 41px 28px 39px;
 
         @include m.sm {
-          max-width: 529px; 
+          max-width: 529px;
         }
 
         &__img {
@@ -1273,7 +1341,7 @@
           min-width: 219px;
 
           @include m.sm {
-            max-width: 100%; 
+            max-width: 100%;
           }
         }
       }
@@ -1281,7 +1349,7 @@
       .tabs-box {
         display: flex;
         flex-wrap: no-wrap;
-        justify-content: space-between; 
+        justify-content: space-between;
       }
     }
 
@@ -1343,7 +1411,7 @@
 
     &.banner {
       @include m.sm {
-        padding-bottom: 60px; 
+        padding-bottom: 60px;
       }
     }
 

@@ -70,6 +70,12 @@
   line-height: 64px;
   letter-spacing: -1px;
   color: v.$white;
+
+  @include md {
+    font-size: 72px;
+    line-height: 80px;
+    letter-spacing: -2px;
+  }
 }
 
 @mixin title {
@@ -224,7 +230,7 @@
   max-width: 257px;
 
   @include sm {
-    max-width: 100%; 
+    max-width: 100%;
   }
 }
 
@@ -313,7 +319,7 @@
   font-size: 16px;
   line-height: 32px;
   color: v.$brown;
-  border: none; 
+  border: none;
 }
 
 @mixin title-tag {

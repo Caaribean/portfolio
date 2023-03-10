@@ -219,6 +219,14 @@
       align-items: center;
       gap: 41px;
 
+      @include m.md {
+        gap: 80px;
+      }
+
+      @include m.lg {
+        gap: 146px;
+      }
+
       &__logo {
         max-width: 147px;
         width: 100%;
@@ -232,11 +240,19 @@
 
     &.light {
       background-color: v.$beige;
-      padding: 47px 49px 71px 30px;
+      padding: 47px 0 71px;
+
+      @include m.md {
+        padding: 73px 0 101px;
+      }
 
       .section-logos__box {
         border-bottom: 1px solid v.$lightorange;
         padding-bottom: 50px;
+
+        @include m.md {
+          padding-bottom: 72px;
+        }
       }
     }
   }
@@ -255,6 +271,10 @@
 
       @include m.sm {
         max-width: 529px;
+      }
+
+      @include m.lg {
+        max-width: 566px;
       }
     }
 
@@ -292,7 +312,7 @@
       margin-bottom: 16px;
 
       @include m.sm {
-        max-width: 80%;
+        max-width: 80%; 
       }
     }
 
@@ -309,10 +329,18 @@
       padding-bottom: 71px;
       margin: 77px 0 63px;
 
+      @include m.md {
+        margin: auto; 
+      }
+
       &__box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+
+        @include m.md {
+          gap: 30px; 
+        }
 
         &__number {
           @include m.number;
@@ -1094,6 +1122,27 @@
       padding-top: 64px;
     }
 
+    &.nowrap {
+      @include m.md {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: unset;
+      }
+    }
+
+    .block-txt {
+      @include m.md {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        max-width: 470px;
+      }
+
+      @include m.lg {
+        margin-left: 130px;
+      }
+    }
+
     .btn-center {
       margin: 0 auto;
     }
@@ -1107,6 +1156,15 @@
       border-radius: 6px 6px 0px 0px;
       padding: 48px 0 38px 48px;
 
+      @include m.md {
+        border-radius: 6px 0px 0px 0px;
+        padding: 45px 105px 38px 48px;
+      } 
+
+      @include m.lg {
+        padding-right: 145px; 
+      }
+
       &__number {
         @include m.title;
         margin-bottom: 13px;
@@ -1119,6 +1177,11 @@
 
     &.box-main {
       padding: 112px 23px 94px;
+
+      @include m.md {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     &.box-aboutus {

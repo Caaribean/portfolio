@@ -105,7 +105,7 @@
 }
 .icon-oval:before {
   content: "\e912";
-  color: v.$orange;
+  color: v.$orange; 
 }
 .icon-path:before {
   content: "\e913";
@@ -147,7 +147,12 @@
   left: 250;
 
   @include m.sm {
-    left: 300; 
+    left: 500; 
+  }
+
+  @include m.md {
+    left: 400;
+    top: -20;
   }
 }
 .icon-shape:before {

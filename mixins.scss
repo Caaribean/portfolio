@@ -102,6 +102,12 @@
   line-height: 48px;
   text-align: center;
   color: v.$white;
+
+  @include md {
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+  }
 }
 
 @mixin title-left {
@@ -111,6 +117,12 @@
   line-height: 48px;
   text-align: left;
   color: v.$white;
+
+  @include md {
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+  }
 }
 
 @mixin title-small {
@@ -119,6 +131,12 @@
   font-size: 24px;
   line-height: 32px;
   color: v.$white;
+
+  @include md {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 
 @mixin title-black {

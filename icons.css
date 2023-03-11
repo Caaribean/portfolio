@@ -169,7 +169,13 @@
 }
 @media (min-width: 768px) {
   .icon-quote:before {
-    left: 300;
+    left: 500;
+  }
+}
+@media (min-width: 1152px) {
+  .icon-quote:before {
+    left: 400;
+    top: -20;
   }
 }
 

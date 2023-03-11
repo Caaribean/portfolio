@@ -332,16 +332,17 @@
       @include m.md {
         margin: auto;
         border-bottom: none;
-        padding-bottom: 0; 
+        padding-bottom: 0;
       }
 
       &__box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         @include m.md {
           gap: 30px;
+          justify-content: space-between;
         }
 
         &__number {
@@ -380,7 +381,7 @@
 
     &__box {
       @include m.md {
-        display:flex;
+        display: flex;
       }
 
       &__cell--white {
@@ -434,7 +435,12 @@
     &__quote {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       margin-bottom: 20px;
+
+      @include m.md {
+        flex-wrap: nowrap;
+      }
 
       &__avatar {
         width: 64px;
@@ -444,7 +450,6 @@
 
       &__txt--quote {
         @include m.txt-quote;
-        max-width: 245px;
 
         @include m.sm {
           max-width: 100%;
@@ -457,12 +462,15 @@
 
       .quote-box {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
       }
     }
 
     &__container {
+      @include m.md {
+        display: flex;
+      }
+
       &__cell {
         display: flex;
         flex-wrap: wrap;
@@ -470,6 +478,12 @@
         border: 1px solid v.$lightorange;
         border-radius: 0px 0px 6px 6px;
         padding: 48px 35px 52px 28px;
+
+        @include m.md {
+          padding: 48px 48px 52px 48px;
+          max-width: 391px;
+          width: 100%;
+        }
 
         &__icon {
           width: 80px;
@@ -534,7 +548,7 @@
 
         &__quote {
           display: flex;
-          flex-wrap: no-wrap;
+          flex-wrap: nowrap;
           margin-top: 31px;
 
           &__avatar {
@@ -806,12 +820,9 @@
 
       &__post {
         margin-bottom: 52px;
-
-        @include m.sm {
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
 
         &__img {
           max-width: 370px;
@@ -977,10 +988,24 @@
 
     &.service {
       padding-bottom: 124px;
+
+      @include m.md {
+        padding-bottom: 141px;
+      }
     }
 
     &.agency {
       padding-bottom: 283px;
+
+      @include m.md {
+        padding-bottom: 128px;
+      }
+
+      .section-light__title {
+        @include m.md {
+          max-width: 336px;
+        }
+      }
     }
 
     &.testominals {
@@ -1069,7 +1094,7 @@
 
       @include m.md {
         padding: 202px 23px 213px;
-        gap: 130px; 
+        gap: 130px;
       }
     }
 
@@ -1100,7 +1125,7 @@
     &.howwework {
       @include m.md {
         border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 108px; 
+        padding-bottom: 108px;
       }
     }
 
@@ -1153,7 +1178,7 @@
 
     &.video {
       @include m.md {
-        padding: 127px 23px 215px; 
+        padding: 127px 23px 215px;
       }
     }
 
@@ -1173,7 +1198,15 @@
       }
     }
 
+    .order {
+      order: 2;
+    }
+
     .block-txt {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
       @include m.md {
         display: flex;
         flex-direction: column;
@@ -1254,6 +1287,28 @@
       @include m.sm {
         width: 80%;
       }
+
+      @include m.md {
+        display: none;
+      }
+    }
+
+    &__nav {
+      display: none;
+
+      @include m.md {
+        display: flex;
+        margin: 44px 0 68px;
+        gap: 60px;
+      }
+
+      &__txt--light {
+        @include m.txt-light;
+      }
+
+      &__sub {
+        @include m.txt-sub;
+      }
     }
 
     &__btn--small {
@@ -1304,6 +1359,13 @@
 
     &__box {
       margin-bottom: 100px;
+      display: block; 
+
+      @include m.md {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 64px; 
+      }
 
       &__cell {
         display: flex;
@@ -1312,6 +1374,12 @@
         border: 1px solid v.$blue;
         border-radius: 6px;
         padding: 41px 28px 36px;
+
+        @include m.md {
+          max-width: 370px; 
+          width: 100%; 
+          margin-bottom: 0;
+        }
 
         &__date {
           display: flex;
@@ -1530,6 +1598,35 @@
       position: relative;
       margin-bottom: 29px;
     }
+
+    .box-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 48px;
+
+      @include m.md {
+        gap: 30px;
+
+        .sofa {
+          max-width: 470px;
+        }
+
+        .keyboard {
+          max-width: 670px;
+        }
+
+        .workmedia {
+          max-width: 670px;
+        }
+
+        .dddone {
+          max-width: 470px;
+        }
+      }
+    }
   }
 
   .section-banner {
@@ -1541,6 +1638,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0 135px 60px;
     }
 
     &__icon {
@@ -1548,6 +1646,10 @@
       height: 148px;
       position: absolute;
       top: -75;
+
+      @include m.md {
+        left: 200;
+      }
     }
 
     &__box {
@@ -1559,6 +1661,20 @@
       max-width: 329px;
       padding: 92px 53px 0 28px;
 
+      @include m.md {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        max-width: 1000px;
+        width: 100%;
+        gap: 60px;
+        padding: 80 83px 0 100px;
+      }
+
+      @include m.lg {
+        max-width: 1170px;
+        gap: 100px;
+      }
+
       &__caption {
         @include m.caption;
         margin-bottom: 13px;
@@ -1567,6 +1683,11 @@
       &__title {
         @include m.title;
         margin-bottom: 23px;
+
+        @include m.md {
+          @include m.title-black;
+          max-width: 248px;
+        }
       }
 
       &__btn {
@@ -1577,6 +1698,13 @@
 
       &__img {
         max-width: 351px;
+        width: 100%;
+
+        @include m.md {
+          max-width: 338px;
+          width: 100%;
+          object-fit: cover;
+        }
       }
 
       &__img-woman {

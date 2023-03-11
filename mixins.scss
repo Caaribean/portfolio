@@ -169,6 +169,15 @@
   color: v.$shadow-brown;
 }
 
+@mixin txt-sub {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: v.$shadow-white;
+}
+
 @mixin txt-small {
   font-style: normal;
   font-weight: 400;

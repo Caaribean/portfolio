@@ -203,6 +203,12 @@
 .icon-star-small:before {
   content: "\e920";
   color: #f6d021;
+  font-size: 1rem;
+}
+@media (min-width: 1152px) {
+  .icon-star-small:before {
+    font-size: 1.5rem;
+  }
 }
 
 .icon-triangle:before {
@@ -1134,6 +1140,13 @@ table {
 .page .section-light__box-opinions {
   margin-bottom: 50px;
 }
+@media (min-width: 1152px) {
+  .page .section-light__box-opinions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .page .section-light__box-opinions__opinion--white {
   background: #ffffff;
   border: 1px solid #F3D1BF;
@@ -1145,6 +1158,12 @@ table {
 @media (min-width: 768px) {
   .page .section-light__box-opinions__opinion--white {
     max-width: 529px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light__box-opinions__opinion--white {
+    max-width: 586px;
+    padding: 48px;
   }
 }
 .page .section-light__box-opinions__opinion {
@@ -1159,6 +1178,12 @@ table {
 @media (min-width: 768px) {
   .page .section-light__box-opinions__opinion {
     max-width: 529px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light__box-opinions__opinion {
+    max-width: 586px;
+    padding: 48px;
   }
 }
 .page .section-light__box-opinions__opinion__stars {
@@ -1204,6 +1229,13 @@ table {
   line-height: 32px;
   color: #391400;
 }
+@media (min-width: 1152px) {
+  .page .section-light__box-offer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
 .page .section-light__box-offer__beige {
   display: flex;
   flex-wrap: wrap;
@@ -1212,10 +1244,21 @@ table {
   border-radius: 6px 6px 0px 0px;
   padding: 44px 28px 47px;
   max-width: 329px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .page .section-light__box-offer__beige {
     max-width: 529px;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-light__box-offer__beige {
+    max-width: 320px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light__box-offer__beige {
+    max-width: 391px;
   }
 }
 .page .section-light__box-offer__beige__caption {
@@ -1303,10 +1346,21 @@ table {
   box-shadow: 0px 32px 64px rgba(57, 20, 0, 0.04);
   padding: 33px 28px 48px;
   max-width: 329px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .page .section-light__box-offer__white {
     max-width: 529px;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-light__box-offer__white {
+    max-width: 320px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light__box-offer__white {
+    max-width: 391px;
   }
 }
 .page .section-light__box-offer__white__caption {
@@ -1759,6 +1813,11 @@ table {
     align-items: center;
   }
 }
+@media (min-width: 1152px) {
+  .page .section-light.testominals {
+    padding: 92px 23px 108px;
+  }
+}
 .page .section-light.pricing {
   padding-bottom: 92px;
 }
@@ -1766,6 +1825,22 @@ table {
   .page .section-light.pricing {
     justify-content: center;
     align-items: center;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-light.pricing {
+    justify-content: start;
+    align-items: start;
+    padding-bottom: 156px;
+  }
+  .page .section-light.pricing .section-light__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: #391400;
+    max-width: 358px;
   }
 }
 .page .section-light.awards {
@@ -2197,13 +2272,6 @@ table {
   color: #ffffff;
   max-width: 127px;
 }
-@media (min-width: 1152px) {
-  .page .section-dark__box__cell__date__title--small {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-  }
-}
 .page .section-dark__box__cell__txt--light {
   font-style: normal;
   font-weight: 400;
@@ -2224,13 +2292,6 @@ table {
   font-size: 24px;
   line-height: 32px;
   color: #ffffff;
-}
-@media (min-width: 1152px) {
-  .page .section-dark__box__cell__title--small {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-  }
 }
 .page .section-dark__box .border {
   border-bottom: 1px solid #3A3C56;
@@ -2300,13 +2361,6 @@ table {
   line-height: 32px;
   color: #ffffff;
 }
-@media (min-width: 1152px) {
-  .page .section-dark__container__person__title--small {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-  }
-}
 .page .section-dark__container__person__txt--light {
   font-style: normal;
   font-weight: 400;
@@ -2344,13 +2398,6 @@ table {
   line-height: 32px;
   color: #ffffff;
   max-width: 329px;
-}
-@media (min-width: 1152px) {
-  .page .section-dark__title--small {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-  }
 }
 @media (min-width: 768px) {
   .page .section-dark__title--small {
@@ -2420,13 +2467,6 @@ table {
   color: #ffffff;
   max-width: 0;
   min-width: 219px;
-}
-@media (min-width: 1152px) {
-  .page .section-dark__tabs__tab__title--small {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-  }
 }
 @media (min-width: 768px) {
   .page .section-dark__tabs__tab__title--small {
@@ -2499,6 +2539,11 @@ table {
   .page .section-dark.founder {
     padding-bottom: 345px;
   }
+}
+.page .section-dark.founder .section-dark__title--small {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
 }
 .page .section-dark.faq {
   justify-content: start;

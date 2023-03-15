@@ -175,6 +175,11 @@
 .icon-star-small:before {
   content: "\e920";
   color: v.$yellow;
+  font-size: 1rem; 
+
+  @include m.md {
+    font-size: 1.5rem; 
+  }
 }
 .icon-triangle:before {
   content: "\e921";

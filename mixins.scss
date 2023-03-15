@@ -131,12 +131,6 @@
   font-size: 24px;
   line-height: 32px;
   color: v.$white;
-
-  @include md {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-  }
 }
 
 @mixin title-black {

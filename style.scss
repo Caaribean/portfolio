@@ -314,8 +314,13 @@
       @include m.sm {
         max-width: 80%;
       }
-    }
 
+      @include m.md {
+        margin: auto 30px auto auto; 
+        width: 370px; 
+      }
+    }
+ 
     &__btn-newsletter {
       @include m.btn-newsletter;
 
@@ -585,10 +590,9 @@
     }
 
     &__box-offer {
-
       @include m.md {
-        display: flex; 
-        flex-wrap: wrap; 
+        display: flex;
+        flex-wrap: wrap;
         margin: 0 auto;
       }
 
@@ -679,7 +683,7 @@
         @include m.sm {
           max-width: 529px;
         }
- 
+
         @include m.md {
           max-width: 320px;
         }
@@ -815,6 +819,11 @@
         border-bottom: 1px solid v.$lightorange;
         padding-bottom: 20px;
 
+        @include m.md {
+          flex-direction: revert;
+          justify-content: space-between;
+        }
+
         &__img {
           width: 120px;
           height: 80px;
@@ -859,6 +868,13 @@
     &__box-blog {
       margin-top: 48px;
 
+      @include m.md {
+        display: flex;
+        gap: 30px;
+        border-bottom: 1px solid #f3d1bf;
+        padding-bottom: 52px;
+      }
+
       &__post {
         margin-bottom: 52px;
         display: flex;
@@ -871,6 +887,10 @@
 
           @include m.sm {
             max-width: 600px;
+          }
+
+          @include m.md {
+            max-width: 370px;
           }
         }
 
@@ -892,6 +912,10 @@
         border-bottom: 1px solid v.$lightorange;
         padding-bottom: 52px;
         margin-bottom: 0px;
+
+        @include m.md {
+          border-bottom: none;
+        }
       }
     }
 
@@ -958,6 +982,11 @@
     }
 
     &__box-contact {
+      @include m.md {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+      }
       &__cell {
         border: 1px solid v.$lightorange;
         border-radius: 6px 6px 0px 0px;
@@ -966,6 +995,14 @@
         flex-wrap: wrap;
         flex-direction: column;
 
+        @include m.md {
+          width: 321px; 
+        }
+
+        @include m.lg {
+          width: 391px; 
+        }
+ 
         &__icon {
           width: 64px;
           height: 64px;
@@ -1074,18 +1111,22 @@
 
       @include m.md {
         justify-content: start;
-        align-items: start; 
+        align-items: start;
         padding-bottom: 156px;
 
         .section-light__title {
           @include m.title-big;
-          max-width: 358px; 
+          max-width: 358px;
         }
       }
     }
 
     &.awards {
-      padding: 92px 0 96px;
+      padding: 92px 23px 96px;
+
+      @include m.md {
+        padding: 156px 23px 112px;
+      }
 
       .section-light__title {
         text-align: center;
@@ -1113,6 +1154,16 @@
 
     &.newsletter {
       padding: 76px 23px 128px;
+
+      @include m.md {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .section-light__title {
+          margin-right: 367px; 
+        }
+      }
     }
 
     &.newsletter-blog {
@@ -1123,6 +1174,10 @@
 
     &.contact {
       padding-bottom: 128px;
+
+      @include m.md {
+        padding-bottom: 130px;
+      }
     }
 
     &.contact-sub {
@@ -1134,6 +1189,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      @include m.md {
+        align-items: start;
       }
 
       .section-light__title {
@@ -1277,6 +1336,40 @@
 
     .btn-center {
       margin: 0 auto;
+    }
+
+    .small-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include m.md {
+        gap: 24px;
+        flex-direction: row;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+
+      @include m.md {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &.banner {
+      padding: 0; 
+
+      @include m.md {
+        padding: 0 60px;  
+      }
+  
+      @include m.lg {
+        padding: 0 135px;  
+      }
     }
   }
 
@@ -1887,12 +1980,25 @@
       align-items: center;
     }
 
+    @include m.md {
+      flex-direction: revert;
+      gap: 50px;
+    }
+
+    @include m.lg {
+      gap: 100px; 
+    }
+
     &__img {
       max-width: 273px;
       margin-bottom: 37px;
 
       @include m.sm {
         max-width: 523px;
+      }
+
+      @include m.md {
+        order: 2; 
       }
     }
 
@@ -1906,6 +2012,10 @@
         max-width: 523px;
         text-align: center;
       }
+
+      @include m.md {
+        text-align: left; 
+      }
     }
 
     &__txt--light {
@@ -1917,10 +2027,19 @@
         text-align: center;
         max-width: 523px;
       }
+
+      @include m.md {
+        text-align: left; 
+      }
     }
 
     &__btn--white {
       @include m.btn-white;
+      margin: auto;
+
+      @include m.md {
+        margin: 0; 
+      }
     }
   }
 

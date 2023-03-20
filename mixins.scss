@@ -18,7 +18,7 @@
 @mixin md {
   @media (min-width: 1152px) {
     @content;
-  }
+  } 
 }
 
 @mixin lg {
@@ -226,6 +226,14 @@
   padding: 18px 33px 16px;
   max-width: 154px;
   border: none;
+
+  @include sm {
+    max-width: 170px; 
+  }
+
+  @include md {
+    height: 48px;
+  }
 }
 
 @mixin btn-black {
@@ -337,6 +345,10 @@
   color: v.$brown;
   padding: 18px 124px 16px;
   border: none;
+
+  @include md {
+    padding: 18px 45px 16px;
+  }
 }
 
 @mixin btn-small {

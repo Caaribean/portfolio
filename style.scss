@@ -952,21 +952,20 @@
     }
 
     &__map {
-      position: relative;
       margin-bottom: 32px;
+      padding-bottom: 150%;
+      position: relative;
 
       @include m.sm {
-        margin: 0 auto 32px;
+        padding-bottom: 50%;
       }
 
       &__img {
-        width: 375px;
-        height: 719px;
-        object-fit: cover;
-
-        @include m.sm {
-          width: 750px;
-        }
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute; 
       }
 
       &__icon {
@@ -2035,7 +2034,11 @@
 
     &__btn--white {
       @include m.btn-white;
-      margin: auto;
+      margin: 0;
+
+      @include m.sm {
+        margin: auto; 
+      }
 
       @include m.md {
         margin: 0; 

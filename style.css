@@ -1736,24 +1736,21 @@ table {
   margin-left: 147px;
 }
 .page .section-light__map {
-  position: relative;
   margin-bottom: 32px;
+  padding-bottom: 150%;
+  position: relative;
 }
 @media (min-width: 768px) {
   .page .section-light__map {
-    margin: 0 auto 32px;
+    padding-bottom: 50%;
   }
 }
 .page .section-light__map__img {
-  width: 375px;
-  height: 719px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 768px) {
-  .page .section-light__map__img {
-    width: 750px;
-  }
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 }
 .page .section-light__map__icon {
   width: 72px;
@@ -2969,7 +2966,7 @@ table {
   padding: 18px 33px 16px;
   max-width: 154px;
   border: none;
-  margin: auto;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .page .banner-orange__btn--white {
@@ -2979,6 +2976,11 @@ table {
 @media (min-width: 1152px) {
   .page .banner-orange__btn--white {
     height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .page .banner-orange__btn--white {
+    margin: auto;
   }
 }
 @media (min-width: 1152px) {

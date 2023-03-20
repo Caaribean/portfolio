@@ -316,11 +316,11 @@
       }
 
       @include m.md {
-        margin: auto 30px auto auto; 
-        width: 370px; 
+        margin: auto 30px auto auto;
+        width: 370px;
       }
     }
- 
+
     &__btn-newsletter {
       @include m.btn-newsletter;
 
@@ -931,14 +931,32 @@
       padding: 57px 28px 48px;
       margin-bottom: 65px;
 
+      @include m.md {
+        padding: 57px 48px 48px;
+        justify-content: start;
+        align-items: start;
+      }
+
       &__title--black {
         @include m.title-black;
         margin-bottom: 23px;
+
+        @include m.md {
+          text-align: left;
+        }
       }
 
       &__input {
         @include m.input-newsletter;
         width: 273px;
+
+        @include m.md {
+          width: 320px;
+        }
+
+        @include m.lg {
+          width: 374px;
+        }
 
         &:nth-child(4) {
           padding-bottom: 55px;
@@ -948,11 +966,14 @@
       &__btn--orange {
         @include m.btn-orange;
         margin-left: 147px;
+
+        @include m.md {
+          margin-left: 185px;
+        }
       }
     }
 
     &__map {
-      margin-bottom: 32px;
       padding-bottom: 150%;
       position: relative;
 
@@ -965,7 +986,7 @@
         width: 100%;
         left: 0;
         top: 0;
-        position: absolute; 
+        position: absolute;
       }
 
       &__icon {
@@ -983,7 +1004,7 @@
     &__box-contact {
       @include m.md {
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
       }
       &__cell {
@@ -995,13 +1016,13 @@
         flex-direction: column;
 
         @include m.md {
-          width: 321px; 
+          width: 321px;
         }
 
         @include m.lg {
-          width: 391px; 
+          width: 391px;
         }
- 
+
         &__icon {
           width: 64px;
           height: 64px;
@@ -1160,7 +1181,7 @@
         align-items: center;
 
         .section-light__title {
-          margin-right: 367px; 
+          margin-right: 367px;
         }
       }
     }
@@ -1172,10 +1193,10 @@
     }
 
     &.contact {
-      padding-bottom: 128px;
+      padding: 32px 23px 128px;
 
       @include m.md {
-        padding-bottom: 130px;
+        padding: 80px 23px 130px; 
       }
     }
 
@@ -1353,21 +1374,21 @@
       flex-direction: column;
 
       @include m.md {
-        display: flex; 
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
     }
 
     &.banner {
-      padding: 0; 
+      padding: 0;
 
       @include m.md {
-        padding: 0 60px;  
+        padding: 0 60px;
       }
-  
+
       @include m.lg {
-        padding: 0 135px;  
+        padding: 0 135px;
       }
     }
   }
@@ -1985,7 +2006,7 @@
     }
 
     @include m.lg {
-      gap: 100px; 
+      gap: 100px;
     }
 
     &__img {
@@ -1997,7 +2018,7 @@
       }
 
       @include m.md {
-        order: 2; 
+        order: 2;
       }
     }
 
@@ -2013,7 +2034,7 @@
       }
 
       @include m.md {
-        text-align: left; 
+        text-align: left;
       }
     }
 
@@ -2028,7 +2049,7 @@
       }
 
       @include m.md {
-        text-align: left; 
+        text-align: left;
       }
     }
 
@@ -2037,11 +2058,11 @@
       margin: 0;
 
       @include m.sm {
-        margin: auto; 
+        margin: auto;
       }
 
       @include m.md {
-        margin: 0; 
+        margin: 0;
       }
     }
   }
@@ -2049,6 +2070,10 @@
   .footer {
     background-color: v.$beige;
     padding: 121px 23px 30px;
+
+    @include m.md {
+      padding: 92px 23px 30px;
+    }
 
     &__navfooter {
       display: flex;
@@ -2059,6 +2084,12 @@
       padding-bottom: 64px;
       margin-bottom: 43px;
 
+      @include m.md {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start; 
+      }
+
       &__title {
         @include m.title-black;
         margin-bottom: 51px;
@@ -2066,6 +2097,10 @@
 
       &__list {
         text-align: center;
+
+        @include m.md {
+          text-align: left; 
+        }
 
         &__title {
           @include m.caption;
@@ -2092,10 +2127,20 @@
       align-items: center;
       text-align: center;
 
+      @include m.md {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start; 
+      }
+
       &__txt--shadow {
         @include m.txt-shadow;
         max-width: 198px;
         margin-bottom: 32px;
+
+        @include m.md {
+          max-width: 100%; 
+        }
       }
 
       &__txt--small {

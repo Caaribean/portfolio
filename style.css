@@ -489,6 +489,11 @@ table {
   justify-content: space-between;
   padding: 16px 23px;
 }
+@media (min-width: 1400px) {
+  .page .header {
+    padding: 16px 135px;
+  }
+}
 .page .header__logo {
   display: flex;
 }
@@ -578,6 +583,11 @@ table {
   .page .section-main {
     flex-wrap: nowrap;
     flex-direction: unset;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-main {
+    padding: 114px 135px 56px;
   }
 }
 .page .section-main__img {
@@ -768,11 +778,21 @@ table {
 }
 .page .section-logos.light {
   background-color: #FDF0E9;
-  padding: 47px 0 71px;
+  padding: 47px 23px 71px;
 }
 @media (min-width: 1152px) {
   .page .section-logos.light {
-    padding: 73px 0 101px;
+    padding: 73px 23px 101px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-logos.light {
+    padding: 73px 23px 101px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-logos.light {
+    padding: 73px 135px 101px;
   }
 }
 .page .section-logos.light .section-logos__box {
@@ -790,6 +810,11 @@ table {
   flex-direction: column;
   padding: 0 23px;
   background-color: #FDF0E9;
+}
+@media (min-width: 1400px) {
+  .page .section-light {
+    padding: 0 135px;
+  }
 }
 .page .section-light__img {
   max-width: 329px;
@@ -1913,6 +1938,11 @@ table {
     padding: 92px 23px 108px;
   }
 }
+@media (min-width: 1920px) {
+  .page .section-light.testominals {
+    padding: 92px 135px 108px;
+  }
+}
 .page .section-light.pricing {
   padding-bottom: 92px;
 }
@@ -1944,6 +1974,11 @@ table {
 @media (min-width: 1152px) {
   .page .section-light.awards {
     padding: 156px 23px 112px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light.awards {
+    padding: 156px 135px 112px;
   }
 }
 .page .section-light.awards .section-light__title {
@@ -1979,6 +2014,11 @@ table {
     margin-right: 367px;
   }
 }
+@media (min-width: 1400px) {
+  .page .section-light.newsletter {
+    padding: 76px 135px 128px;
+  }
+}
 .page .section-light.newsletter-blog {
   border-bottom: 1px solid #F3D1BF;
   border-top: 1px solid #F3D1BF;
@@ -1990,6 +2030,11 @@ table {
 @media (min-width: 1152px) {
   .page .section-light.contact {
     padding: 80px 23px 130px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light.contact {
+    padding: 80px 135px 130px;
   }
 }
 .page .section-light.contact-sub {
@@ -2015,6 +2060,11 @@ table {
     max-width: 100%;
   }
 }
+@media (min-width: 1400px) {
+  .page .section-light.faq {
+    gap: 130px;
+  }
+}
 .page .section-light.features {
   padding-bottom: 112px;
 }
@@ -2022,6 +2072,11 @@ table {
   .page .section-light.features {
     padding: 202px 23px 213px;
     gap: 130px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-light.features {
+    padding: 202px 135px 213px;
   }
 }
 .page .section-light.features2 {
@@ -2052,6 +2107,11 @@ table {
   .page .section-light.howwework {
     border-bottom: 1px solid #F3D1BF;
     padding-bottom: 108px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-light.howwework {
+    gap: 130px;
   }
 }
 .page .section-light.howwork {
@@ -2101,6 +2161,11 @@ table {
     padding: 127px 23px 215px;
   }
 }
+@media (min-width: 1400px) {
+  .page .section-light.video {
+    padding: 127px 135px 215px;
+  }
+}
 .page .section-light.empty {
   padding-top: 79px;
 }
@@ -2128,11 +2193,6 @@ table {
     flex-direction: column;
     margin-left: 60px;
     max-width: 470px;
-  }
-}
-@media (min-width: 1400px) {
-  .page .section-light .block-txt {
-    margin-left: 130px;
   }
 }
 .page .section-light .btn-center {
@@ -2228,6 +2288,11 @@ table {
   align-items: center;
   padding: 0 23px;
   background-color: #28293E;
+}
+@media (min-width: 1400px) {
+  .page .section-dark {
+    padding: 0 135px;
+  }
 }
 .page .section-dark__img {
   max-width: 329px;
@@ -2634,7 +2699,12 @@ table {
   justify-content: space-between;
 }
 .page .section-dark.portfolio {
-  padding: 55px 0 144px;
+  padding: 55px 23px 144px;
+}
+@media (min-width: 1400px) {
+  .page .section-dark.portfolio {
+    padding: 55px 135px 144px;
+  }
 }
 .page .section-dark.events {
   padding-bottom: 124px;
@@ -2666,6 +2736,11 @@ table {
   }
   .page .section-dark.ourteam .section-dark__title--left {
     max-width: 531px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .section-dark.ourteam {
+    padding: 140px 135px 180px;
   }
 }
 .page .section-dark.ourteam-aboutus {
@@ -3021,6 +3096,11 @@ table {
 @media (min-width: 1152px) {
   .page .footer {
     padding: 92px 23px 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .page .footer {
+    padding: 92px 135px 30px;
   }
 }
 .page .footer__navfooter {

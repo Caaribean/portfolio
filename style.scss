@@ -78,7 +78,7 @@
     background-color: v.$navyblue;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column; 
     padding: 0 23px;
 
     @include m.sm {
@@ -88,6 +88,10 @@
     @include m.md {
       flex-wrap: nowrap;
       flex-direction: unset;
+    }
+
+    @include m.lg { 
+      padding: 114px 135px 56px; 
     }
 
     &__img {
@@ -240,10 +244,18 @@
 
     &.light {
       background-color: v.$beige;
-      padding: 47px 0 71px;
+      padding: 47px 23px 71px;
 
       @include m.md {
-        padding: 73px 0 101px;
+        padding: 73px 23px 101px;
+      }
+
+      @include m.lg {
+        padding: 73px 23px 101px; 
+      }
+
+      @include m.xl {
+        padding: 73px 135px 101px; 
       }
 
       .section-logos__box {
@@ -263,6 +275,10 @@
     flex-direction: column;
     padding: 0 23px;
     background-color: v.$beige;
+
+    @include m.lg {
+      padding: 0 135px; 
+    }
 
     &__img {
       max-width: 329px;
@@ -1119,6 +1135,10 @@
       @include m.md {
         padding: 92px 23px 108px;
       }
+
+      @include m.xl { 
+        padding: 92px 135px 108px;
+      }
     }
 
     &.pricing {
@@ -1146,6 +1166,10 @@
 
       @include m.md {
         padding: 156px 23px 112px;
+      }
+
+      @include m.lg {
+        padding: 156px 135px 112px;
       }
 
       .section-light__title {
@@ -1184,7 +1208,11 @@
           margin-right: 367px;
         }
       }
-    }
+
+      @include m.lg {
+        padding: 76px 135px 128px;
+      }
+    } 
 
     &.newsletter-blog {
       border-bottom: 1px solid v.$lightorange;
@@ -1197,6 +1225,10 @@
 
       @include m.md {
         padding: 80px 23px 130px; 
+      }
+
+      @include m.lg { 
+        padding: 80px 135px 130px; 
       }
     }
 
@@ -1222,6 +1254,10 @@
           max-width: 100%;
         }
       }
+
+      @include m.lg {
+        gap: 130px; 
+      }
     }
 
     &.features {
@@ -1230,6 +1266,11 @@
       @include m.md {
         padding: 202px 23px 213px;
         gap: 130px;
+      }
+
+      @include m.lg {
+        padding: 202px 135px 213px;
+
       }
     }
 
@@ -1261,6 +1302,10 @@
       @include m.md {
         border-bottom: 1px solid v.$lightorange;
         padding-bottom: 108px;
+      }
+
+      @include m.xl {
+        gap: 130px; 
       }
     }
 
@@ -1312,8 +1357,13 @@
     }
 
     &.video {
-      @include m.md {
+      @include m.md { 
         padding: 127px 23px 215px;
+      }
+
+      @include m.lg { 
+        padding: 127px 135px 215px;
+
       }
     }
 
@@ -1347,10 +1397,6 @@
         flex-direction: column;
         margin-left: 60px;
         max-width: 470px;
-      }
-
-      @include m.lg {
-        margin-left: 130px;
       }
     }
 
@@ -1443,6 +1489,10 @@
     align-items: center;
     padding: 0 23px;
     background-color: v.$navyblue;
+
+    @include m.lg {
+      padding: 0 135px; 
+    }
 
     &__img {
       max-width: 329px;
@@ -1743,8 +1793,12 @@
     }
 
     &.portfolio {
-      padding: 55px 0 144px;
-    }
+      padding: 55px 23px 144px;
+
+      @include m.lg {
+        padding: 55px 135px 144px;
+      }
+    } 
 
     &.events {
       padding-bottom: 124px;
@@ -1775,6 +1829,10 @@
         .section-dark__title--left {
           max-width: 531px;
         }
+      }
+
+      @include m.lg {
+        padding: 140px 135px 180px;
       }
     }
 
@@ -2074,6 +2132,10 @@
     @include m.md {
       padding: 92px 23px 30px;
     }
+
+    @include m.lg {
+      padding: 92px 135px 30px;
+    } 
 
     &__navfooter {
       display: flex;

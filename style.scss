@@ -78,7 +78,7 @@
     background-color: v.$navyblue;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; 
+    flex-direction: column;
     padding: 0 23px;
 
     @include m.sm {
@@ -90,8 +90,8 @@
       flex-direction: unset;
     }
 
-    @include m.lg { 
-      padding: 114px 135px 56px; 
+    @include m.lg {
+      padding: 114px 135px 56px;
     }
 
     &__img {
@@ -190,6 +190,10 @@
       @include m.lg {
         margin-right: 87px;
       }
+
+      @include m.xl {
+        max-width: 50%;
+      }
     }
 
     &.main-box {
@@ -251,11 +255,11 @@
       }
 
       @include m.lg {
-        padding: 73px 23px 101px; 
+        padding: 73px 23px 101px;
       }
 
       @include m.xl {
-        padding: 73px 135px 101px; 
+        padding: 73px 135px 101px;
       }
 
       .section-logos__box {
@@ -277,7 +281,7 @@
     background-color: v.$beige;
 
     @include m.lg {
-      padding: 0 135px; 
+      padding: 0 135px;
     }
 
     &__img {
@@ -461,6 +465,10 @@
 
       @include m.md {
         flex-wrap: nowrap;
+      }
+
+      @include m.lg {
+        flex-direction: unset;
       }
 
       &__avatar {
@@ -889,6 +897,12 @@
         gap: 30px;
         border-bottom: 1px solid #f3d1bf;
         padding-bottom: 52px;
+
+        @include m.xl {
+          align-items: center; 
+          justify-content: center; 
+          gap: 100px; 
+        }
       }
 
       &__post {
@@ -907,6 +921,10 @@
 
           @include m.md {
             max-width: 370px;
+          }
+
+          @include m.xl {
+            max-width: 520px;
           }
         }
 
@@ -1113,11 +1131,17 @@
 
       @include m.md {
         padding-bottom: 128px;
+
+        .section-light__title {
+          max-width: 336px;
+        }
       }
 
-      .section-light__title {
-        @include m.md {
-          max-width: 336px;
+      @include m.xl {
+        align-items: center;
+
+        .section-light__title {
+          max-width: max-content;
         }
       }
     }
@@ -1136,7 +1160,7 @@
         padding: 92px 23px 108px;
       }
 
-      @include m.xl { 
+      @include m.xl {
         padding: 92px 135px 108px;
       }
     }
@@ -1157,6 +1181,16 @@
         .section-light__title {
           @include m.title-big;
           max-width: 358px;
+        }
+      }
+
+      @include m.xl {
+        justify-content: center;
+        align-items: center;
+
+        .section-light__title {
+          @include m.title-big;
+          max-width: max-content;
         }
       }
     }
@@ -1190,9 +1224,18 @@
           max-width: 100%;
         }
       }
+    }
 
-      &.blog {
-        padding: 80px 23px 76px;
+    &.blog {
+      padding: 80px 23px 76px;
+
+      @include m.lg {
+        padding: 80px 135px 76px;
+      }
+
+      @include m.xl {
+        align-items: center; 
+        justify-content: center;
       }
     }
 
@@ -1211,8 +1254,8 @@
 
       @include m.lg {
         padding: 76px 135px 128px;
-      }
-    } 
+      } 
+    }
 
     &.newsletter-blog {
       border-bottom: 1px solid v.$lightorange;
@@ -1224,11 +1267,11 @@
       padding: 32px 23px 128px;
 
       @include m.md {
-        padding: 80px 23px 130px; 
+        padding: 80px 23px 130px;
       }
 
-      @include m.lg { 
-        padding: 80px 135px 130px; 
+      @include m.lg {
+        padding: 80px 135px 130px;
       }
     }
 
@@ -1256,7 +1299,7 @@
       }
 
       @include m.lg {
-        gap: 130px; 
+        gap: 130px;
       }
     }
 
@@ -1270,7 +1313,6 @@
 
       @include m.lg {
         padding: 202px 135px 213px;
-
       }
     }
 
@@ -1305,7 +1347,7 @@
       }
 
       @include m.xl {
-        gap: 130px; 
+        gap: 130px;
       }
     }
 
@@ -1357,13 +1399,12 @@
     }
 
     &.video {
-      @include m.md { 
+      @include m.md {
         padding: 127px 23px 215px;
       }
 
-      @include m.lg { 
+      @include m.lg {
         padding: 127px 135px 215px;
-
       }
     }
 
@@ -1398,6 +1439,10 @@
         margin-left: 60px;
         max-width: 470px;
       }
+
+      @include m.xl {
+        max-width: 50%;
+      }
     }
 
     .btn-center {
@@ -1423,6 +1468,12 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+      }
+
+      @include m.xl {
+        align-items: center; 
+        justify-content: center;
+        gap: 1200px; 
       }
     }
 
@@ -1491,7 +1542,7 @@
     background-color: v.$navyblue;
 
     @include m.lg {
-      padding: 0 135px; 
+      padding: 0 135px;
     }
 
     &__img {
@@ -1669,6 +1720,10 @@
         justify-content: center;
         align-items: center;
         gap: 36px;
+
+        @include m.xl {
+          gap: 50px;
+        }
       }
       &__person {
         &__img {
@@ -1683,12 +1738,22 @@
             width: 200px;
           }
 
+          @include m.xl {
+            height: 300px;
+            width: 300px;
+          }
+
           .avatar {
             max-width: 196px;
 
             @include m.md {
               max-height: 200px;
               height: 100%;
+            }
+
+            @include m.xl {
+              max-height: 300px; 
+              max-width: 100%;
             }
           }
         }
@@ -1798,7 +1863,7 @@
       @include m.lg {
         padding: 55px 135px 144px;
       }
-    } 
+    }
 
     &.events {
       padding-bottom: 124px;
@@ -1807,6 +1872,12 @@
         padding-bottom: 0;
         .section-dark__title--white {
           max-width: 426px;
+        }
+      }
+
+      @include m.xl {
+        .section-dark__title--white {
+          max-width: max-content;
         }
       }
     }
@@ -1833,6 +1904,10 @@
 
       @include m.lg {
         padding: 140px 135px 180px;
+      }
+
+      @include m.xl {
+        align-items: center;
       }
     }
 
@@ -1918,6 +1993,10 @@
       @include m.md {
         display: flex;
         gap: 527px;
+
+        @include m.xl {
+          gap: 870px; 
+        }
       }
     }
 
@@ -1947,10 +2026,17 @@
 
         .keyboard {
           max-width: 670px;
+
+          @include m.xl {
+            max-width: 800px;
+          }
         }
 
         .workmedia {
           max-width: 670px;
+          @include m.xl {
+            max-width: 800px;
+          }
         }
 
         .dddone {
@@ -1980,6 +2066,10 @@
 
       @include m.md {
         left: 200;
+      }
+
+      @include m.xl {
+        left: 400;
       }
     }
 
@@ -2135,7 +2225,7 @@
 
     @include m.lg {
       padding: 92px 135px 30px;
-    } 
+    }
 
     &__navfooter {
       display: flex;
@@ -2149,7 +2239,7 @@
       @include m.md {
         flex-direction: row;
         justify-content: space-between;
-        align-items: start; 
+        align-items: start;
       }
 
       &__title {
@@ -2161,7 +2251,7 @@
         text-align: center;
 
         @include m.md {
-          text-align: left; 
+          text-align: left;
         }
 
         &__title {
@@ -2192,7 +2282,7 @@
       @include m.md {
         flex-direction: row;
         justify-content: space-between;
-        align-items: start; 
+        align-items: start;
       }
 
       &__txt--shadow {
@@ -2201,7 +2291,7 @@
         margin-bottom: 32px;
 
         @include m.md {
-          max-width: 100%; 
+          max-width: 100%;
         }
       }
 

@@ -96,7 +96,6 @@
 
     &__img {
       max-width: 329px;
-      width: 100%;
       margin: 0 auto;
 
       @include m.sm {
@@ -203,7 +202,7 @@
       padding: 80px 23px 87px;
 
       @include m.md {
-        padding: 104px 23px 66px; 
+        padding: 104px 23px 66px;
         flex-direction: column;
 
         .section-main__txt--light {
@@ -212,7 +211,13 @@
       }
 
       @include m.lg {
-        padding: 104px 135px 66px; 
+        padding: 104px 135px 66px;
+      }
+
+      @include m.xl {
+        .section-main__txt--light {
+          max-width: 80%;
+        }
       }
     }
 
@@ -308,6 +313,19 @@
 
       @include m.lg {
         max-width: 566px;
+      }
+    }
+
+    &__img-video {
+      margin: 0 auto;
+      width: 80%; 
+
+      @include m.sm {
+        width: 70%;
+      }
+
+      @include m.md {
+        width: 50%;  
       }
     }
 
@@ -1102,7 +1120,7 @@
       margin-top: 17px;
 
       @include m.md {
-        margin-top: 0; 
+        margin-top: 0;
       }
 
       &__img-small {
@@ -1342,6 +1360,11 @@
 
       @include m.md {
         padding-bottom: 144px;
+        gap: 60px;
+      }
+
+      @include m.lg {
+        gap: 130px;
       }
     }
 
@@ -1352,17 +1375,11 @@
         padding: 76px 23px 128px;
       }
 
-      @include m.lg {
-        @include m.md {
-          padding: 76px 135px 128px;
-        }
-      }
-
       .section-light__txt--shadow {
         max-width: 329px;
 
         @include m.sm {
-          max-width: 100%;
+          max-width: 100%; 
         }
       }
 
@@ -1372,6 +1389,10 @@
         .section-light__title {
           @include m.title-big;
         }
+      }
+
+      @include m.xl {
+        padding: 100px 135px 150px; 
       }
     }
 
@@ -1534,6 +1555,10 @@
       @include m.md {
         max-width: 570px;
       }
+
+      @include m.xl {
+        max-width: 50%;  
+      }
     }
 
     .images {
@@ -1542,8 +1567,8 @@
 
       @include m.md {
         flex-direction: unset;
-        gap: 30px; 
-      } 
+        gap: 30px;
+      }
     }
 
     &.banner {
@@ -1602,7 +1627,7 @@
       @include m.md {
         display: flex;
         justify-content: center;
-        padding: 0 23px 128px; 
+        padding: 0 23px 128px;
       }
     }
   }
@@ -1813,6 +1838,11 @@
             width: 150px;
           }
 
+          @include m.lg {
+            height: 200px;
+            width: 200px;
+          }
+
           @include m.xl {
             height: 300px;
             width: 300px;
@@ -1826,9 +1856,12 @@
               height: 100%;
             }
 
+            @include m.lg {
+              max-height: 200px;
+            }
+
             @include m.xl {
               max-height: 300px;
-              max-width: 100%;
             }
           }
         }
@@ -2046,7 +2079,7 @@
         align-items: center;
       }
 
-      @include m.md { 
+      @include m.md {
         padding: 92px 23px 108px;
       }
 
@@ -2105,10 +2138,14 @@
       @include m.md {
         display: flex;
         gap: 400px;
+      }
 
-        @include m.xl {
-          gap: 870px;
-        }
+      @include m.lg {
+        gap: 570px; 
+      }
+
+      @include m.xl {
+        gap: 870px;
       }
     }
 

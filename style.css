@@ -592,7 +592,6 @@ table {
 }
 .page .section-main__img {
   max-width: 329px;
-  width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -754,6 +753,11 @@ table {
     padding: 104px 135px 66px;
   }
 }
+@media (min-width: 1920px) {
+  .page .section-main.main-box .section-main__txt--light {
+    max-width: 80%;
+  }
+}
 .page .section-main .btn-box {
   display: flex;
   gap: 46px;
@@ -848,6 +852,20 @@ table {
 @media (min-width: 1440px) {
   .page .section-light__img {
     max-width: 566px;
+  }
+}
+.page .section-light__img-video {
+  margin: 0 auto;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .page .section-light__img-video {
+    width: 70%;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-light__img-video {
+    width: 50%;
   }
 }
 .page .section-light__caption {
@@ -2165,6 +2183,12 @@ table {
 @media (min-width: 1152px) {
   .page .section-light.features2 {
     padding-bottom: 144px;
+    gap: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .page .section-light.features2 {
+    gap: 130px;
   }
 }
 .page .section-light.about {
@@ -2173,11 +2197,6 @@ table {
 @media (min-width: 1152px) {
   .page .section-light.about {
     padding: 76px 23px 128px;
-  }
-}
-@media (min-width: 1440px) and (min-width: 1152px) {
-  .page .section-light.about {
-    padding: 76px 135px 128px;
   }
 }
 .page .section-light.about .section-light__txt--shadow {
@@ -2199,6 +2218,11 @@ table {
     line-height: 64px;
     letter-spacing: -1px;
     color: #391400;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-light.about {
+    padding: 100px 135px 150px;
   }
 }
 @media (min-width: 1152px) {
@@ -2353,6 +2377,11 @@ table {
 @media (min-width: 1152px) {
   .page .section-light .block-small {
     max-width: 570px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-light .block-small {
+    max-width: 50%;
   }
 }
 .page .section-light .images {
@@ -2722,6 +2751,12 @@ table {
     width: 150px;
   }
 }
+@media (min-width: 1440px) {
+  .page .section-dark__container__person__img {
+    height: 200px;
+    width: 200px;
+  }
+}
 @media (min-width: 1920px) {
   .page .section-dark__container__person__img {
     height: 300px;
@@ -2737,10 +2772,14 @@ table {
     height: 100%;
   }
 }
+@media (min-width: 1440px) {
+  .page .section-dark__container__person__img .avatar {
+    max-height: 200px;
+  }
+}
 @media (min-width: 1920px) {
   .page .section-dark__container__person__img .avatar {
     max-height: 300px;
-    max-width: 100%;
   }
 }
 .page .section-dark__container__person__title--small {
@@ -3046,7 +3085,12 @@ table {
     gap: 400px;
   }
 }
-@media (min-width: 1152px) and (min-width: 1920px) {
+@media (min-width: 1440px) {
+  .page .section-dark .wrap-icons {
+    gap: 570px;
+  }
+}
+@media (min-width: 1920px) {
   .page .section-dark .wrap-icons {
     gap: 870px;
   }

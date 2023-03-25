@@ -200,7 +200,20 @@
       text-align: center;
       justify-content: center;
       align-items: center;
-      padding: 80px 0 87px;
+      padding: 80px 23px 87px;
+
+      @include m.md {
+        padding: 104px 23px 66px; 
+        flex-direction: column;
+
+        .section-main__txt--light {
+          max-width: 570px;
+        }
+      }
+
+      @include m.lg {
+        padding: 104px 135px 66px; 
+      }
     }
 
     .btn-box {
@@ -899,9 +912,9 @@
         padding-bottom: 52px;
 
         @include m.xl {
-          align-items: center; 
-          justify-content: center; 
-          gap: 100px; 
+          align-items: center;
+          justify-content: center;
+          gap: 100px;
         }
       }
 
@@ -1088,8 +1101,16 @@
       gap: 17px;
       margin-top: 17px;
 
+      @include m.md {
+        margin-top: 0; 
+      }
+
       &__img-small {
         max-width: 156px;
+
+        @include m.md {
+          max-width: 35%;
+        }
       }
     }
 
@@ -1234,7 +1255,7 @@
       }
 
       @include m.xl {
-        align-items: center; 
+        align-items: center;
         justify-content: center;
       }
     }
@@ -1254,7 +1275,7 @@
 
       @include m.lg {
         padding: 76px 135px 128px;
-      } 
+      }
     }
 
     &.newsletter-blog {
@@ -1318,16 +1339,38 @@
 
     &.features2 {
       padding-bottom: 81px;
+
+      @include m.md {
+        padding-bottom: 144px;
+      }
     }
 
     &.about {
       padding: 76px 23px 88px;
+
+      @include m.md {
+        padding: 76px 23px 128px;
+      }
+
+      @include m.lg {
+        @include m.md {
+          padding: 76px 135px 128px;
+        }
+      }
 
       .section-light__txt--shadow {
         max-width: 329px;
 
         @include m.sm {
           max-width: 100%;
+        }
+      }
+
+      @include m.lg {
+        padding: 76px 135px 88px;
+
+        .section-light__title {
+          @include m.title-big;
         }
       }
     }
@@ -1471,10 +1514,36 @@
       }
 
       @include m.xl {
-        align-items: center; 
+        align-items: center;
         justify-content: center;
-        gap: 1200px; 
+        gap: 1200px;
       }
+    }
+
+    .block {
+      @include m.md {
+        display: flex;
+        gap: 183px;
+      }
+    }
+
+    .block-small {
+      display: flex;
+      flex-direction: column;
+
+      @include m.md {
+        max-width: 570px;
+      }
+    }
+
+    .images {
+      display: flex;
+      flex-direction: column;
+
+      @include m.md {
+        flex-direction: unset;
+        gap: 30px; 
+      } 
     }
 
     &.banner {
@@ -1529,6 +1598,12 @@
 
     &.box-aboutus {
       padding: 0 23px 98px;
+
+      @include m.md {
+        display: flex;
+        justify-content: center;
+        padding: 0 23px 128px; 
+      }
     }
   }
 
@@ -1734,8 +1809,8 @@
           margin-bottom: 26px;
 
           @include m.md {
-            height: 200px;
-            width: 200px;
+            height: 150px;
+            width: 150px;
           }
 
           @include m.xl {
@@ -1747,12 +1822,12 @@
             max-width: 196px;
 
             @include m.md {
-              max-height: 200px;
+              max-height: 150px;
               height: 100%;
             }
 
             @include m.xl {
-              max-height: 300px; 
+              max-height: 300px;
               max-width: 100%;
             }
           }
@@ -1920,6 +1995,24 @@
         justify-content: center;
         align-items: center;
       }
+
+      @include m.md {
+        padding: 92px 23px 0px;
+        justify-content: start;
+        align-items: start;
+
+        .section-dark__title--left {
+          max-width: 531px;
+        }
+      }
+
+      @include m.lg {
+        padding: 92px 135px 0px;
+      }
+
+      @include m.xl {
+        align-items: center;
+      }
     }
 
     &.founder {
@@ -1943,12 +2036,31 @@
       }
     }
 
+    &.testominals-dark {
+      justify-content: start;
+      align-items: start;
+      padding: 92px 23px 124px;
+
+      @include m.sm {
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include m.md { 
+        padding: 92px 23px 108px;
+      }
+
+      @include m.xl {
+        padding: 92px 135px 108px;
+      }
+    }
+
     &.faq {
       justify-content: start;
       align-items: start;
       padding: 112px 23px 118px;
 
-      .section-light__title {
+      .section-dark__title {
         max-width: 329px;
       }
 
@@ -1992,10 +2104,10 @@
     .wrap-icons {
       @include m.md {
         display: flex;
-        gap: 527px;
+        gap: 400px;
 
         @include m.xl {
-          gap: 870px; 
+          gap: 870px;
         }
       }
     }

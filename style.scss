@@ -318,14 +318,14 @@
 
     &__img-video {
       margin: 0 auto;
-      width: 80%; 
+      width: 80%;
 
       @include m.sm {
         width: 70%;
       }
 
       @include m.md {
-        width: 50%;  
+        width: 50%;
       }
     }
 
@@ -1134,26 +1134,46 @@
 
     &__icon-tab {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       background-color: v.$beige;
       border-bottom: 1px solid v.$lightorange;
       border-top: 1px solid v.$lightorange;
-      padding: 32px 0;
+      padding: 32px 23px;
+
+      @include m.lg {
+        padding: 32px 135px; 
+      }
 
       &__title {
         @include m.title;
-        max-width: 150px;
+        max-width: 150px; 
+        word-wrap: break-word;
+
+        @include m.md {
+          @include m.title-big; 
+          max-width: 100%; 
+        }
       }
 
       &__icon--big {
         width: 80px;
         height: 80px;
+        margin-right: 33px;
+
+        @include m.md {
+          margin-right: 36px; 
+        }
       }
 
       &__icon--small {
         width: 32px;
         height: 32px;
+      }
+
+      .icon-box {
+        display: flex; 
+        align-items: center; 
       }
     }
 
@@ -1376,11 +1396,7 @@
       }
 
       .section-light__txt--shadow {
-        max-width: 329px;
-
-        @include m.sm {
-          max-width: 100%; 
-        }
+        max-width: 100%;
       }
 
       @include m.lg {
@@ -1392,7 +1408,7 @@
       }
 
       @include m.xl {
-        padding: 100px 135px 150px; 
+        padding: 100px 135px 150px;
       }
     }
 
@@ -1418,6 +1434,10 @@
     &.howwork {
       padding-top: 91px;
 
+      @include m.md {
+        justify-content: space-around;
+      }
+
       .section-light__txt--shadow {
         max-width: 329px;
 
@@ -1429,6 +1449,11 @@
 
     &.list {
       padding: 72px 23px 84px;
+
+      @include m.md {
+        max-width: 50%;
+        padding-left: 50%;
+      } 
 
       .section-light__title--black {
         max-width: 329px;
@@ -1544,7 +1569,7 @@
     .block {
       @include m.md {
         display: flex;
-        gap: 183px;
+        gap: 130px;
       }
     }
 
@@ -1557,7 +1582,7 @@
       }
 
       @include m.xl {
-        max-width: 50%;  
+        max-width: 50%;
       }
     }
 
@@ -2141,7 +2166,7 @@
       }
 
       @include m.lg {
-        gap: 570px; 
+        gap: 570px;
       }
 
       @include m.xl {

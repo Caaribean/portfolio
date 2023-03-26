@@ -1942,12 +1942,17 @@ table {
 }
 .page .section-light__icon-tab {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #FDF0E9;
   border-bottom: 1px solid #F3D1BF;
   border-top: 1px solid #F3D1BF;
-  padding: 32px 0;
+  padding: 32px 23px;
+}
+@media (min-width: 1440px) {
+  .page .section-light__icon-tab {
+    padding: 32px 135px;
+  }
 }
 .page .section-light__icon-tab__title {
   font-style: normal;
@@ -1956,14 +1961,36 @@ table {
   line-height: 48px;
   color: #391400;
   max-width: 150px;
+  word-wrap: break-word;
+}
+@media (min-width: 1152px) {
+  .page .section-light__icon-tab__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: #391400;
+    max-width: 100%;
+  }
 }
 .page .section-light__icon-tab__icon--big {
   width: 80px;
   height: 80px;
+  margin-right: 33px;
+}
+@media (min-width: 1152px) {
+  .page .section-light__icon-tab__icon--big {
+    margin-right: 36px;
+  }
 }
 .page .section-light__icon-tab__icon--small {
   width: 32px;
   height: 32px;
+}
+.page .section-light__icon-tab .icon-box {
+  display: flex;
+  align-items: center;
 }
 .page .section-light.service {
   padding-bottom: 124px;
@@ -2200,12 +2227,7 @@ table {
   }
 }
 .page .section-light.about .section-light__txt--shadow {
-  max-width: 329px;
-}
-@media (min-width: 768px) {
-  .page .section-light.about .section-light__txt--shadow {
-    max-width: 100%;
-  }
+  max-width: 100%;
 }
 @media (min-width: 1440px) {
   .page .section-light.about {
@@ -2249,6 +2271,11 @@ table {
 .page .section-light.howwork {
   padding-top: 91px;
 }
+@media (min-width: 1152px) {
+  .page .section-light.howwork {
+    justify-content: space-around;
+  }
+}
 .page .section-light.howwork .section-light__txt--shadow {
   max-width: 329px;
 }
@@ -2259,6 +2286,12 @@ table {
 }
 .page .section-light.list {
   padding: 72px 23px 84px;
+}
+@media (min-width: 1152px) {
+  .page .section-light.list {
+    max-width: 50%;
+    padding-left: 50%;
+  }
 }
 .page .section-light.list .section-light__title--black {
   max-width: 329px;
@@ -2367,7 +2400,7 @@ table {
 @media (min-width: 1152px) {
   .page .section-light .block {
     display: flex;
-    gap: 183px;
+    gap: 130px;
   }
 }
 .page .section-light .block-small {

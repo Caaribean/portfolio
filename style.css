@@ -2250,7 +2250,17 @@ table {
   }
 }
 .page .section-light.contact-sub {
-  padding-bottom: 108px;
+  padding: 32px 23px 108px;
+}
+@media (min-width: 1152px) {
+  .page .section-light.contact-sub {
+    padding: 80px 23px 144px;
+  }
+}
+@media (min-width: 1440px) {
+  .page .section-light.contact-sub {
+    padding: 80px 135px 144px;
+  }
 }
 @media (min-width: 768px) {
   .page .section-light.faq {

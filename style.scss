@@ -95,21 +95,21 @@
     }
 
     &__img {
-      max-width: 329px;
+      max-width: 80%;
       margin: 0 auto;
 
       @include m.sm {
-        max-width: 529px;
+        max-width: 70%;
       }
 
       @include m.md {
-        max-width: 500px;
+        max-width: 50%;
         object-fit: contain;
         order: 2;
       }
 
       @include m.lg {
-        max-width: 570px;
+        max-width: 35%; 
       }
     }
 
@@ -142,6 +142,8 @@
 
     &__txt {
       @include m.txt;
+      display: flex;
+      align-items: center; 
     }
 
     &__btn {
@@ -303,16 +305,23 @@
     }
 
     &__img {
-      max-width: 329px;
-      width: 100%;
+      max-width: 80%;
       margin: 0 auto;
 
       @include m.sm {
-        max-width: 529px;
+        max-width: 70%;
+      }
+
+      @include m.md {
+        max-width: 50%;
       }
 
       @include m.lg {
-        max-width: 566px;
+        max-width: 40%;
+      }
+
+      @include m.lg {
+        max-width: 35%;
       }
     }
 
@@ -1709,6 +1718,10 @@
       @include m.lg {
         padding: 0 135px;
       }
+
+      @include m.xl {
+        padding: 0 135px 150px;
+      }
     }
   }
 
@@ -1773,9 +1786,13 @@
       padding: 0 135px;
     }
 
-    &__img {
-      max-width: 329px;
-    }
+    /* &__img {
+      max-width: 80%;
+
+      @include m.md {
+        max-width: 50%; 
+      }
+    } */
 
     &__input {
       @include m.input;
@@ -2018,6 +2035,22 @@
 
       @include m.sm {
         max-width: 529px;
+      }
+    }
+
+    &__img-man {
+      max-width: 80%; 
+
+      @include m.sm {
+        max-width: 65%; 
+      }
+
+      @include m.md {
+        max-width: 50%; 
+      }
+
+      @include m.lg {
+        max-width: 40%; 
       }
     }
 
@@ -2435,14 +2468,15 @@
     }
 
     &__img {
-      max-width: 273px;
+      max-width: 80%;
       margin-bottom: 37px;
 
       @include m.sm {
-        max-width: 523px;
+        max-width: 50%;
       }
 
       @include m.md {
+        max-width: 35%; 
         order: 2;
       }
     }

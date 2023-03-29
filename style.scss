@@ -109,7 +109,7 @@
       }
 
       @include m.lg {
-        max-width: 35%; 
+        max-width: 35%;
       }
     }
 
@@ -143,7 +143,7 @@
     &__txt {
       @include m.txt;
       display: flex;
-      align-items: center; 
+      align-items: center;
     }
 
     &__btn {
@@ -152,7 +152,10 @@
 
     &__quote {
       display: flex;
-      flex-wrap: wrap;
+
+      @include m.md {
+        flex-wrap: wrap;
+      }
 
       &__avatar {
         width: 48px;
@@ -182,9 +185,13 @@
     }
 
     .block-txt {
+      margin-top: 30px;
+      padding-bottom: 32px;
+
       @include m.md {
         order: 1;
         margin-right: 47px;
+        margin-top: 0;
         max-width: 513px;
       }
 
@@ -391,8 +398,8 @@
 
     &__numbers {
       border-bottom: 1px solid v.$lightorange;
-      padding-bottom: 71px;
-      margin: 77px 0 63px;
+      padding-bottom: 60px;
+      margin: 72px 0 63px;
 
       @include m.md {
         margin: auto;
@@ -428,8 +435,14 @@
     }
 
     &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
       &__item {
         @include m.txt-shadow;
+        display: flex;
+        align-items: center;
 
         &::before {
           content: "";
@@ -499,8 +512,8 @@
 
     &__quote {
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      /* flex-wrap: wrap;
+      flex-direction: column; */
       margin-bottom: 20px;
 
       @include m.md {
@@ -634,6 +647,7 @@
         &__quote {
           display: flex;
           flex-wrap: nowrap;
+          align-items: center;
           margin-top: 31px;
 
           &__avatar {
@@ -668,10 +682,11 @@
         border-radius: 6px 6px 0px 0px;
         padding: 44px 28px 47px;
         max-width: 329px;
-        width: 100%;
+        
 
         @include m.sm {
           max-width: 529px;
+          width: 100%;
         }
 
         @include m.md {
@@ -742,10 +757,11 @@
         box-shadow: v.$shadow-cell;
         padding: 33px 28px 48px;
         max-width: 329px;
-        width: 100%;
+        
 
         @include m.sm {
           max-width: 529px;
+          width: 100%;
         }
 
         @include m.md {
@@ -892,6 +908,7 @@
           width: 120px;
           height: 80px;
           margin-bottom: 26px;
+          border-radius: 6px;
         }
 
         &__txt--black {
@@ -996,18 +1013,18 @@
         flex-wrap: wrap;
 
         @include m.md {
-          border-bottom: none; 
-          padding-bottom: 0; 
+          border-bottom: none;
+          padding-bottom: 0;
         }
 
         .big-img {
           @include m.md {
             display: flex;
             border-bottom: 1px solid v.$lightorange;
-            padding-bottom: 68px; 
+            padding-bottom: 68px;
 
             .section-light__box-blog__post {
-              margin-bottom: 0; 
+              margin-bottom: 0;
             }
 
             .section-light__box-blog__post__img {
@@ -1026,18 +1043,17 @@
         }
 
         .small-img {
-
           @include m.md {
             display: flex;
-            flex-wrap: wrap; 
-            padding-top: 79px; 
+            flex-wrap: wrap;
+            padding-top: 79px;
 
             .section-light__box-blog__post {
-              max-width: 30%; 
+              max-width: 30%;
             }
 
             .section-light__box-blog__post__img {
-              max-width: 80%; 
+              max-width: 80%;
             }
 
             .section-light__box-blog__post__title--black {
@@ -1046,10 +1062,10 @@
           }
 
           @include m.lg {
-            gap: 30px; 
+            gap: 30px;
 
             .section-light__box-blog__post__img {
-              max-width: 95%; 
+              max-width: 95%;
             }
           }
         }
@@ -1089,10 +1105,6 @@
 
         @include m.md {
           width: 320px;
-        }
-
-        @include m.lg {
-          width: 374px;
         }
 
         &:nth-child(4) {
@@ -1252,13 +1264,21 @@
     &.service {
       padding-bottom: 124px;
 
+      .section-light__img {
+        margin-bottom: 6px;
+      }
+
       @include m.md {
         padding-bottom: 141px;
+
+        .section-light__img {
+          margin-bottom: 0;
+        }
       }
     }
 
     &.agency {
-      padding-bottom: 283px;
+      padding-bottom: 206px;
 
       @include m.md {
         padding-bottom: 128px;
@@ -1278,13 +1298,12 @@
     }
 
     &.testominals {
-      justify-content: start;
-      align-items: start;
+      justify-content: center;
+      align-items: center;
       padding: 92px 23px 124px;
 
-      @include m.sm {
-        justify-content: center;
-        align-items: center;
+      .section-light__title {
+        text-align: center;
       }
 
       @include m.md {
@@ -1388,7 +1407,7 @@
     }
 
     &.newsletter {
-      padding: 76px 23px 128px;
+      padding: 0 23px 128px;
 
       @include m.md {
         display: flex;
@@ -1414,7 +1433,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 60px 23px 64px; 
+        padding: 60px 23px 64px;
 
         .section-light__title {
           margin-right: 367px;
@@ -1422,7 +1441,7 @@
       }
 
       @include m.lg {
-        padding: 60px 135px 64px; 
+        padding: 60px 135px 64px;
       }
     }
 
@@ -1442,11 +1461,11 @@
       padding: 32px 23px 108px;
 
       @include m.md {
-        padding: 80px 23px 144px; 
+        padding: 80px 23px 144px;
       }
 
       @include m.lg {
-        padding: 80px 135px 144px; 
+        padding: 80px 135px 144px;
       }
     }
 
@@ -1475,7 +1494,7 @@
     }
 
     &.features {
-      padding-bottom: 112px;
+      padding: 128px 23px 112px;
 
       @include m.md {
         padding: 202px 23px 213px;
@@ -1525,8 +1544,13 @@
     }
 
     &.aboutus {
-      .section-light__title {
-        @include m.md {
+      .section-light__img {
+        margin-bottom: 16px;
+      }
+
+      @include m.md {
+        margin-bottom: 0px;
+        .section-light__title {
           @include m.title-big;
         }
       }
@@ -1600,6 +1624,8 @@
     }
 
     &.video {
+      padding: 0 23px 81px;
+
       @include m.md {
         padding: 127px 23px 215px;
       }
@@ -1626,7 +1652,9 @@
     }
 
     .order {
-      order: 2;
+      @include m.md {
+        order: 2;
+      }
     }
 
     .block-txt {
@@ -1706,10 +1734,10 @@
         flex-direction: unset;
         gap: 30px;
       }
-    }
+    } 
 
     &.banner {
-      padding: 0;
+      padding: 0 23px;
 
       @include m.md {
         padding: 0 60px;
@@ -1873,7 +1901,7 @@
     }
 
     &__box {
-      margin-bottom: 100px;
+      margin-bottom: 84px;
       display: block;
 
       @include m.md {
@@ -2031,26 +2059,26 @@
     }
 
     &__img {
-      max-width: 329px;
+      max-width: 90%;
 
       @include m.sm {
-        max-width: 529px;
+        max-width: 75%; 
       }
     }
 
     &__img-man {
-      max-width: 80%; 
+      max-width: 80%;
 
       @include m.sm {
-        max-width: 65%; 
+        max-width: 65%;
       }
 
       @include m.md {
-        max-width: 50%; 
+        max-width: 50%;
       }
 
       @include m.lg {
-        max-width: 40%; 
+        max-width: 40%;
       }
     }
 
@@ -2154,7 +2182,7 @@
     &.ourteam {
       justify-content: start;
       align-items: start;
-      padding: 116px 23px 35px;
+      padding: 0 23px 116px;
 
       @include m.sm {
         justify-content: center;
@@ -2221,12 +2249,12 @@
 
       @include m.md {
         padding-bottom: 345px;
-      }
 
-      .section-dark__title--small {
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 48px;
+        .section-dark__title--small {
+          font-weight: 800;
+          font-size: 40px;
+          line-height: 48px;
+        }
       }
     }
 
@@ -2333,7 +2361,7 @@
         .sofa {
           max-width: 470px;
         }
-
+ 
         .keyboard {
           max-width: 670px;
 
@@ -2408,22 +2436,21 @@
 
       &__caption {
         @include m.caption;
-        margin-bottom: 13px;
       }
 
       &__title {
-        @include m.title;
+        @include m.title-black;
         margin-bottom: 23px;
+        margin-top: 13px; 
 
         @include m.md {
-          @include m.title-black;
           max-width: 248px;
         }
       }
 
       &__btn {
         @include m.btn-orange;
-        max-width: 154px;
+        max-width: 154px; 
         margin-bottom: 29px;
       }
 
@@ -2476,7 +2503,7 @@
       }
 
       @include m.md {
-        max-width: 35%; 
+        max-width: 35%;
         order: 2;
       }
     }

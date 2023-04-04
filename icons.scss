@@ -105,7 +105,7 @@
 }
 .icon-oval:before {
   content: "\e912";
-  color: v.$orange;
+  color: v.$orange; 
 }
 .icon-path:before {
   content: "\e913";
@@ -145,6 +145,15 @@
   font-size: 6rem;
   position: absolute;
   left: 250;
+
+  @include m.sm {
+    left: 500; 
+  }
+
+  @include m.md {
+    left: 400;
+    top: -20;
+  }
 }
 .icon-shape:before {
   content: "\e91c";
@@ -166,6 +175,11 @@
 .icon-star-small:before {
   content: "\e920";
   color: v.$yellow;
+  font-size: 1rem; 
+
+  @include m.md {
+    font-size: 1.5rem; 
+  }
 }
 .icon-triangle:before {
   content: "\e921";

@@ -3,17 +3,18 @@
 @use "icons.scss";
 @use "reset.scss";
 @use "layout.scss";
+@use "slider.scss";  
 
 * {
   font-family: v.$epilogue;
   font-size: 16px;
 }
 
-.page {
+.page { 
   .header {
     @include m.header;
 
-    &__logo {
+    &__logo { 
       display: flex;
 
       &__img {
@@ -2088,6 +2089,14 @@
           width: 270px;
           background-size: cover;
           background-repeat: no-repeat;
+
+          @include m.md {
+            width: 240px; 
+          }
+
+          @include m.lg {
+            width: 270px; 
+          }
 
           &.azah {
             background-image: url("images/man-hat.png");

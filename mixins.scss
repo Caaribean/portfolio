@@ -1,4 +1,5 @@
 @use "variables.scss" as v;
+@use "functions.scss" as f;
 
 //
 //BREAKPOINTS
@@ -41,6 +42,13 @@
 
 //
 
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: f.calculateRem(16px); 
+}
+
+//
+
 @mixin header {
   background-color: v.$navyblue;
   display: flex;
@@ -56,7 +64,7 @@
 @mixin header-logo-txt {
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: f.calculateRem(24px);
   line-height: 32px;
   color: v.$white;
   display: flex;

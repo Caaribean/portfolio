@@ -3,14 +3,15 @@
 @use "icons.scss";
 @use "reset.scss";
 @use "layout.scss";
-@use "slider.scss";  
+@use "slider.scss"; 
+@use "functions.scss" as f; 
 
 * {
   font-family: v.$epilogue;
   font-size: 16px;
 }
 
-.page { 
+.page {  
   .header {
     @include m.header;
 
@@ -262,7 +263,7 @@
       }
 
       &__logo {
-        max-width: 147px;
+        max-width: 147px; 
         width: 100%;
       }
     }

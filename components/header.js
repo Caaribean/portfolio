@@ -8,7 +8,7 @@ class Header extends HTMLElement {
         <header class="header">
         <div class="header__logo">
           <img class="header__logo__img" src="./images/logo.png" />
-          <h2 class="header__logo__txt">Agency</h2>
+          <a class="header__logo__txt" href="main.html">Agency</h2>
         </div>
         <nav class="header__navmenu">
           <ul class="header__navmenu__list">

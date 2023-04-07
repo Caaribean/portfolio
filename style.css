@@ -471,9 +471,6 @@ table {
   font-size: 16px;
 }
 
-.page {
-  /* padding: 0 23px; */
-}
 .page .header {
   background-color: #28293E;
   display: flex;
@@ -502,6 +499,7 @@ table {
   color: #ffffff;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .page .header__navmenu {
   display: none;
@@ -3009,46 +3007,22 @@ table {
 .page .section-dark__container__person__img {
   border: 1px solid #3A3C56;
   border-radius: 6px;
-  max-width: 270px;
-  padding: 0 37px;
-  margin-bottom: 26px;
+  height: 272px;
+  width: 270px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-@media (min-width: 1152px) {
-  .page .section-dark__container__person__img {
-    height: 150px;
-    width: 150px;
-  }
+.page .section-dark__container__person__img.azah {
+  background-image: url("images/man-hat.png");
 }
-@media (min-width: 1440px) {
-  .page .section-dark__container__person__img {
-    height: 200px;
-    width: 200px;
-  }
+.page .section-dark__container__person__img.roelof {
+  background-image: url("images/man-belts.png");
 }
-@media (min-width: 1920px) {
-  .page .section-dark__container__person__img {
-    height: 300px;
-    width: 300px;
-  }
+.page .section-dark__container__person__img.leonardo {
+  background-image: url("images/woman-red.png");
 }
-.page .section-dark__container__person__img .avatar {
-  max-width: 196px;
-}
-@media (min-width: 1152px) {
-  .page .section-dark__container__person__img .avatar {
-    max-height: 150px;
-    height: 100%;
-  }
-}
-@media (min-width: 1440px) {
-  .page .section-dark__container__person__img .avatar {
-    max-height: 200px;
-  }
-}
-@media (min-width: 1920px) {
-  .page .section-dark__container__person__img .avatar {
-    max-height: 300px;
-  }
+.page .section-dark__container__person__img.izabella {
+  background-image: url("images/woman-black.png");
 }
 .page .section-dark__container__person__title--small {
   font-style: normal;
@@ -3648,6 +3622,11 @@ table {
 @media (min-width: 1440px) {
   .page .footer {
     padding: 92px 135px 30px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .footer {
+    padding: 200px 135px 30px;
   }
 }
 .page .footer__navfooter {

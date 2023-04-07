@@ -10,8 +10,6 @@
 }
 
 .page {
-  /* padding: 0 23px; */
-
   .header {
     @include m.header;
 
@@ -2081,44 +2079,30 @@
           gap: 50px;
         }
       }
+
       &__person {
         &__img {
           border: 1px solid v.$blue;
           border-radius: 6px;
-          max-width: 270px;
-          padding: 0 37px;
-          margin-bottom: 26px;
+          height: 272px;
+          width: 270px;
+          background-size: cover;
+          background-repeat: no-repeat;
 
-          @include m.md {
-            height: 150px;
-            width: 150px;
+          &.azah {
+            background-image: url("images/man-hat.png");
+          } 
+
+          &.roelof {
+            background-image: url("images/man-belts.png");
           }
 
-          @include m.lg {
-            height: 200px;
-            width: 200px;
+          &.leonardo {
+            background-image: url("images/woman-red.png");
           }
 
-          @include m.xl {
-            height: 300px;
-            width: 300px;
-          }
-
-          .avatar {
-            max-width: 196px;
-
-            @include m.md {
-              max-height: 150px;
-              height: 100%;
-            }
-
-            @include m.lg {
-              max-height: 200px;
-            }
-
-            @include m.xl {
-              max-height: 300px;
-            }
+          &.izabella {
+            background-image: url("images/woman-black.png");
           }
         }
 
@@ -2625,6 +2609,10 @@
 
     @include m.lg {
       padding: 92px 135px 30px;
+    }
+
+    @include m.xl {
+      padding: 200px 135px 30px;
     }
 
     &__navfooter {

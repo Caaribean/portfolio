@@ -42,13 +42,6 @@
 
 //
 
-@mixin fontSize($size) {
-  font-size: $size;
-  font-size: f.calculateRem(16px); 
-}
-
-//
-
 @mixin header {
   background-color: v.$navyblue;
   display: flex;
@@ -59,6 +52,12 @@
   @include lg {
     padding: 16px 135px;
   }
+}
+
+@mixin header-logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 14px;
 }
 
 @mixin header-logo-txt {
@@ -225,6 +224,475 @@
   color: v.$white;
 }
 
+@mixin number {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  color: v.$brown;
+}
+
+@mixin list-txt {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: v.$brown;
+  max-width: 257px;
+
+  @include sm {
+    max-width: 100%;
+  }
+}
+
+@mixin number-white {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  color: v.$white;
+}
+
+@mixin name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: v.$white;
+}
+
+@mixin name-small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: v.$shadow-white;
+}
+
+@mixin title-tag {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: v.$white;
+  text-transform: uppercase;
+}
+
+@mixin cell-white {
+  background-color: v.$white;
+  border: 1px solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  border-radius: 6px 6px 0px 0px;
+  padding: 48px 41px 46px 48px;
+
+  @include md {
+    border-radius: 6px 6px 0px 6px;
+    padding: 48px 48px 46px;
+  }
+}
+
+@mixin cell-orange {
+  border: 1px solid v.$lightorange;
+  border-radius: 0px 0px 6px 6px;
+  padding: 105px 41px 46px 48px;
+
+  @include md {
+    border-radius: 0px 6px 6px 0px;
+    padding: 105px 48px 46px;
+  }
+}
+
+@mixin cell-beige {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid v.$lightorange;
+  border-radius: 0px 0px 6px 6px;
+  padding: 48px 35px 52px 28px;
+
+  @include md {
+    padding: 48px 48px 52px 48px;
+    max-width: 391px;
+    width: 100%;
+  }
+}
+
+@mixin cell-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid v.$lightorange;
+  border-radius: 6px 6px 0px 0px;
+  padding: 32px 0 37px 28px;
+
+  @include md {
+    width: 321px;
+  }
+
+  @include lg {
+    width: 391px;
+  }
+}
+
+@mixin cell-number {
+  border: 1px solid v.$lightorange;
+  border-radius: 6px 6px 0px 0px;
+  padding: 48px 0 38px 48px;
+
+  @include md {
+    border-radius: 6px 0px 0px 0px;
+    padding: 45px 105px 38px 48px;
+  }
+
+  @include lg {
+    padding-right: 145px;
+  }
+}
+
+@mixin cell-dark {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid v.$blue;
+  border-radius: 6px;
+  padding: 41px 28px 36px;
+
+  @include md {
+    max-width: 370px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@mixin opinion {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid v.$lightorange;
+  border-radius: 6px;
+  padding: 49px 28px 48px;
+  max-width: 329px;
+
+  @include sm {
+    max-width: 529px;
+  }
+
+  @include lg {
+    max-width: 586px;
+    padding: 48px;
+  }
+}
+
+@mixin opinion-white {
+  background: v.$white;
+  border: 1px solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  border-radius: 6px 6px 0px 0px;
+  padding: 49px 28px 48px;
+  max-width: 329px;
+
+  @include sm {
+    max-width: 529px;
+  }
+
+  @include lg {
+    max-width: 586px;
+    padding: 48px;
+  }
+}
+
+@mixin offer-beige {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid v.$lightorange;
+  border-radius: 6px 6px 0px 0px;
+  padding: 44px 28px 47px;
+  max-width: 329px;
+
+  @include sm {
+    max-width: 529px;
+    width: 100%;
+  }
+
+  @include md {
+    max-width: 320px;
+  }
+
+  @include lg {
+    max-width: 391px;
+  }
+}
+
+@mixin offer-white {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$white;
+  border: 1px solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  padding: 33px 28px 48px;
+  max-width: 329px;
+
+  @include sm {
+    max-width: 529px;
+    width: 100%;
+  }
+
+  @include md {
+    max-width: 320px;
+  }
+
+  @include lg {
+    max-width: 391px;
+  }
+}
+
+@mixin tab-big {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$white;
+  border: 1px solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  border-radius: 6px 6px 0px 0px;
+  padding: 41px 28px 38px;
+  max-width: 329px;
+
+  @include sm {
+    max-width: 529px;
+  }
+}
+
+@mixin tab-normal {
+  border: 1px solid v.$lightorange;
+  max-width: 329px;
+  padding: 41px 28px 39px;
+
+  @include sm {
+    max-width: 529px;
+  }
+}
+
+@mixin tab-dark {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$white;
+  border: 1px solid v.$blue;
+  box-shadow: v.$shadow-tab;
+  border-radius: 6px 6px 0px 0px;
+  padding: 41px 28px 38px;
+  max-width: 329px;
+
+  @include sm {
+    max-width: 529px;
+  }
+}
+
+@mixin tab-dark-normal {
+  border: 1px solid v.$blue;
+  max-width: 329px;
+  padding: 41px 28px 39px;
+
+  @include sm {
+    max-width: 529px;
+  }
+}
+
+@mixin award {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid v.$lightorange;
+  padding-bottom: 20px;
+
+  @include md {
+    flex-direction: revert;
+    justify-content: space-between;
+  }
+}
+
+@mixin box-blog {
+  margin-top: 48px;
+
+  @include md {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid v.$lightorange;
+    padding-bottom: 52px;
+  }
+
+  @include xl {
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
+@mixin blog-post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 52px;
+}
+
+@mixin form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: v.$white;
+  border-radius: 6px;
+  max-width: 329px;
+  padding: 57px 28px 48px;
+  margin-bottom: 65px;
+
+  @include md {
+    position: absolute;
+    justify-content: start;
+    align-items: start;
+    padding: 57px 48px 48px;
+    z-index: 1;
+    bottom: -20px;
+    left: 50px;
+  }
+
+  @include lg {
+    bottom: -10px;
+    left: 200px;
+  }
+
+  @include xl {
+    bottom: 100px;
+    left: 200px;
+  }
+}
+
+@mixin map {
+  padding-bottom: 150%;
+  position: relative;
+
+  @include sm {
+    padding-bottom: 50%;
+  }
+}
+
+@mixin icon-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$beige;
+  border-bottom: 1px solid v.$lightorange;
+  border-top: 1px solid v.$lightorange;
+  padding: 32px 23px;
+
+  @include lg {
+    padding: 32px 135px;
+  }
+}
+
+@mixin box-banner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$beige;
+  border-radius: 6px;
+  max-width: 329px;
+  padding: 92px 53px 0 28px;
+
+  @include md {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 1000px;
+    width: 100%;
+    gap: 60px;
+    padding: 80 83px 0 100px;
+  }
+
+  @include lg {
+    max-width: 1170px;
+    gap: 100px;
+  }
+}
+
+@mixin banner-orange {
+  background: v.$orange;
+  border-radius: 6px;
+  padding: 32px 28px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include sm {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include md {
+    flex-direction: revert;
+    gap: 50px;
+  }
+
+  @include lg {
+    gap: 100px;
+  }
+}
+
+@mixin footer {
+  background-color: v.$beige;
+  padding: 121px 23px 30px;
+
+  @include md {
+    padding: 92px 23px 30px;
+  }
+
+  @include lg {
+    padding: 92px 135px 30px;
+  }
+
+  @include xl {
+    padding: 200px 135px 30px;
+  }
+}
+
+@mixin navfooter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid v.$lightorange;
+  padding-bottom: 64px;
+  margin-bottom: 43px;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+@mixin copyright {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+// BUTTONS
+
 @mixin btn-orange {
   background-color: v.$orange;
   border-radius: 6px;
@@ -277,27 +745,39 @@
   background-color: transparent;
 }
 
-@mixin number {
+@mixin btn-newsletter {
+  background: v.$white;
+  box-shadow: v.$shadow;
+  border-radius: 6px;
   font-style: normal;
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 80px;
-  letter-spacing: -2px;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
   color: v.$brown;
-}
+  padding: 18px 124px 16px;
+  border: none;
 
-@mixin list-txt {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: v.$brown;
-  max-width: 257px;
-
-  @include sm {
-    max-width: 100%;
+  @include md {
+    padding: 18px 45px 16px;
   }
 }
+
+@mixin btn-small {
+  background: v.$white;
+  border-radius: 19px;
+  padding: 5px 15px 1px;
+  max-width: 84px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: v.$brown;
+  border: none;
+}
+
+// INPUTS
 
 @mixin input {
   background: v.$white;
@@ -307,31 +787,6 @@
   font-size: 16px;
   line-height: 32px;
   color: v.$shadow-brown;
-}
-
-@mixin number-white {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 80px;
-  letter-spacing: -2px;
-  color: v.$white;
-}
-
-@mixin name {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  color: v.$white;
-}
-
-@mixin name-small {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: v.$shadow-white;
 }
 
 @mixin input-orange {
@@ -368,46 +823,239 @@
   font-size: 16px;
   line-height: 32px;
   color: v.$brown;
-  border: none; 
+  border: none;
 }
 
-@mixin btn-newsletter {
-  background: v.$white;
-  box-shadow: v.$shadow;
-  border-radius: 6px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  color: v.$brown;
-  padding: 18px 124px 16px;
-  border: none;
+// IMAGES
+
+@mixin img-main {
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include sm {
+    max-width: 70%;
+  }
 
   @include md {
-    padding: 18px 45px 16px;
+    max-width: 50%;
+    object-fit: contain;
+    order: 2;
+  }
+
+  @include lg {
+    max-width: 35%;
   }
 }
 
-@mixin btn-small {
-  background: v.$white;
-  border-radius: 19px;
-  padding: 5px 15px 1px;
-  max-width: 84px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: v.$brown;
-  border: none;
+@mixin img-light {
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include sm {
+    max-width: 70%;
+  }
+
+  @include md {
+    max-width: 50%;
+  }
+
+  @include lg {
+    max-width: 40%;
+  }
+
+  @include xl {
+    max-width: 35%;
+  }
 }
 
-@mixin title-tag {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
-  color: v.$white;
-  text-transform: uppercase;
+@mixin img-dark {
+  max-width: 90%;
+
+  @include sm {
+    max-width: 75%;
+  }
+}
+
+@mixin img-video {
+  margin: 0 auto;
+  width: 80%;
+
+  @include sm {
+    width: 70%;
+  }
+
+  @include md {
+    width: 50%;
+  }
+}
+
+@mixin img-blog {
+  max-width: 90%;
+  margin-bottom: 26px;
+
+  @include sm {
+    max-width: 75%;
+  }
+
+  @include md {
+    max-width: 80%;
+  }
+}
+
+@mixin img-map {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin img-small {
+  max-width: 156px;
+
+  @include md {
+    max-width: 35%;
+  }
+}
+
+@mixin img-scene {
+  position: relative;
+  height: 416px;
+  width: 470px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin img-person {
+  border: 1px solid v.$blue;
+  border-radius: 6px;
+  height: 272px;
+  width: 270px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include md {
+    width: 240px;
+  }
+
+  @include lg {
+    width: 270px;
+  }
+}
+
+@mixin img-man {
+  max-width: 80%;
+
+  @include sm {
+    max-width: 65%;
+  }
+
+  @include md {
+    max-width: 50%;
+  }
+
+  @include lg {
+    max-width: 40%;
+  }
+}
+
+@mixin img-woman {
+  margin: 0 auto;
+  max-width: 191px;
+}
+
+@mixin img-banner {
+  max-width: 351px;
+  width: 100%;
+
+  @include md {
+    max-width: 338px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@mixin img-banner-orange {
+  max-width: 80%;
+  margin-bottom: 37px;
+
+  @include sm {
+    max-width: 50%;
+  }
+
+  @include md {
+    max-width: 35%;
+    order: 2;
+  }
+}
+
+// ICONS, AVATARS
+
+@mixin avatar {
+  width: 48px;
+  height: 48px;
+}
+
+@mixin avatar-big {
+  width: 64px;
+  height: 64px;
+}
+
+@mixin logo {
+  max-width: 147px;
+  width: 100%;
+}
+
+@mixin icon {
+  width: 80px;
+  height: 80px;
+}
+
+@mixin icon-small {
+  width: 32px;
+  height: 32px;
+}
+
+@mixin icon-micro {
+  width: 12px;
+  height: 12px;
+}
+
+@mixin icon-banner {
+  width: 148px;
+  height: 148px;
+  position: absolute;
+  top: -75;
+
+  @include md {
+    left: 200;
+  }
+
+  @include xl {
+    left: 400;
+  }
+}
+
+@mixin icon-map {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@mixin award-img {
+  width: 120px;
+  height: 80px;
+  border-radius: 6px;
+  margin-bottom: 26px;
+}
+
+@mixin award-logo {
+  width: 38px;
+  height: 48px;
 }

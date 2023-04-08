@@ -493,6 +493,7 @@ table {
 * {
   font-family: "Epilogue", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 .page .header {
@@ -500,7 +501,7 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px 23px;
+  padding: 1rem 1.4375rem;
 }
 @media (min-width: 1440px) {
   .page .header {
@@ -674,6 +675,16 @@ table {
     margin: 24px 0;
   }
 }
+@media (min-width: 1440px) {
+  .page .section-main__title {
+    max-width: 513px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-main__title {
+    max-width: 100%;
+  }
+}
 .page .section-main__txt--light {
   font-style: normal;
   font-weight: 400;
@@ -826,6 +837,11 @@ table {
 @media (min-width: 1440px) {
   .page .section-logos__box {
     gap: 146px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-logos__box {
+    gap: 220px;
   }
 }
 .page .section-logos__box__logo {
@@ -2477,6 +2493,14 @@ table {
     padding: 80px 135px 144px;
   }
 }
+.page .section-light.services {
+  padding: 76px 23px 96px;
+}
+@media (min-width: 1440px) {
+  .page .section-light.services {
+    padding: 76px 135px 96px;
+  }
+}
 .page .section-light.list {
   padding: 72px 23px 84px;
 }
@@ -2682,29 +2706,84 @@ table {
   align-items: center;
   padding: 0 23px;
   background-color: #28293E;
-  /* &.testominals-dark {
-    justify-content: start;
-    align-items: start;
-    padding: 92px 23px 124px;
-
-    @include m.sm {
-      justify-content: center;
-      align-items: center;
-    }
-
-    @include m.md {
-      padding: 92px 23px 108px;
-    }
-
-    @include m.xl {
-      padding: 92px 135px 108px;
-    }
-  } */
 }
 @media (min-width: 1440px) {
   .page .section-dark {
     padding: 0 135px;
   }
+}
+.page .section-dark__box-opinions {
+  margin-bottom: 50px;
+}
+@media (min-width: 1152px) {
+  .page .section-dark__box-opinions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.page .section-dark__box-opinions__opinion--white {
+  background: #ffffff;
+  border: 1px solid #F3D1BF;
+  box-shadow: 0px 32px 64px rgba(57, 20, 0, 0.04);
+  border-radius: 6px 6px 0px 0px;
+  padding: 49px 28px 48px;
+  max-width: 329px;
+}
+@media (min-width: 768px) {
+  .page .section-dark__box-opinions__opinion--white {
+    max-width: 529px;
+  }
+}
+@media (min-width: 1440px) {
+  .page .section-dark__box-opinions__opinion--white {
+    max-width: 586px;
+    padding: 48px;
+  }
+}
+.page .section-dark__box-opinions__opinion--white__stars {
+  margin-bottom: 36px;
+  display: flex;
+  gap: 8px;
+}
+.page .section-dark__box-opinions__opinion--white__txt--shadow {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}
+.page .section-dark__box-opinions__opinion--white__quote {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 31px;
+}
+.page .section-dark__box-opinions__opinion--white__quote__avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 24px;
+}
+.page .section-dark__box-opinions__opinion--white__quote__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #391400;
+  max-width: 257px;
+  margin-bottom: 3px;
+}
+@media (min-width: 768px) {
+  .page .section-dark__box-opinions__opinion--white__quote__name {
+    max-width: 100%;
+  }
+}
+.page .section-dark__box-opinions__opinion--white__quote__name--small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #391400;
 }
 .page .section-dark__input {
   background: #ffffff;
@@ -3007,7 +3086,7 @@ table {
 }
 @media (min-width: 1152px) and (min-width: 1920px) {
   .page .section-dark__container {
-    gap: 50px;
+    gap: 120px;
   }
 }
 .page .section-dark__container__person__img {
@@ -3026,6 +3105,11 @@ table {
 @media (min-width: 1440px) {
   .page .section-dark__container__person__img {
     width: 270px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-dark__container__person__img {
+    width: 290px;
   }
 }
 .page .section-dark__container__person__img.azah {
@@ -3295,6 +3379,27 @@ table {
     font-weight: 800;
     font-size: 40px;
     line-height: 48px;
+  }
+}
+.page .section-dark.testominals-dark {
+  justify-content: start;
+  align-items: start;
+  padding: 92px 23px 124px;
+}
+@media (min-width: 768px) {
+  .page .section-dark.testominals-dark {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1152px) {
+  .page .section-dark.testominals-dark {
+    padding: 92px 23px 108px;
+  }
+}
+@media (min-width: 1920px) {
+  .page .section-dark.testominals-dark {
+    padding: 92px 135px 108px;
   }
 }
 .page .section-dark.faq {

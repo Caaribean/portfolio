@@ -47,24 +47,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px 23px;
+  padding: f.calculateRem(16px) f.calculateRem(23px);
 
   @include lg {
-    padding: 16px 135px;
+    padding: f.calculateRem(16px) f.calculateRem(135px);
   }
 }
 
 @mixin header-logo {
-  width: 48px;
-  height: 48px;
-  margin-right: 14px;
+  width: f.calculateRem(48px);
+  height: f.calculateRem(48px);
+  margin-right: f.calculateRem(14px);
 }
 
 @mixin header-logo-txt {
   font-style: normal;
   font-weight: 700;
   font-size: f.calculateRem(24px);
-  line-height: 32px;
+  line-height: f.calculateRem(32px);
   color: v.$white;
   display: flex;
   align-items: center;
@@ -941,6 +941,10 @@
 
   @include lg {
     width: 270px;
+  }
+
+  @include xl {
+    width: 290px; 
   }
 }
 

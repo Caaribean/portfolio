@@ -3,14 +3,17 @@
 @use "icons.scss";
 @use "reset.scss";
 @use "layout.scss";
+@use "slider.scss";
+@use "functions.scss" as f;
 
 * {
-  font-family: v.$epilogue;
+  font-family: v.$epilogue; 
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 .page {
-  /* padding: 0 23px; */
+  // HEADER  
 
   .header {
     @include m.header;
@@ -19,9 +22,7 @@
       display: flex;
 
       &__img {
-        width: 48px;
-        height: 48px;
-        margin-right: 14px;
+        @include m.header-logo;
       }
       &__txt {
         @include m.header-logo-txt;
@@ -36,13 +37,21 @@
 
         &__list {
           display: flex;
-          gap: 100px;
+          gap: f.calculateRem(100px);
+
+          @include m.xl {
+            gap: f.calculateRem(150px);
+          }
 
           &__txt {
             @include m.txt;
             text-decoration: none;
           }
         }
+      }
+
+      @include m.xl {
+        margin-right: f.calculateRem(350px);
       }
     }
 
@@ -68,8 +77,7 @@
         display: none;
       }
       &__img {
-        width: 48px;
-        height: 48px;
+        @include m.avatar;
       }
     }
   }
@@ -79,10 +87,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 0 23px;
+    padding: 0 f.calculateRem(23px);
 
     @include m.sm {
-      padding: 114px 23px 56px;
+      padding: f.calculateRem(114px) f.calculateRem(23px) f.calculateRem(56px);
     }
 
     @include m.md {
@@ -91,26 +99,11 @@
     }
 
     @include m.lg {
-      padding: 114px 135px 56px;
+      padding: f.calculateRem(114px) f.calculateRem(135px) f.calculateRem(56px);
     }
 
     &__img {
-      max-width: 80%;
-      margin: 0 auto;
-
-      @include m.sm {
-        max-width: 70%;
-      }
-
-      @include m.md {
-        max-width: 50%;
-        object-fit: contain;
-        order: 2;
-      }
-
-      @include m.lg {
-        max-width: 35%;
-      }
+      @include m.img-main;
     }
 
     &__caption {
@@ -119,21 +112,29 @@
 
     &__title {
       @include m.title-main;
-      margin: 20px 0 12px;
-      max-width: 329px;
+      margin: f.calculateRem(20px) f.calculateRem(0px) f.calculateRem(12px);
+      max-width: f.calculateRem(329px);
 
       @include m.sm {
         max-width: 100%;
       }
 
       @include m.md {
-        margin: 24px 0;
+        margin: f.calculateRem(24px) f.calculateRem(0px);
+      }
+
+      @include m.lg {
+        max-width: f.calculateRem(513px);
+      }
+
+      @include m.xl {
+        max-width: 100%;
       }
     }
 
     &__txt--light {
       @include m.txt-light;
-      max-width: 329px;
+      max-width: f.calculateRem(329px);
 
       @include m.sm {
         max-width: 100%;
@@ -158,15 +159,14 @@
       }
 
       &__avatar {
-        width: 48px;
-        height: 48px;
-        margin-right: 16px;
+        @include m.avatar;
+        margin-right: f.calculateRem(16px);
       }
 
       &__txt--light {
         @include m.txt-light;
-        margin-bottom: 4px;
-        max-width: 265px;
+        margin-bottom: f.calculateRem(4px);
+        max-width: f.calculateRem(265px);
 
         @include m.sm {
           max-width: 100%;
@@ -184,43 +184,23 @@
       }
     }
 
-    .block-txt {
-      margin-top: 30px;
-      padding-bottom: 32px;
-
-      @include m.md {
-        order: 1;
-        margin-right: 47px;
-        margin-top: 0;
-        max-width: 513px;
-      }
-
-      @include m.lg {
-        margin-right: 87px;
-      }
-
-      @include m.xl {
-        max-width: 50%;
-      }
-    }
-
     &.main-box {
       text-align: center;
       justify-content: center;
       align-items: center;
-      padding: 80px 23px 87px;
+      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(87px);
 
       @include m.md {
-        padding: 104px 23px 66px;
         flex-direction: column;
+        padding: f.calculateRem(104px) f.calculateRem(23px) f.calculateRem(66px);
 
         .section-main__txt--light {
-          max-width: 570px;
+          max-width: f.calculateRem(570px);
         }
       }
 
       @include m.lg {
-        padding: 104px 135px 66px;
+        padding: f.calculateRem(104px) f.calculateRem(135px) f.calculateRem(66px);
       }
 
       @include m.xl {
@@ -230,18 +210,38 @@
       }
     }
 
+    .block-txt {
+      margin-top: f.calculateRem(30px);
+      padding-bottom: f.calculateRem(32px);
+
+      @include m.md {
+        order: 1;
+        margin-right: f.calculateRem(47px);
+        margin-top: 0;
+        max-width: f.calculateRem(513px);
+      }
+
+      @include m.lg {
+        margin-right: f.calculateRem(87px);
+      }
+
+      @include m.xl {
+        max-width: 50%;
+      }
+    }
+
     .btn-box {
       display: flex;
-      gap: 46px;
-      margin: 16px 0 44px;
+      gap: f.calculateRem(46px);
+      margin: f.calculateRem(16px) f.calculateRem(0px) f.calculateRem(44px);
 
       @include m.sm {
-        gap: 380px;
+        gap: f.calculateRem(380px);
       }
 
       @include m.md {
-        gap: 46px;
-        margin: 34px 0 112px;
+        gap: f.calculateRem(46px);
+        margin: f.calculateRem(34px) f.calculateRem(0px) f.calculateRem(112px);
       }
     }
   }
@@ -252,97 +252,72 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 41px;
+      gap: f.calculateRem(41px);
 
       @include m.md {
-        gap: 80px;
+        gap: f.calculateRem(80px);
       }
 
       @include m.lg {
-        gap: 146px;
+        gap: f.calculateRem(146px);
+      }
+
+      @include m.xl {
+        gap: f.calculateRem(220px);
       }
 
       &__logo {
-        max-width: 147px;
-        width: 100%;
+        @include m.logo;
       }
     }
 
     &.dark {
       background-color: v.$navyblue;
-      padding: 0 49px 130px 30px;
+      padding: f.calculateRem(0px) f.calculateRem(49px) f.calculateRem(130px) f.calculateRem(30px);
     }
 
     &.light {
       background-color: v.$beige;
-      padding: 47px 23px 71px;
+      padding: f.calculateRem(47px) f.calculateRem(23px) f.calculateRem(71px);
 
       @include m.md {
-        padding: 73px 23px 101px;
-      }
-
-      @include m.lg {
-        padding: 73px 23px 101px;
+        padding: f.calculateRem(73px) f.calculateRem(23px) f.calculateRem(101px);
       }
 
       @include m.xl {
-        padding: 73px 135px 101px;
+        padding: f.calculateRem(73px) f.calculateRem(135px) f.calculateRem(101px);
       }
 
       .section-logos__box {
-        border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 50px;
+        border-bottom: f.calculateRem(1px) solid v.$lightorange;
+        padding-bottom: f.calculateRem(50px);
 
         @include m.md {
-          padding-bottom: 72px;
+          padding-bottom: f.calculateRem(72px);
         }
       }
     }
   }
 
+  // SECTION WITH LIGHT BACKGROUND
+
   .section-light {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 0 23px;
+    padding: f.calculateRem(0px) f.calculateRem(23px);
     background-color: v.$beige;
 
     @include m.lg {
-      padding: 0 135px;
+      padding: f.calculateRem(0px) f.calculateRem(135px);
     }
 
     &__img {
-      max-width: 80%;
-      margin: 0 auto;
-
-      @include m.sm {
-        max-width: 70%;
-      }
-
-      @include m.md {
-        max-width: 50%;
-      }
-
-      @include m.lg {
-        max-width: 40%;
-      }
-
-      @include m.lg {
-        max-width: 35%;
-      }
+      @include m.img-light;
     }
 
     &__img-video {
-      margin: 0 auto;
-      width: 80%;
-
-      @include m.sm {
-        width: 70%;
-      }
-
-      @include m.md {
-        width: 50%;
-      }
+      @include m.img-video;
     }
 
     &__caption {
@@ -375,16 +350,16 @@
 
     &__input-newsletter {
       @include m.input-newsletter;
-      margin-top: 35px;
-      margin-bottom: 16px;
+      margin-top: f.calculateRem(35px);
+      margin-bottom: f.calculateRem(16px);
 
       @include m.sm {
         max-width: 80%;
       }
 
       @include m.md {
-        margin: auto 30px auto auto;
-        width: 370px;
+        margin: auto f.calculateRem(30px) auto auto;
+        width: f.calculateRem(370px);
       }
     }
 
@@ -397,9 +372,9 @@
     }
 
     &__numbers {
-      border-bottom: 1px solid v.$lightorange;
-      padding-bottom: 60px;
-      margin: 72px 0 63px;
+      border-bottom: f.calculateRem(1px) solid v.$lightorange;
+      padding-bottom: f.calculateRem(60px);
+      margin: f.calculateRem(72px) f.calculateRem(0px) f.calculateRem(63px);
 
       @include m.md {
         margin: auto;
@@ -413,7 +388,7 @@
         justify-content: space-evenly;
 
         @include m.md {
-          gap: 30px;
+          gap: f.calculateRem(30px);
           justify-content: space-between;
         }
 
@@ -430,14 +405,14 @@
       &.services {
         border-bottom: none;
         padding-bottom: 0;
-        margin: 77px 0 103px;
+        margin: f.calculateRem(77px) f.calculateRem(0px) f.calculateRem(103px);
       }
     }
 
     &__list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: f.calculateRem(16px);
 
       &__item {
         @include m.txt-shadow;
@@ -446,13 +421,13 @@
 
         &::before {
           content: "";
-          width: 32px;
-          height: 32px;
+          width: f.calculateRem(32px);
+          height: f.calculateRem(32px);
           background-image: url("./images/check-orange.png");
           background-size: contain;
           background-repeat: no-repeat;
           display: inline-block;
-          margin-right: 16px;
+          margin-right: f.calculateRem(16px);
         }
       }
     }
@@ -463,26 +438,16 @@
       }
 
       &__cell--white {
-        background: v.$white;
-        border: 1px solid v.$lightorange;
-        box-shadow: v.$shadow-cell;
-        border-radius: 6px 6px 0px 0px;
-        padding: 48px 41px 46px 48px;
-
-        @include m.md {
-          border-radius: 6px 6px 0px 6px;
-          padding: 48px 48px 46px;
-        }
+        @include m.cell-white;
 
         &__icon {
-          width: 80px;
-          height: 80px;
+          @include m.icon;
         }
 
         &__title {
           @include m.list-txt;
-          margin-top: 41px;
-          margin-bottom: 19px;
+          margin-top: f.calculateRem(41px);
+          margin-bottom: f.calculateRem(19px);
         }
 
         &__txt {
@@ -491,14 +456,7 @@
       }
 
       &__cell {
-        border: 1px solid v.$lightorange;
-        border-radius: 0px 0px 6px 6px;
-        padding: 105px 41px 46px 48px;
-
-        @include m.md {
-          border-radius: 0px 6px 6px 0px;
-          padding: 105px 48px 46px;
-        }
+        @include m.cell-orange;
 
         &__title {
           @include m.list-txt;
@@ -512,9 +470,7 @@
 
     &__quote {
       display: flex;
-      /* flex-wrap: wrap;
-      flex-direction: column; */
-      margin-bottom: 20px;
+      margin-bottom: f.calculateRem(20px);
 
       @include m.md {
         flex-wrap: nowrap;
@@ -525,9 +481,8 @@
       }
 
       &__avatar {
-        width: 64px;
-        height: 64px;
-        margin-right: 20px;
+        @include m.avatar-big;
+        margin-right: f.calculateRem(20px);
       }
 
       &__txt--quote {
@@ -554,33 +509,21 @@
       }
 
       &__cell {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        border: 1px solid v.$lightorange;
-        border-radius: 0px 0px 6px 6px;
-        padding: 48px 35px 52px 28px;
-
-        @include m.md {
-          padding: 48px 48px 52px 48px;
-          max-width: 391px;
-          width: 100%;
-        }
+        @include m.cell-beige;
 
         &__icon {
-          width: 80px;
-          height: 80px;
-          margin-bottom: 41px;
+          @include m.icon;
+          margin-bottom: f.calculateRem(41px);
         }
 
         &__title {
           @include m.list-txt;
-          margin-bottom: 19px;
+          margin-bottom: f.calculateRem(19px);
         }
 
         &__txt {
           @include m.txt-shadow;
-          margin-bottom: 26px;
+          margin-bottom: f.calculateRem(26px);
         }
 
         &__txt--small {
@@ -590,7 +533,7 @@
     }
 
     &__box-opinions {
-      margin-bottom: 50px;
+      margin-bottom: f.calculateRem(50px);
 
       @include m.md {
         display: flex;
@@ -599,45 +542,16 @@
       }
 
       &__opinion--white {
-        background: v.$white;
-        border: 1px solid v.$lightorange;
-        box-shadow: v.$shadow-cell;
-        border-radius: 6px 6px 0px 0px;
-        padding: 49px 28px 48px;
-        max-width: 329px;
-
-        @include m.sm {
-          max-width: 529px;
-        }
-
-        @include m.lg {
-          max-width: 586px;
-          padding: 48px;
-        }
+        @include m.opinion-white;
       }
 
       &__opinion {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        border: 1px solid v.$lightorange;
-        border-radius: 6px;
-        padding: 49px 28px 48px;
-        max-width: 329px;
-
-        @include m.sm {
-          max-width: 529px;
-        }
-
-        @include m.lg {
-          max-width: 586px;
-          padding: 48px;
-        }
+        @include m.opinion;
 
         &__stars {
-          margin-bottom: 36px;
+          margin-bottom: f.calculateRem(36px);
           display: flex;
-          gap: 8px;
+          gap: f.calculateRem(8px);
         }
 
         &__txt--shadow {
@@ -648,16 +562,15 @@
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
-          margin-top: 31px;
+          margin-top: f.calculateRem(31px);
 
           &__avatar {
-            width: 80px;
-            height: 80px;
-            margin-right: 24px;
+            @include m.icon;
+            margin-right: f.calculateRem(24px);
           }
           &__name {
             @include m.list-txt;
-            margin-bottom: 3px;
+            margin-bottom: f.calculateRem(3px);
           }
 
           &__name--small {
@@ -675,41 +588,21 @@
       }
 
       &__beige {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        border: 1px solid v.$lightorange;
-        border-radius: 6px 6px 0px 0px;
-        padding: 44px 28px 47px;
-        max-width: 329px;
-        
-
-        @include m.sm {
-          max-width: 529px;
-          width: 100%;
-        }
-
-        @include m.md {
-          max-width: 320px;
-        }
-
-        @include m.lg {
-          max-width: 391px;
-        }
+        @include m.offer-beige;
 
         &__caption {
           @include m.caption;
-          margin-bottom: 17px;
+          margin-bottom: f.calculateRem(17px);
         }
 
         &__title {
           @include m.title;
-          margin-bottom: 15px;
+          margin-bottom: f.calculateRem(15px);
         }
 
         &__txt--shadow {
           @include m.txt-shadow;
-          margin-bottom: 27px;
+          margin-bottom: f.calculateRem(27px);
         }
 
         &__plus {
@@ -717,13 +610,13 @@
 
           &::before {
             content: "";
-            width: 16px;
-            height: 16px;
+            width: f.calculateRem(16px);
+            height: f.calculateRem(16px);
             background-image: url("./images/icon-plus.png");
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
-            margin-right: 16px;
+            margin-right: f.calculateRem(16px);
           }
         }
 
@@ -732,59 +625,38 @@
 
           &::before {
             content: "";
-            width: 16px;
-            height: 16px;
+            width: f.calculateRem(16px);
+            height: f.calculateRem(16px);
             background-image: url("./images/icon-minus.png");
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
-            margin-right: 16px;
+            margin-right: f.calculateRem(16px);
           }
         }
 
         &__btn--white {
           @include m.btn-white;
-          margin-top: 36px;
+          margin-top: f.calculateRem(36px);
         }
       }
 
       &__white {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        background: v.$white;
-        border: 1px solid v.$lightorange;
-        box-shadow: v.$shadow-cell;
-        padding: 33px 28px 48px;
-        max-width: 329px;
-        
-
-        @include m.sm {
-          max-width: 529px;
-          width: 100%;
-        }
-
-        @include m.md {
-          max-width: 320px;
-        }
-
-        @include m.lg {
-          max-width: 391px;
-        }
+        @include m.offer-white;
 
         &__caption {
           @include m.caption;
-          margin-bottom: 17px;
+          margin-bottom: f.calculateRem(17px);
         }
 
         &__title {
           @include m.title;
-          margin-bottom: 15px;
+          margin-bottom: f.calculateRem(15px);
         }
 
         &__txt--shadow {
           @include m.txt-shadow;
-          margin-bottom: 27px;
+          margin-bottom: f.calculateRem(27px);
         }
 
         &__plus {
@@ -792,13 +664,13 @@
 
           &::before {
             content: "";
-            width: 16px;
-            height: 16px;
+            width: f.calculateRem(16px);
+            height: f.calculateRem(16px);
             background-image: url("./images/icon-plus.png");
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
-            margin-right: 16px;
+            margin-right: f.calculateRem(16px);
           }
         }
 
@@ -807,53 +679,40 @@
 
           &::before {
             content: "";
-            width: 16px;
-            height: 16px;
+            width: f.calculateRem(16px);
+            height: f.calculateRem(16px);
             background-image: url("./images/icon-minus.png");
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
-            margin-right: 16px;
+            margin-right: f.calculateRem(16px);
           }
         }
 
         &__btn--orange {
           @include m.btn-orange;
-          max-width: 154px;
-          margin-top: 36px;
+          max-width: f.calculateRem(154px);
+          margin-top: f.calculateRem(36px);
         }
 
         &__input {
           @include m.input-orange;
-          margin-bottom: 24px;
+          margin-bottom: f.calculateRem(24px);
         }
       }
     }
 
     &__tabs {
       &__tab--big {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        background: v.$white;
-        border: 1px solid v.$lightorange;
-        box-shadow: v.$shadow-cell;
-        border-radius: 6px 6px 0px 0px;
-        padding: 41px 28px 38px;
-        max-width: 329px;
-
-        @include m.sm {
-          max-width: 529px;
-        }
+        @include m.tab-big;
 
         &__img {
-          width: 32px;
-          height: 32px;
+          @include m.icon-small;
         }
 
         &__title {
           @include m.list-txt;
-          margin-bottom: 19px;
+          margin-bottom: f.calculateRem(19px);
         }
 
         &__txt--shadow {
@@ -862,23 +721,16 @@
       }
 
       &__tab {
-        border: 1px solid v.$lightorange;
-        max-width: 329px;
-        padding: 41px 28px 39px;
-
-        @include m.sm {
-          max-width: 529px;
-        }
+        @include m.tab-normal;
 
         &__img {
-          width: 32px;
-          height: 32px;
+          @include m.icon-small;
         }
 
         &__title {
           @include m.list-txt;
           max-width: 0;
-          min-width: 219px;
+          min-width: f.calculateRem(219px);
         }
       }
 
@@ -891,34 +743,20 @@
 
     &__box-awards {
       &__award {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 20px;
-
-        @include m.md {
-          flex-direction: revert;
-          justify-content: space-between;
-        }
+        @include m.award;
 
         &__img {
-          width: 120px;
-          height: 80px;
-          margin-bottom: 26px;
-          border-radius: 6px;
+          @include m.award-img;
         }
 
         &__txt--black {
           @include m.txt-black;
-          margin-bottom: 2px;
+          margin-bottom: f.calculateRem(2px);
         }
 
         &__txt--shadow {
           @include m.txt-shadow;
-          margin-bottom: 16px;
+          margin-bottom: f.calculateRem(16px);
         }
 
         &__txt--small {
@@ -926,19 +764,18 @@
         }
 
         &__logo {
-          width: 38px;
-          height: 48px;
+          @include m.award-logo;
         }
       }
     }
 
     &__box-text {
       margin: 0 auto;
-      margin-top: 43px;
+      margin-top: f.calculateRem(43px);
 
       &__txt--shadow {
         @include m.txt-shadow;
-        margin-right: 8px;
+        margin-right: f.calculateRem(8px);
       }
 
       &__txt--small {
@@ -947,42 +784,13 @@
     }
 
     &__box-blog {
-      margin-top: 48px;
-
-      @include m.md {
-        display: flex;
-        gap: 30px;
-        border-bottom: 1px solid #f3d1bf;
-        padding-bottom: 52px;
-
-        @include m.xl {
-          align-items: center;
-          justify-content: center;
-          gap: 100px;
-        }
-      }
+      @include m.box-blog;
 
       &__post {
-        margin-bottom: 52px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+        @include m.blog-post;
 
         &__img {
-          max-width: 90%;
-          margin-bottom: 26px;
-
-          @include m.sm {
-            max-width: 75%;
-          }
-
-          @include m.md {
-            max-width: 80%;
-          }
-
-          /* @include m.xl {
-            max-width: 520px;
-          } */
+          @include m.img-blog;
         }
 
         &__txt--black {
@@ -991,7 +799,7 @@
 
         &__title--black {
           @include m.title-black;
-          margin: 15px 0;
+          margin: f.calculateRem(15px) 0;
         }
 
         &__txt--shadow {
@@ -1000,9 +808,9 @@
       }
 
       .border {
-        border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 52px;
-        margin-bottom: 0px;
+        border-bottom: f.calculateRem(1px) solid v.$lightorange;
+        padding-bottom: f.calculateRem(52px);
+        margin-bottom: f.calculateRem(0px);
 
         @include m.md {
           border-bottom: none;
@@ -1020,8 +828,8 @@
         .big-img {
           @include m.md {
             display: flex;
-            border-bottom: 1px solid v.$lightorange;
-            padding-bottom: 68px;
+            border-bottom: f.calculateRem(1px) solid v.$lightorange;
+            padding-bottom: f.calculateRem(68px);
 
             .section-light__box-blog__post {
               margin-bottom: 0;
@@ -1046,7 +854,7 @@
           @include m.md {
             display: flex;
             flex-wrap: wrap;
-            padding-top: 79px;
+            padding-top: f.calculateRem(79px);
 
             .section-light__box-blog__post {
               max-width: 30%;
@@ -1062,7 +870,7 @@
           }
 
           @include m.lg {
-            gap: 30px;
+            gap: f.calculateRem(30px);
 
             .section-light__box-blog__post__img {
               max-width: 95%;
@@ -1073,26 +881,11 @@
     }
 
     &__form {
-      background: v.$white;
-      border-radius: 6px;
-      max-width: 329px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 57px 28px 48px;
-      margin-bottom: 65px;
-
-      @include m.md {
-        padding: 57px 48px 48px;
-        justify-content: start;
-        align-items: start;
-      }
+      @include m.form;
 
       &__title--black {
         @include m.title-black;
-        margin-bottom: 23px;
+        margin-bottom: f.calculateRem(23px);
 
         @include m.md {
           text-align: left;
@@ -1101,52 +894,36 @@
 
       &__input {
         @include m.input-newsletter;
-        width: 273px;
+        width: f.calculateRem(273px);
 
         @include m.md {
-          width: 320px;
+          width: f.calculateRem(320px);
         }
 
         &:nth-child(4) {
-          padding-bottom: 55px;
+          padding-bottom: f.calculateRem(55px);
         }
       }
 
       &__btn--orange {
         @include m.btn-orange;
-        margin-left: 147px;
+        margin-left: f.calculateRem(147px);
 
         @include m.md {
-          margin-left: 185px;
+          margin-left: f.calculateRem(185px);
         }
       }
     }
 
     &__map {
-      padding-bottom: 150%;
-      position: relative;
-
-      @include m.sm {
-        padding-bottom: 50%;
-      }
+      @include m.map;
 
       &__img {
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
+        @include m.img-map;
       }
 
       &__icon {
-        width: 72px;
-        height: 72px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+        @include m.icon-map;
       }
     }
 
@@ -1157,25 +934,11 @@
         justify-content: center;
       }
       &__cell {
-        border: 1px solid v.$lightorange;
-        border-radius: 6px 6px 0px 0px;
-        padding: 32px 0 37px 28px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-        @include m.md {
-          width: 321px;
-        }
-
-        @include m.lg {
-          width: 391px;
-        }
+        @include m.cell-contact;
 
         &__icon {
-          width: 64px;
-          height: 64px;
-          margin-right: 24px;
+          @include m.avatar-big;
+          margin-right: f.calculateRem(24px);
         }
 
         &__caption {
@@ -1189,8 +952,8 @@
 
         .box {
           display: flex;
-          flex-wrap: no-wrap;
-          margin-bottom: 26px;
+          flex-wrap: nowrap;
+          margin-bottom: f.calculateRem(26px);
         }
       }
     }
@@ -1200,38 +963,24 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 17px;
-      margin-top: 17px;
+      gap: f.calculateRem(17px);
+      margin-top: f.calculateRem(17px);
 
       @include m.md {
         margin-top: 0;
       }
 
       &__img-small {
-        max-width: 156px;
-
-        @include m.md {
-          max-width: 35%;
-        }
+        @include m.img-small;
       }
     }
 
     &__icon-tab {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: v.$beige;
-      border-bottom: 1px solid v.$lightorange;
-      border-top: 1px solid v.$lightorange;
-      padding: 32px 23px;
-
-      @include m.lg {
-        padding: 32px 135px;
-      }
+      @include m.icon-tab;
 
       &__title {
         @include m.title;
-        max-width: 150px;
+        max-width: f.calculateRem(150px);
         word-wrap: break-word;
 
         @include m.md {
@@ -1241,18 +990,16 @@
       }
 
       &__icon--big {
-        width: 80px;
-        height: 80px;
-        margin-right: 33px;
+        @include m.icon;
+        margin-right: f.calculateRem(33px);
 
         @include m.md {
-          margin-right: 36px;
+          margin-right: f.calculateRem(36px);
         }
       }
 
       &__icon--small {
-        width: 32px;
-        height: 32px;
+        @include m.icon-small;
       }
 
       .icon-box {
@@ -1261,15 +1008,128 @@
       }
     }
 
-    &.service {
-      padding-bottom: 124px;
+    // ADDITIONAL CLASSES - SECTION LIGHT
 
+    &.nowrap {
+      @include m.md {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: unset;
+      }
+    }
+
+    &.aboutus {
       .section-light__img {
-        margin-bottom: 6px;
+        margin-bottom: f.calculateRem(16px);
       }
 
       @include m.md {
-        padding-bottom: 141px;
+        margin-bottom: f.calculateRem(0px);
+
+        .section-light__title {
+          @include m.title-big;
+        }
+      }
+    }
+
+    &.about {
+      padding: f.calculateRem(76px) f.calculateRem(23px) f.calculateRem(88px);
+
+      @include m.md {
+        padding: f.calculateRem(76px) f.calculateRem(23px) f.calculateRem(128px);
+      }
+
+      .section-light__txt--shadow {
+        max-width: 100%;
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(76px) f.calculateRem(135px) f.calculateRem(88px);
+
+        .section-light__title {
+          @include m.title-big;
+        }
+      }
+
+      @include m.xl {
+        padding: f.calculateRem(100px) f.calculateRem(135px) f.calculateRem(150px);
+      }
+    }
+
+    &.howwework {
+      @include m.md {
+        border-bottom: f.calculateRem(1px) solid v.$lightorange;
+        padding-bottom: f.calculateRem(108px);
+      }
+
+      @include m.xl {
+        gap: f.calculateRem(130px);
+      }
+    }
+
+    &.howwork {
+      padding-top: f.calculateRem(91px);
+
+      @include m.md {
+        justify-content: space-around;
+      }
+
+      .section-light__txt--shadow {
+        max-width: f.calculateRem(329px);
+
+        @include m.sm {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &.video {
+      padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(81px);
+
+      @include m.md {
+        padding: f.calculateRem(127px) f.calculateRem(23px) f.calculateRem(215px);
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(127px) f.calculateRem(135px) f.calculateRem(215px);
+      }
+    }
+
+    &.features {
+      padding: f.calculateRem(128px) f.calculateRem(23px) f.calculateRem(112px);
+
+      @include m.md {
+        padding: f.calculateRem(202px) f.calculateRem(23px) f.calculateRem(213px);
+        gap: f.calculateRem(130px);
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(202px) f.calculateRem(135px) f.calculateRem(213px);
+      }
+    }
+
+    &.features2 {
+      padding-bottom: f.calculateRem(81px);
+
+      @include m.md {
+        padding-bottom: f.calculateRem(144px);
+        gap: f.calculateRem(60px);
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(130px);
+      }
+    }
+
+    &.service {
+      padding-bottom: f.calculateRem(124px);
+
+      .section-light__img {
+        margin-bottom: f.calculateRem(6px);
+      }
+
+      @include m.md {
+        padding-bottom: f.calculateRem(141px);
 
         .section-light__img {
           margin-bottom: 0;
@@ -1278,13 +1138,13 @@
     }
 
     &.agency {
-      padding-bottom: 206px;
+      padding-bottom: f.calculateRem(206px);
 
       @include m.md {
-        padding-bottom: 128px;
+        padding-bottom: f.calculateRem(128px);
 
         .section-light__title {
-          max-width: 336px;
+          max-width: f.calculateRem(336px);
         }
       }
 
@@ -1300,23 +1160,23 @@
     &.testominals {
       justify-content: center;
       align-items: center;
-      padding: 92px 23px 124px;
+      padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(124px);
 
       .section-light__title {
         text-align: center;
       }
 
       @include m.md {
-        padding: 92px 23px 108px;
+        padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(108px);
       }
 
       @include m.xl {
-        padding: 92px 135px 108px;
+        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(108px);
       }
     }
 
     &.pricing {
-      padding-bottom: 92px;
+      padding-bottom: f.calculateRem(92px);
 
       @include m.sm {
         justify-content: center;
@@ -1326,11 +1186,11 @@
       @include m.md {
         justify-content: start;
         align-items: start;
-        padding-bottom: 156px;
+        padding-bottom: f.calculateRem(156px);
 
         .section-light__title {
           @include m.title-big;
-          max-width: 358px;
+          max-width: f.calculateRem(358px);
         }
       }
 
@@ -1342,130 +1202,6 @@
           @include m.title-big;
           max-width: max-content;
         }
-      }
-    }
-
-    &.awards {
-      padding: 92px 23px 96px;
-
-      @include m.md {
-        padding: 156px 23px 112px;
-      }
-
-      @include m.lg {
-        padding: 156px 135px 112px;
-      }
-
-      .section-light__title {
-        text-align: center;
-        border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 35px;
-        margin-bottom: 31px;
-      }
-    }
-
-    &.ourblog {
-      padding: 80px 23px 80px;
-
-      @include m.md {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      @include m.lg {
-        padding: 80px 135px 80px;
-      }
-
-      .section-light__box-blog__post__title--black {
-        max-width: 329px;
-
-        @include m.sm {
-          max-width: 100%;
-        }
-      }
-
-      .section-light__box-blog__post__img {
-        max-width: 80%;
-
-        @include m.sm {
-          max-width: 70%;
-        }
-      }
-    }
-
-    &.blog {
-      padding: 80px 23px 76px;
-
-      @include m.lg {
-        padding: 80px 135px 76px;
-      }
-
-      @include m.xl {
-        align-items: center;
-        justify-content: center;
-      }
-    }
-
-    &.newsletter {
-      padding: 0 23px 128px;
-
-      @include m.md {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .section-light__title {
-          margin-right: 367px;
-        }
-      }
-
-      @include m.lg {
-        padding: 76px 135px 128px;
-      }
-    }
-
-    &.newsletter-blog {
-      border-bottom: 1px solid v.$lightorange;
-      border-top: 1px solid v.$lightorange;
-      padding: 76px 23px 80px;
-
-      @include m.md {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 60px 23px 64px;
-
-        .section-light__title {
-          margin-right: 367px;
-        }
-      }
-
-      @include m.lg {
-        padding: 60px 135px 64px;
-      }
-    }
-
-    &.contact {
-      padding: 32px 23px 128px;
-
-      @include m.md {
-        padding: 80px 23px 130px;
-      }
-
-      @include m.lg {
-        padding: 80px 135px 130px;
-      }
-    }
-
-    &.contact-sub {
-      padding: 32px 23px 108px;
-
-      @include m.md {
-        padding: 80px 23px 144px;
-      }
-
-      @include m.lg {
-        padding: 80px 135px 144px;
       }
     }
 
@@ -1481,7 +1217,7 @@
       }
 
       .section-light__title {
-        max-width: 329px;
+        max-width: f.calculateRem(329px);
 
         @include m.sm {
           max-width: 100%;
@@ -1489,102 +1225,152 @@
       }
 
       @include m.lg {
-        gap: 130px;
+        gap: f.calculateRem(130px);
       }
     }
 
-    &.features {
-      padding: 128px 23px 112px;
+    &.awards {
+      padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(96px);
 
       @include m.md {
-        padding: 202px 23px 213px;
-        gap: 130px;
+        padding: f.calculateRem(156px) f.calculateRem(23px) f.calculateRem(112px);
       }
 
       @include m.lg {
-        padding: 202px 135px 213px;
+        padding: f.calculateRem(156px) f.calculateRem(135px) f.calculateRem(112px);
+      }
+
+      .section-light__title {
+        text-align: center;
+        border-bottom: f.calculateRem(1px) solid v.$lightorange;
+        padding-bottom: f.calculateRem(35px);
+        margin-bottom: f.calculateRem(31px);
       }
     }
 
-    &.features2 {
-      padding-bottom: 81px;
-
-      @include m.md {
-        padding-bottom: 144px;
-        gap: 60px;
-      }
+    &.blog {
+      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(76px);
 
       @include m.lg {
-        gap: 130px;
-      }
-    }
-
-    &.about {
-      padding: 76px 23px 88px;
-
-      @include m.md {
-        padding: 76px 23px 128px;
-      }
-
-      .section-light__txt--shadow {
-        max-width: 100%;
-      }
-
-      @include m.lg {
-        padding: 76px 135px 88px;
-
-        .section-light__title {
-          @include m.title-big;
-        }
+        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(76px);
       }
 
       @include m.xl {
-        padding: 100px 135px 150px;
+        align-items: center;
+        justify-content: center;
       }
     }
 
-    &.aboutus {
-      .section-light__img {
-        margin-bottom: 16px;
-      }
+    &.ourblog {
+      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(80px);
 
       @include m.md {
-        margin-bottom: 0px;
-        .section-light__title {
-          @include m.title-big;
-        }
-      }
-    }
-
-    &.howwework {
-      @include m.md {
-        border-bottom: 1px solid v.$lightorange;
-        padding-bottom: 108px;
+        display: flex;
+        flex-wrap: wrap;
       }
 
-      @include m.xl {
-        gap: 130px;
-      }
-    }
-
-    &.howwork {
-      padding-top: 91px;
-
-      @include m.md {
-        justify-content: space-around;
+      @include m.lg {
+        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(80px);
       }
 
-      .section-light__txt--shadow {
-        max-width: 329px;
+      .section-light__box-blog__post__title--black {
+        max-width: f.calculateRem(329px);
 
         @include m.sm {
           max-width: 100%;
         }
+      }
+
+      .section-light__box-blog__post__img {
+        max-width: 80%;
+
+        @include m.sm {
+          max-width: 70%;
+        }
+      }
+    }
+
+    &.newsletter {
+      padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(128px);
+
+      @include m.md {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .section-light__title {
+          margin-right: f.calculateRem(367px);
+        }
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(76px) f.calculateRem(135px) f.calculateRem(128px);
+      }
+    }
+
+    &.newsletter-blog {
+      border-bottom: f.calculateRem(1px) solid v.$lightorange;
+      border-top: f.calculateRem(1px) solid v.$lightorange;
+      padding: f.calculateRem(76px) f.calculateRem(23px) f.calculateRem(80px);
+
+      @include m.md {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: f.calculateRem(60px) f.calculateRem(23px) f.calculateRem(64px);
+
+        .section-light__title {
+          margin-right: f.calculateRem(367px);
+        }
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(60px) f.calculateRem(135px) f.calculateRem(64px);
+      }
+    }
+
+    &.googlemap {
+      position: relative;
+    }
+
+    &.map {
+      padding-top: f.calculateRem(64px);
+    }
+
+    &.contact {
+      padding: f.calculateRem(32px) f.calculateRem(23px) f.calculateRem(128px);
+
+      @include m.md {
+        padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(130px);
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(139px);
+      }
+    }
+
+    &.contact-sub {
+      padding: f.calculateRem(32px) f.calculateRem(23px) f.calculateRem(108px);
+
+      @include m.md {
+        padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(144px);
+      }
+
+      @include m.lg {
+        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(144px);
+      }
+    }
+
+    &.services {
+      padding: f.calculateRem(76px) f.calculateRem(23px) f.calculateRem(96px);
+
+      @include m.lg {
+        padding: f.calculateRem(76px) f.calculateRem(135px) f.calculateRem(96px);
       }
     }
 
     &.list {
-      padding: 72px 23px 84px;
+      padding: f.calculateRem(72px) f.calculateRem(23px) f.calculateRem(84px);
 
       @include m.md {
         max-width: 50%;
@@ -1592,8 +1378,8 @@
       }
 
       .section-light__title--black {
-        max-width: 329px;
-        margin-bottom: 28px;
+        max-width: f.calculateRem(329px);
+        margin-bottom: f.calculateRem(28px);
 
         @include m.sm {
           max-width: 100%;
@@ -1601,8 +1387,8 @@
       }
 
       .section-light__txt--shadow {
-        max-width: 329px;
-        margin-bottom: 42px;
+        max-width: f.calculateRem(329px);
+        margin-bottom: f.calculateRem(42px);
 
         @include m.sm {
           max-width: 100%;
@@ -1612,49 +1398,35 @@
       .section-light__txt--small {
         &::before {
           content: "";
-          width: 32px;
-          height: 32px;
+          width: f.calculateRem(32px);
+          height: f.calculateRem(32px);
           background-image: url("./images/check-orange.png");
           background-size: contain;
           background-repeat: no-repeat;
           display: inline-block;
-          margin-right: 16px;
+          margin-right: f.calculateRem(16px);
         }
       }
     }
 
-    &.video {
-      padding: 0 23px 81px;
+    &.banner {
+      padding: f.calculateRem(0px) f.calculateRem(23px);
 
       @include m.md {
-        padding: 127px 23px 215px;
+        padding: f.calculateRem(0px) f.calculateRem(60px);
       }
 
       @include m.lg {
-        padding: 127px 135px 215px;
+        padding: f.calculateRem(0px) f.calculateRem(135px);
+      }
+
+      @include m.xl {
+        padding: f.calculateRem(0px) f.calculateRem(135px) f.calculateRem(150px);
       }
     }
 
     &.empty {
-      padding-top: 79px;
-    }
-
-    &.map {
-      padding-top: 64px;
-    }
-
-    &.nowrap {
-      @include m.md {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: unset;
-      }
-    }
-
-    .order {
-      @include m.md {
-        order: 2;
-      }
+      padding-top: f.calculateRem(79px);
     }
 
     .block-txt {
@@ -1665,17 +1437,13 @@
       @include m.md {
         display: flex;
         flex-direction: column;
-        margin-left: 60px;
-        max-width: 470px;
+        margin-left: f.calculateRem(60px);
+        max-width: f.calculateRem(470px);
       }
 
       @include m.xl {
         max-width: 50%;
       }
-    }
-
-    .btn-center {
-      margin: 0 auto;
     }
 
     .small-box {
@@ -1684,7 +1452,7 @@
       align-items: center;
 
       @include m.md {
-        gap: 24px;
+        gap: f.calculateRem(24px);
         flex-direction: row;
       }
     }
@@ -1702,14 +1470,14 @@
       @include m.xl {
         align-items: center;
         justify-content: center;
-        gap: 1200px;
+        gap: f.calculateRem(1200px);
       }
     }
 
     .block {
       @include m.md {
         display: flex;
-        gap: 130px;
+        gap: f.calculateRem(130px);
       }
     }
 
@@ -1718,12 +1486,22 @@
       flex-direction: column;
 
       @include m.md {
-        max-width: 570px;
+        max-width: f.calculateRem(570px);
       }
 
       @include m.xl {
         max-width: 50%;
       }
+    }
+
+    .order {
+      @include m.md {
+        order: 2;
+      }
+    }
+
+    .btn-center {
+      margin: 0 auto;
     }
 
     .images {
@@ -1732,47 +1510,22 @@
 
       @include m.md {
         flex-direction: unset;
-        gap: 30px;
-      }
-    } 
-
-    &.banner {
-      padding: 0 23px;
-
-      @include m.md {
-        padding: 0 60px;
-      }
-
-      @include m.lg {
-        padding: 0 135px;
-      }
-
-      @include m.xl {
-        padding: 0 135px 150px;
+        gap: f.calculateRem(30px);
       }
     }
   }
+
+  // SECTION WITH BOXES
 
   .section-box {
     background-color: v.$beige;
 
     &__cell {
-      border: 1px solid v.$lightorange;
-      border-radius: 6px 6px 0px 0px;
-      padding: 48px 0 38px 48px;
-
-      @include m.md {
-        border-radius: 6px 0px 0px 0px;
-        padding: 45px 105px 38px 48px;
-      }
-
-      @include m.lg {
-        padding-right: 145px;
-      }
+      @include m.cell-number;
 
       &__number {
         @include m.title;
-        margin-bottom: 13px;
+        margin-bottom: f.calculateRem(13px);
       }
 
       &__txt--black {
@@ -1781,25 +1534,27 @@
     }
 
     &.box-main {
-      padding: 112px 23px 94px;
+      padding: f.calculateRem(112px) f.calculateRem(23px) f.calculateRem(94px);
 
       @include m.md {
         display: flex;
         justify-content: center;
-        padding: 161px 23px 140px;
+        padding: f.calculateRem(161px) f.calculateRem(23px) f.calculateRem(140px);
       }
     }
 
     &.box-aboutus {
-      padding: 0 23px 98px;
+      padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(98px);
 
       @include m.md {
         display: flex;
         justify-content: center;
-        padding: 0 23px 128px;
+        padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(128px);
       }
     }
   }
+
+  // SECTION WITH DARK BACKGROUND
 
   .section-dark {
     display: flex;
@@ -1807,24 +1562,60 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 23px;
+    padding: f.calculateRem(0px) f.calculateRem(23px);
     background-color: v.$navyblue;
 
     @include m.lg {
-      padding: 0 135px;
+      padding: f.calculateRem(0px) f.calculateRem(135px);
     }
 
-    /* &__img {
-      max-width: 80%;
+    &__box-opinions {
+      margin-bottom: f.calculateRem(50px);
 
       @include m.md {
-        max-width: 50%; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
-    } */
+
+      &__opinion--white {
+        @include m.opinion-white;
+
+        &__stars {
+          margin-bottom: f.calculateRem(36px);
+          display: flex;
+          gap: f.calculateRem(8px);
+        }
+
+        &__txt--shadow {
+          @include m.txt-shadow;
+        }
+
+        &__quote {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          margin-top: f.calculateRem(31px);
+
+          &__avatar {
+            @include m.icon;
+            margin-right: f.calculateRem(24px);
+          }
+          &__name {
+            @include m.list-txt;
+            margin-bottom: f.calculateRem(3px);
+          }
+
+          &__name--small {
+            @include m.txt-small;
+          }
+        }
+      }
+    }
 
     &__input {
       @include m.input;
-      padding: 9px 0 7px 16px;
+      padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(16px);
       width: 100%;
 
       @include m.sm {
@@ -1841,8 +1632,8 @@
 
       @include m.md {
         display: flex;
-        margin: 44px 0 68px;
-        gap: 60px;
+        margin: f.calculateRem(44px) f.calculateRem(0px) f.calculateRem(68px);
+        gap: f.calculateRem(60px);
       }
 
       &__txt--light {
@@ -1854,25 +1645,65 @@
       }
     }
 
-    &__btn--small {
-      @include m.btn-small;
-      position: absolute;
-      left: 50%;
-      transform: translate(-180%, 400%);
+    &__img-scene {
+      @include m.img-scene;
 
-      @include m.sm {
-        transform: translate(-280%, 700%);
+      &.design {
+        background-image: url("images/sofa.png");
+        @include m.xl {
+          width: f.calculateRem(570px);
+        }
       }
-    }
 
-    &__title--tag {
-      @include m.title-tag;
-      position: absolute;
-      left: 50%;
-      transform: translate(-155%, -230%);
+      &.keyboard {
+        background-image: url("images/keyboard.png");
 
-      @include m.sm {
-        transform: translate(-235%, -300%);
+        @include m.lg {
+          width: f.calculateRem(670px);
+        }
+
+        @include m.xl {
+          width: f.calculateRem(770px);
+        }
+      }
+
+      &.workmedia {
+        background-image: url("images/workmedia.png");
+
+        @include m.lg {
+          width: f.calculateRem(670px);
+        }
+
+        @include m.xl {
+          width: f.calculateRem(770px);
+        }
+      }
+
+      &.dddnone {
+        display: none;
+
+        @include m.md {
+          display: block;
+          background-image: url("images/dddone.png");
+        }
+
+        @include m.xl {
+          width: f.calculateRem(570px);
+        }
+      }
+
+      &__input {
+        @include m.input-oval;
+        position: absolute;
+        left: f.calculateRem(20px);
+        bottom: f.calculateRem(100px);
+      }
+
+      &__txt {
+        @include m.txt-white;
+        position: absolute;
+        left: f.calculateRem(20px);
+        bottom: f.calculateRem(30px);
       }
     }
 
@@ -1901,28 +1732,17 @@
     }
 
     &__box {
-      margin-bottom: 84px;
+      margin-bottom: f.calculateRem(84px);
       display: block;
 
       @include m.md {
         display: flex;
-        gap: 30px;
-        margin-bottom: 64px;
+        gap: f.calculateRem(30px);
+        margin-bottom: f.calculateRem(64px);
       }
 
       &__cell {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        border: 1px solid v.$blue;
-        border-radius: 6px;
-        padding: 41px 28px 36px;
-
-        @include m.md {
-          max-width: 370px;
-          width: 100%;
-          margin-bottom: 0;
-        }
+        @include m.cell-dark;
 
         &__date {
           display: flex;
@@ -1930,12 +1750,12 @@
 
           &__number {
             @include m.number-white;
-            margin-right: 12px;
+            margin-right: f.calculateRem(12px);
           }
 
           &__title--small {
             @include m.title-small;
-            max-width: 127px;
+            max-width: f.calculateRem(127px);
           }
         }
 
@@ -1953,8 +1773,8 @@
       }
 
       .border {
-        border-bottom: 1px solid v.$blue;
-        padding-bottom: 36px;
+        border-bottom: f.calculateRem(1px) solid v.$blue;
+        padding-bottom: f.calculateRem(36px);
       }
     }
 
@@ -1963,11 +1783,10 @@
 
       @include m.md {
         display: flex;
-        gap: 16px;
+        gap: f.calculateRem(16px);
 
         &__arrow {
-          height: 48px;
-          width: 48px;
+          @include m.avatar;
         }
       }
     }
@@ -1977,12 +1796,11 @@
 
       @include m.md {
         display: flex;
-        gap: 20px;
-        margin: 52px auto 180px;
+        gap: f.calculateRem(20px);
+        margin: f.calculateRem(52px) auto f.calculateRem(180px);
 
         &__icon {
-          width: 12px;
-          height: 12px;
+          @include m.icon-micro;
         }
       }
     }
@@ -1992,50 +1810,31 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 36px;
+        gap: f.calculateRem(36px);
 
         @include m.xl {
-          gap: 50px;
+          gap: f.calculateRem(120px);
         }
       }
+
       &__person {
         &__img {
-          border: 1px solid v.$blue;
-          border-radius: 6px;
-          max-width: 270px;
-          padding: 0 37px;
-          margin-bottom: 26px;
+          @include m.img-person;
 
-          @include m.md {
-            height: 150px;
-            width: 150px;
+          &.azah {
+            background-image: url("images/man-hat.png");
           }
 
-          @include m.lg {
-            height: 200px;
-            width: 200px;
+          &.roelof {
+            background-image: url("images/man-belts.png");
           }
 
-          @include m.xl {
-            height: 300px;
-            width: 300px;
+          &.leonardo {
+            background-image: url("images/woman-red.png");
           }
 
-          .avatar {
-            max-width: 196px;
-
-            @include m.md {
-              max-height: 150px;
-              height: 100%;
-            }
-
-            @include m.lg {
-              max-height: 200px;
-            }
-
-            @include m.xl {
-              max-height: 300px;
-            }
+          &.izabella {
+            background-image: url("images/woman-black.png");
           }
         }
 
@@ -2051,7 +1850,7 @@
 
     &__name {
       @include m.name;
-      margin-bottom: 6px;
+      margin-bottom: f.calculateRem(6px);
     }
 
     &__name--small {
@@ -2059,62 +1858,33 @@
     }
 
     &__img {
-      max-width: 90%;
-
-      @include m.sm {
-        max-width: 75%; 
-      }
+      @include m.img-dark;
     }
 
     &__img-man {
-      max-width: 80%;
-
-      @include m.sm {
-        max-width: 65%;
-      }
-
-      @include m.md {
-        max-width: 50%;
-      }
-
-      @include m.lg {
-        max-width: 40%;
-      }
+      @include m.img-man;
     }
 
     &__title--small {
       @include m.title-small;
-      max-width: 329px;
+      max-width: f.calculateRem(329px);
 
       @include m.sm {
-        max-width: 529px;
+        max-width: f.calculateRem(529px);
       }
     }
 
     &__tabs {
       &__tab--big {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        background: v.$white;
-        border: 1px solid v.$blue;
-        box-shadow: v.$shadow-tab;
-        border-radius: 6px 6px 0px 0px;
-        padding: 41px 28px 38px;
-        max-width: 329px;
-
-        @include m.sm {
-          max-width: 529px;
-        }
+        @include m.tab-dark;
 
         &__img {
-          width: 32px;
-          height: 32px;
+          @include m.icon-small;
         }
 
         &__title {
           @include m.list-txt;
-          margin-bottom: 19px;
+          margin-bottom: f.calculateRem(19px);
         }
 
         &__txt--shadow {
@@ -2123,23 +1893,16 @@
       }
 
       &__tab {
-        border: 1px solid v.$blue;
-        max-width: 329px;
-        padding: 41px 28px 39px;
-
-        @include m.sm {
-          max-width: 529px;
-        }
+        @include m.tab-dark-normal;
 
         &__img {
-          width: 32px;
-          height: 32px;
+          @include m.icon-small;
         }
 
         &__title--small {
           @include m.title-small;
           max-width: 0;
-          min-width: 219px;
+          min-width: f.calculateRem(219px);
 
           @include m.sm {
             max-width: 100%;
@@ -2149,26 +1912,36 @@
 
       .tabs-box {
         display: flex;
-        flex-wrap: no-wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
       }
     }
 
+    // ADDITIONAL CLASSES - SECTION DARK
+
+    &.nowrap {
+      @include m.md {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: unset;
+      }
+    }
+
     &.portfolio {
-      padding: 55px 23px 144px;
+      padding: f.calculateRem(55px) f.calculateRem(23px) f.calculateRem(144px);
 
       @include m.lg {
-        padding: 55px 135px 144px;
+        padding: f.calculateRem(55px) f.calculateRem(135px) f.calculateRem(144px);
       }
     }
 
     &.events {
-      padding-bottom: 124px;
+      padding-bottom: f.calculateRem(124px);
 
       @include m.md {
         padding-bottom: 0;
         .section-dark__title--white {
-          max-width: 426px;
+          max-width: f.calculateRem(426px);
         }
       }
 
@@ -2182,7 +1955,7 @@
     &.ourteam {
       justify-content: start;
       align-items: start;
-      padding: 0 23px 116px;
+      padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(116px);
 
       @include m.sm {
         justify-content: center;
@@ -2190,17 +1963,17 @@
       }
 
       @include m.md {
-        padding: 140px 23px 180px;
+        padding: f.calculateRem(140px) f.calculateRem(23px) f.calculateRem(180px);
         justify-content: start;
         align-items: start;
 
         .section-dark__title--left {
-          max-width: 531px;
+          max-width: f.calculateRem(531px);
         }
       }
 
       @include m.lg {
-        padding: 140px 135px 180px;
+        padding: f.calculateRem(140px) f.calculateRem(135px) f.calculateRem(180px);
       }
 
       @include m.xl {
@@ -2211,7 +1984,7 @@
     &.ourteam-aboutus {
       justify-content: start;
       align-items: start;
-      padding-top: 108px;
+      padding-top: f.calculateRem(108px);
 
       @include m.sm {
         justify-content: center;
@@ -2219,17 +1992,17 @@
       }
 
       @include m.md {
-        padding: 92px 23px 0px;
+        padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(0px);
         justify-content: start;
         align-items: start;
 
         .section-dark__title--left {
-          max-width: 531px;
+          max-width: f.calculateRem(531px);
         }
       }
 
       @include m.lg {
-        padding: 92px 135px 0px;
+        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(0px);
       }
 
       @include m.xl {
@@ -2240,7 +2013,7 @@
     &.founder {
       justify-content: start;
       align-items: start;
-      padding-bottom: 118px;
+      padding-bottom: f.calculateRem(118px);
 
       @include m.sm {
         justify-content: center;
@@ -2248,12 +2021,12 @@
       }
 
       @include m.md {
-        padding-bottom: 345px;
+        padding-bottom: f.calculateRem(345px);
 
         .section-dark__title--small {
           font-weight: 800;
-          font-size: 40px;
-          line-height: 48px;
+          font-size: f.calculateRem(40px);
+          line-height: f.calculateRem(48px);
         }
       }
     }
@@ -2261,7 +2034,7 @@
     &.testominals-dark {
       justify-content: start;
       align-items: start;
-      padding: 92px 23px 124px;
+      padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(124px);
 
       @include m.sm {
         justify-content: center;
@@ -2269,21 +2042,21 @@
       }
 
       @include m.md {
-        padding: 92px 23px 108px;
+        padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(108px);
       }
 
       @include m.xl {
-        padding: 92px 135px 108px;
+        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(108px);
       }
     }
-
+ 
     &.faq {
       justify-content: start;
       align-items: start;
-      padding: 112px 23px 118px;
+      padding: f.calculateRem(112px) f.calculateRem(23px) f.calculateRem(118px);
 
       .section-dark__title {
-        max-width: 329px;
+        max-width: f.calculateRem(329px);
       }
 
       @include m.sm {
@@ -2294,15 +2067,7 @@
 
     &.banner {
       @include m.sm {
-        padding-bottom: 60px;
-      }
-    }
-
-    &.nowrap {
-      @include m.md {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: unset;
+        padding-bottom: f.calculateRem(60px);
       }
     }
 
@@ -2314,27 +2079,27 @@
       @include m.md {
         display: flex;
         flex-direction: column;
-        margin-left: 60px;
-        max-width: 470px;
+        margin-left: f.calculateRem(60px);
+        max-width: f.calculateRem(470px);
       }
 
       @include m.lg {
-        margin-left: 130px;
+        margin-left: f.calculateRem(130px);
       }
     }
 
     .wrap-icons {
       @include m.md {
         display: flex;
-        gap: 400px;
+        gap: f.calculateRem(400px);
       }
 
       @include m.lg {
-        gap: 570px;
+        gap: f.calculateRem(570px);
       }
 
       @include m.xl {
-        gap: 870px;
+        gap: f.calculateRem(870px);
       }
     }
 
@@ -2344,7 +2109,7 @@
 
     .quote-box {
       position: relative;
-      margin-bottom: 29px;
+      margin-bottom: f.calculateRem(29px);
     }
 
     .box-images {
@@ -2352,40 +2117,21 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 32px;
-      margin-bottom: 48px;
+      flex-direction: column;
+      gap: f.calculateRem(32px);
+      margin-bottom: f.calculateRem(48px);
 
       @include m.md {
-        gap: 30px;
-
-        .sofa {
-          max-width: 470px;
-        }
- 
-        .keyboard {
-          max-width: 670px;
-
-          @include m.xl {
-            max-width: 800px;
-          }
-        }
-
-        .workmedia {
-          max-width: 670px;
-          @include m.xl {
-            max-width: 800px;
-          }
-        }
-
-        .dddone {
-          max-width: 470px;
-        }
+        flex-direction: unset;
+        gap: f.calculateRem(30px);
       }
     }
   }
 
+  // SECTION WITH BANNER
+
   .section-banner {
-    padding: 0 7px 140px 39px;
+    padding: f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(140px) f.calculateRem(39px);
     background-color: v.$navyblue;
     position: relative;
 
@@ -2393,46 +2139,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 135px 60px;
+      padding: f.calculateRem(0px) f.calculateRem(135px) f.calculateRem(60px);
     }
 
     &__icon {
-      width: 148px;
-      height: 148px;
-      position: absolute;
-      top: -75;
-
-      @include m.md {
-        left: 200;
-      }
-
-      @include m.xl {
-        left: 400;
-      }
-    }
+      @include m.icon-banner;
+    } 
 
     &__box {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      background: v.$beige;
-      border-radius: 6px;
-      max-width: 329px;
-      padding: 92px 53px 0 28px;
-
-      @include m.md {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        max-width: 1000px;
-        width: 100%;
-        gap: 60px;
-        padding: 80 83px 0 100px;
-      }
-
-      @include m.lg {
-        max-width: 1170px;
-        gap: 100px;
-      }
+      @include m.box-banner;
 
       &__caption {
         @include m.caption;
@@ -2440,82 +2155,47 @@
 
       &__title {
         @include m.title-black;
-        margin-bottom: 23px;
-        margin-top: 13px; 
+        margin-bottom: f.calculateRem(23px); 
+        margin-top: f.calculateRem(13px);
 
         @include m.md {
-          max-width: 248px;
+          max-width: f.calculateRem(248px);
         }
       }
 
       &__btn {
         @include m.btn-orange;
-        max-width: 154px; 
-        margin-bottom: 29px;
+        max-width: f.calculateRem(154px);
+        margin-bottom: f.calculateRem(29px);
       }
 
       &__img {
-        max-width: 351px;
-        width: 100%;
-
-        @include m.md {
-          max-width: 338px;
-          width: 100%;
-          object-fit: cover;
-        }
+        @include m.img-banner;
       }
 
       &__img-woman {
-        margin: 0 auto;
-        max-width: 191px;
+        @include m.img-woman;
       }
     }
   }
 
+  // SECTION WITH ORANGE BANNER
+
   .banner-orange {
-    background: v.$orange;
-    border-radius: 6px;
-    padding: 32px 28px 48px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    @include m.sm {
-      justify-content: center;
-      align-items: center;
-    }
-
-    @include m.md {
-      flex-direction: revert;
-      gap: 50px;
-    }
-
-    @include m.lg {
-      gap: 100px;
-    }
+    @include m.banner-orange;
 
     &__img {
-      max-width: 80%;
-      margin-bottom: 37px;
-
-      @include m.sm {
-        max-width: 50%;
-      }
-
-      @include m.md {
-        max-width: 35%;
-        order: 2;
-      }
+      @include m.img-banner-orange;
     }
 
     &__title--white {
       @include m.title-white;
       text-align: left;
-      margin-bottom: 15px;
-      max-width: 274px;
+      margin-bottom: f.calculateRem(15px);
+      max-width: f.calculateRem(274px);
 
       @include m.sm {
-        max-width: 523px;
+        max-width: f.calculateRem(523px);
         text-align: center;
       }
 
@@ -2526,12 +2206,12 @@
 
     &__txt--light {
       @include m.txt-light;
-      margin-bottom: 21px;
-      max-width: 273px;
+      margin-bottom: f.calculateRem(21px);
+      max-width: f.calculateRem(273px);
 
       @include m.sm {
         text-align: center;
-        max-width: 523px;
+        max-width: f.calculateRem(523px);
       }
 
       @include m.md {
@@ -2553,36 +2233,17 @@
     }
   }
 
+  // FOOTER
+
   .footer {
-    background-color: v.$beige;
-    padding: 121px 23px 30px;
-
-    @include m.md {
-      padding: 92px 23px 30px;
-    }
-
-    @include m.lg {
-      padding: 92px 135px 30px;
-    }
+    @include m.footer;
 
     &__navfooter {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 1px solid v.$lightorange;
-      padding-bottom: 64px;
-      margin-bottom: 43px;
-
-      @include m.md {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-      }
+      @include m.navfooter;
 
       &__title {
         @include m.title-black;
-        margin-bottom: 51px;
+        margin-bottom: f.calculateRem(51px);
       }
 
       &__list {
@@ -2594,7 +2255,7 @@
 
         &__title {
           @include m.caption;
-          margin-bottom: 16px;
+          margin-bottom: f.calculateRem(16px);
         }
 
         &__txt {
@@ -2604,29 +2265,18 @@
 
       &__socialmedia {
         &__icon {
-          width: 48px;
-          height: 48px;
+          @include m.avatar;
         }
       }
     }
 
     &__copyright {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      @include m.md {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-      }
+      @include m.copyright;
 
       &__txt--shadow {
         @include m.txt-shadow;
-        max-width: 198px;
-        margin-bottom: 32px;
+        max-width: f.calculateRem(198px);
+        margin-bottom: f.calculateRem(32px);
 
         @include m.md {
           max-width: 100%;
@@ -2639,7 +2289,7 @@
 
       .txt-box {
         display: flex;
-        gap: 68px;
+        gap: f.calculateRem(68px);
       }
     }
   }

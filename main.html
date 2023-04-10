@@ -10,6 +10,7 @@
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
     <script src="components/banner.js" type="text/javascript" defet></script>
+    <script src="slider.js"></script>
   </head>
 
   <body>
@@ -272,14 +273,23 @@
           <span class="section-dark__nav__txt--light">Illustration<sub class="section-dark__nav__sub">3</sub></span>
           <span class="section-dark__nav__txt--light">Motion<sub class="section-dark__nav__sub">1</sub></span>
         </div>
-        <div class="box-images"><!-- <div class="box-img"> -->
-          <img class="section-dark__img sofa" src="./images/sofa.png" />
-          <!-- <button class="section-dark__btn--small">Design</button>
-          <h3 class="section-dark__title--tag">Sofa</h3> -->
-        <!-- </div> -->
-        <img class="section-dark__img keyboard" src="./images/keyboard.png" />
-        <img class="section-dark__img workmedia" src="./images/workmedia.png" />
-        <img class="section-dark__img dddone" src="./images/dddone.png" /></div>
+        <div class="box-images">
+          <div class="section-dark__img-scene design">
+            <button class="section-dark__img-scene__input">Design</button>
+            <span class="section-dark__img-scene__txt">SOFA</span>
+          </div>
+          <div class="section-dark__img-scene keyboard">
+            <button class="section-dark__img-scene__input">Branding</button>
+            <span class="section-dark__img-scene__txt">KeyBoard</span>
+          </div>
+          <div class="section-dark__img-scene workmedia">
+            <button class="section-dark__img-scene__input">Illustration</button>
+            <span class="section-dark__img-scene__txt">Work Media</span>
+          </div>
+          <div class="section-dark__img-scene dddnone">
+            <button class="section-dark__img-scene__input">Motion</button>
+            <span class="section-dark__img-scene__txt">DDDone</span>
+          </div> </div>
         <button class="section-dark__btn--black">Explore More</button>
       </div>
 
@@ -371,11 +381,11 @@
           Team of Designers and Developers
         </h3>
         <div class="section-dark__icons"><img class="section-dark__icons__arrow" src="./images/icon-arrow-left.png"><img class="section-dark__icons__arrow" src="./images/icon-arrow-right.png"></div></div>
+
+      <div class="section-dark__wrapper">
         <div class="section-dark__container">
-          <div class="section-dark__container__person mb-30">
-            <div class="section-dark__container__person__img">
-              <img class="avatar" src="./images/man-hat.png" />
-            </div>
+          <div class="section-dark__container__person">
+            <div class="section-dark__container__person__img azah mb-30"></div>
             <h4 class="section-dark__container__person__title--small mb-3">
               Azah Anyeni
             </h4>
@@ -383,10 +393,8 @@
               >Designer</span
             >
           </div>
-          <div class="section-dark__container__person mb-30">
-            <div class="section-dark__container__person__img">
-              <img class="avatar" src="./images/man-belts.png" />
-            </div>
+          <div class="section-dark__container__person">
+            <div class="section-dark__container__person__img roelof mb-30"></div>
             <h4 class="section-dark__container__person__title--small mb-3">
               Roelof Bekkenenks
             </h4>
@@ -394,10 +402,8 @@
               >React Developer</span
             >
           </div>
-          <div class="section-dark__container__person mb-30">
-            <div class="section-dark__container__person__img">
-              <img class="avatar" src="./images/woman-red.png" />
-            </div>
+          <div class="section-dark__container__person">
+            <div class="section-dark__container__person__img leonardo mb-30"></div>
             <h4 class="section-dark__container__person__title--small mb-3">
               Leonardo Oliveira
             </h4>
@@ -405,10 +411,8 @@
               >Illustrator</span
             >
           </div>
-          <div class="section-dark__container__person mb-30">
-            <div class="section-dark__container__person__img">
-              <img class="avatar" src="./images/woman-black.png" />
-            </div>
+          <div class="section-dark__container__person">
+            <div class="section-dark__container__person__img izabella mb-30"></div>
             <h4 class="section-dark__container__person__title--small mb-3">
               Izabella Tabakova
             </h4>
@@ -417,6 +421,7 @@
             >
           </div>
         </div>
+      </div>
         <div class="section-dark__scroll"><img class="section-dark__scroll__icon" src="./images/icon-oval-orange.png"><img class="section-dark__scroll__icon" src="./images/icon-oval.png"><img class="section-dark__scroll__icon" src="./images/icon-oval.png"></div>
       </div>
 
@@ -554,7 +559,7 @@
         <button class="section-light__btn--white btn-center">See All</button>
       </div>
 
-      <div class="section-light pricing">
+      <div class="section-light pricing" id="pricing">
         <span class="section-light__caption mb-17">Pricing</span>
         <h3 class="section-light__title mb-35">Check Our
           Pricing Plans</h3>
@@ -571,7 +576,7 @@
             <button class="section-light__box-offer__beige__btn--white">Contact Us</button>
           </div>
           <div class="section-light__box-offer__white">
-            <input value="Popular" class="section-light__box-offer__white__input"></input>
+            <input value="Popular" class="section-light__box-offer__white__input">
             <span class="section-light__box-offer__white__caption">Design</span>
             <h3 class="section-light__box-offer__white__title">$1500</h3>
             <span class="section-light__box-offer__white__txt--shadow">Provide your business with a variety of digital solutions to promote.</span>

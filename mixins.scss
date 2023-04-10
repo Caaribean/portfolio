@@ -1,4 +1,5 @@
 @use "variables.scss" as v;
+@use "functions.scss" as f;
 
 //
 //BREAKPOINTS
@@ -18,7 +19,7 @@
 @mixin md {
   @media (min-width: 1152px) {
     @content;
-  } 
+  }
 }
 
 @mixin lg {
@@ -33,6 +34,12 @@
   }
 }
 
+@mixin slider {
+  @media (max-width: 1151px) {
+    @content;
+  }
+}
+
 //
 
 @mixin header {
@@ -40,29 +47,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px 23px;
+  padding: f.calculateRem(16px) f.calculateRem(23px);
 
   @include lg {
-    padding: 16px 135px;
+    padding: f.calculateRem(16px) f.calculateRem(135px);
   }
+}
+
+@mixin header-logo {
+  width: f.calculateRem(48px);
+  height: f.calculateRem(48px);
+  margin-right: f.calculateRem(14px);
 }
 
 @mixin header-logo-txt {
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: f.calculateRem(24px);
+  line-height: f.calculateRem(32px);
   color: v.$white;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 @mixin caption {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  letter-spacing: 3px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
+  letter-spacing: f.calculateRem(3px);
   text-transform: uppercase;
   color: v.$orange;
 }
@@ -70,126 +84,126 @@
 @mixin title-main {
   font-style: normal;
   font-weight: 800;
-  font-size: 56px;
-  line-height: 64px;
-  letter-spacing: -1px;
+  font-size: f.calculateRem(56px);
+  line-height: f.calculateRem(64px);
+  letter-spacing: f.calculateRem(-1px);
   color: v.$white;
 
   @include md {
-    font-size: 72px;
-    line-height: 80px;
-    letter-spacing: -2px;
+    font-size: f.calculateRem(72px);
+    line-height: f.calculateRem(80px);
+    letter-spacing: f.calculateRem(-2px);
   }
 }
 
 @mixin title {
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: f.calculateRem(40px);
+  line-height: f.calculateRem(48px);
   color: v.$brown;
 }
 
 @mixin title-big {
   font-style: normal;
   font-weight: 800;
-  font-size: 56px;
-  line-height: 64px;
-  letter-spacing: -1px;
+  font-size: f.calculateRem(56px);
+  line-height: f.calculateRem(64px);
+  letter-spacing: f.calculateRem(-1px);
   color: v.$brown;
 }
 
 @mixin title-white {
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: f.calculateRem(40px);
+  line-height: f.calculateRem(48px);
   text-align: center;
   color: v.$white;
 
   @include md {
-    font-size: 56px;
-    line-height: 64px;
-    letter-spacing: -1px;
+    font-size: f.calculateRem(56px);
+    line-height: f.calculateRem(64px);
+    letter-spacing: f.calculateRem(-1px);
   }
 }
 
 @mixin title-left {
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: f.calculateRem(40px);
+  line-height: f.calculateRem(48px);
   text-align: left;
   color: v.$white;
 
   @include md {
-    font-size: 56px;
-    line-height: 64px;
-    letter-spacing: -1px;
+    font-size: f.calculateRem(56px);
+    line-height: f.calculateRem(64px);
+    letter-spacing: f.calculateRem(-1px);
   }
 }
 
 @mixin title-small {
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: f.calculateRem(24px);
+  line-height: f.calculateRem(32px);
   color: v.$white;
 }
 
 @mixin title-black {
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: f.calculateRem(24px);
+  line-height: f.calculateRem(32px);
   color: v.$brown;
 }
 
 @mixin txt-light {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$shadow-white;
 }
 
 @mixin txt {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$white;
 }
 
 @mixin txt-black {
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: f.calculateRem(20px);
+  line-height: f.calculateRem(32px);
   color: v.$brown;
 }
 
 @mixin txt-shadow {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$shadow-brown;
 }
 
 @mixin txt-quote {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(24px);
   color: v.$shadow-brown;
 }
 
 @mixin txt-sub {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(24px);
   text-align: center;
   color: v.$shadow-white;
 }
@@ -197,19 +211,496 @@
 @mixin txt-small {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$brown;
 }
 
+@mixin txt-white {
+  font-style: normal;
+  font-weight: 800;
+  font-size: f.calculateRem(40px);
+  line-height: f.calculateRem(48px);
+  color: v.$white;
+}
+
+@mixin number {
+  font-style: normal;
+  font-weight: 800;
+  font-size: f.calculateRem(72px);
+  line-height: f.calculateRem(80px);
+  letter-spacing: f.calculateRem(-2px);
+  color: v.$brown;
+}
+
+@mixin list-txt {
+  font-style: normal;
+  font-weight: 700;
+  font-size: f.calculateRem(24px);
+  line-height: f.calculateRem(32px);
+  color: v.$brown;
+  max-width: f.calculateRem(257px);
+
+  @include sm {
+    max-width: 100%;
+  }
+}
+
+@mixin number-white {
+  font-style: normal;
+  font-weight: 800;
+  font-size: f.calculateRem(72px);
+  line-height: f.calculateRem(80px);
+  letter-spacing: f.calculateRem(-2px);
+  color: v.$white;
+}
+
+@mixin name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: f.calculateRem(20px);
+  line-height: f.calculateRem(32px);
+  color: v.$white;
+}
+
+@mixin name-small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(24px);
+  color: v.$shadow-white;
+}
+
+@mixin title-tag {
+  font-style: normal;
+  font-weight: 800;
+  font-size: f.calculateRem(40px);
+  line-height: f.calculateRem(48px);
+  color: v.$white;
+  text-transform: uppercase;
+}
+
+@mixin cell-white {
+  background-color: v.$white;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(48px) f.calculateRem(41px) f.calculateRem(46px) f.calculateRem(48px);
+
+  @include md {
+    border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(6px);
+    padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(46px);
+  }
+}
+
+@mixin cell-orange {
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px);
+  padding: f.calculateRem(105px) f.calculateRem(41px) f.calculateRem(46px) f.calculateRem(48px);
+
+  @include md {
+    border-radius: f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px);
+    padding: f.calculateRem(105px) f.calculateRem(48px) f.calculateRem(46px);
+  }
+}
+
+@mixin cell-beige {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px);
+  padding: f.calculateRem(48px) f.calculateRem(35px) f.calculateRem(52px) f.calculateRem(28px);
+
+  @include md {
+    padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(52px) f.calculateRem(48px);
+    max-width: f.calculateRem(391px);
+    width: 100%;
+  }
+}
+
+@mixin cell-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(32px) f.calculateRem(0px) f.calculateRem(37px) f.calculateRem(28px);
+
+  @include md {
+    width: f.calculateRem(321px);
+  }
+
+  @include lg {
+    width: f.calculateRem(391px);
+  }
+}
+
+@mixin cell-number {
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(48px) f.calculateRem(0px) f.calculateRem(38px) f.calculateRem(48px);
+
+  @include md {
+    border-radius: f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(0px);
+    padding: f.calculateRem(45px) f.calculateRem(105px) f.calculateRem(38px) f.calculateRem(48px);
+  }
+
+  @include lg {
+    padding-right: f.calculateRem(145px);
+  }
+}
+
+@mixin cell-dark {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: f.calculateRem(1px) solid v.$blue;
+  border-radius: f.calculateRem(6px);
+  padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(36px);
+
+  @include md {
+    max-width: f.calculateRem(370px);
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@mixin opinion {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(6px);
+  padding: f.calculateRem(49px) f.calculateRem(28px) f.calculateRem(48px);
+  max-width: f.calculateRem(329px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(586px);
+    padding: f.calculateRem(48px);
+  }
+}
+
+@mixin opinion-white {
+  background: v.$white;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(49px) f.calculateRem(28px) f.calculateRem(48px);
+  max-width: f.calculateRem(329px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(586px);
+    padding: f.calculateRem(48px);
+  }
+}
+
+@mixin offer-beige {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(44px) f.calculateRem(28px) f.calculateRem(47px);
+  max-width: f.calculateRem(329px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+    width: 100%;
+  }
+
+  @include md {
+    max-width: f.calculateRem(320px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(391px);
+  }
+}
+
+@mixin offer-white {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$white;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  padding: f.calculateRem(33px) f.calculateRem(28px) f.calculateRem(48px);
+  max-width: f.calculateRem(329px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+    width: 100%;
+  }
+
+  @include md {
+    max-width: f.calculateRem(320px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(391px);
+  }
+}
+
+@mixin tab-big {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$white;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  box-shadow: v.$shadow-cell;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(38px);
+  max-width: f.calculateRem(329px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+  }
+}
+
+@mixin tab-normal {
+  border: f.calculateRem(1px) solid v.$lightorange;
+  max-width: f.calculateRem(329px);
+  padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(39px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+  }
+}
+
+@mixin tab-dark {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$white;
+  border: f.calculateRem(1px) solid v.$blue;
+  box-shadow: v.$shadow-tab;
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(38px);
+  max-width: f.calculateRem(329px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+  }
+}
+
+@mixin tab-dark-normal {
+  border: f.calculateRem(1px) solid v.$blue;
+  max-width: f.calculateRem(329px);
+  padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(39px);
+
+  @include sm {
+    max-width: f.calculateRem(529px);
+  }
+}
+
+@mixin award {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: f.calculateRem(1px) solid v.$lightorange;
+  padding-bottom: f.calculateRem(20px);
+
+  @include md {
+    flex-direction: revert;
+    justify-content: space-between;
+  }
+}
+
+@mixin box-blog {
+  margin-top: f.calculateRem(48px);
+
+  @include md {
+    display: flex;
+    gap: f.calculateRem(30px);
+    border-bottom: f.calculateRem(1px) solid v.$lightorange;
+    padding-bottom: f.calculateRem(52px);
+  }
+
+  @include xl {
+    align-items: center;
+    justify-content: center;
+    gap: f.calculateRem(100px);
+  }
+}
+
+@mixin blog-post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: f.calculateRem(52px);
+}
+
+@mixin form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: v.$white;
+  border-radius: f.calculateRem(6px);
+  max-width: f.calculateRem(329px);
+  padding: f.calculateRem(57px) f.calculateRem(28px) f.calculateRem(48px);
+  margin-bottom: f.calculateRem(65px);
+
+  @include md {
+    position: absolute;
+    justify-content: start;
+    align-items: start;
+    padding: f.calculateRem(57px) f.calculateRem(48px) f.calculateRem(48px);
+    z-index: 1;
+    bottom: f.calculateRem(-20px);
+    left: f.calculateRem(50px);
+  }
+
+  @include lg {
+    bottom: f.calculateRem(-10px);
+    left: f.calculateRem(200px);
+  }
+
+  @include xl {
+    bottom: f.calculateRem(100px);
+    left: f.calculateRem(200px);
+  }
+}
+
+@mixin map {
+  padding-bottom: 150%;
+  position: relative;
+
+  @include sm {
+    padding-bottom: 50%;
+  }
+}
+
+@mixin icon-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$beige;
+  border-bottom: f.calculateRem(1px) solid v.$lightorange;
+  border-top: f.calculateRem(1px) solid v.$lightorange;
+  padding: f.calculateRem(32px) f.calculateRem(23px);
+
+  @include lg {
+    padding: f.calculateRem(32px) f.calculateRem(135px);
+  }
+}
+
+@mixin box-banner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: v.$beige;
+  border-radius: f.calculateRem(6px);
+  max-width: f.calculateRem(329px);
+  padding: f.calculateRem(92px) f.calculateRem(53px) f.calculateRem(0px) f.calculateRem(28px);
+
+  @include md {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: f.calculateRem(1000px);
+    width: 100%;
+    gap: f.calculateRem(60px);
+    padding: f.calculateRem(80px) f.calculateRem(83px) f.calculateRem(0px) f.calculateRem(100px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(1170px);
+    gap: f.calculateRem(100px);
+  }
+}
+
+@mixin banner-orange {
+  background: v.$orange;
+  border-radius: f.calculateRem(6px);
+  padding: f.calculateRem(32px) f.calculateRem(28px) f.calculateRem(48px);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include sm {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include md {
+    flex-direction: revert;
+    gap: f.calculateRem(50px);
+  }
+
+  @include lg {
+    gap: f.calculateRem(100px);
+  }
+}
+
+@mixin footer {
+  background-color: v.$beige;
+  padding: f.calculateRem(121px) f.calculateRem(23px) f.calculateRem(30px);
+
+  @include md {
+    padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(30px);
+  }
+
+  @include lg {
+    padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(30px);
+  }
+
+  @include xl {
+    padding: f.calculateRem(200px) f.calculateRem(135px) f.calculateRem(30px);
+  }
+}
+
+@mixin navfooter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: f.calculateRem(1px) solid v.$lightorange;
+  padding-bottom: f.calculateRem(64px);
+  margin-bottom: f.calculateRem(43px);
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+@mixin copyright {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+// BUTTONS
+
 @mixin btn-orange {
   background-color: v.$orange;
-  border-radius: 6px;
-  padding: 18px 23px 16px;
+  border-radius: f.calculateRem(6px);
+  padding: f.calculateRem(18px) f.calculateRem(23px) f.calculateRem(16px);
   font-style: normal;
   font-weight: 900;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(14px);
   text-align: center;
   text-transform: uppercase;
   color: v.$white;
@@ -219,160 +710,356 @@
 @mixin btn-white {
   background: v.$white;
   box-shadow: v.$shadow;
-  border-radius: 6px;
+  border-radius: f.calculateRem(6px);
   font-style: normal;
   font-weight: 900;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(14px);
   text-align: center;
   text-transform: uppercase;
   color: v.$brown;
-  padding: 18px 33px 16px;
+  padding: f.calculateRem(18px) f.calculateRem(33px) f.calculateRem(16px);
   max-width: 40%;
   border: none;
 
   @include sm {
-    max-width: 170px; 
+    max-width: f.calculateRem(170px);
   }
 
   @include md {
-    height: 48px;
+    height: f.calculateRem(48px);
   }
 }
 
 @mixin btn-black {
-  border: 1px solid v.$shadow-btn;
-  border-radius: 6px;
+  border: f.calculateRem(1px) solid v.$shadow-btn;
+  border-radius: f.calculateRem(6px);
   font-style: normal;
   font-weight: 900;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(14px);
   text-align: center;
   text-transform: uppercase;
   color: v.$white;
-  padding: 18px 30px 16px;
+  padding: f.calculateRem(18px) f.calculateRem(30px) f.calculateRem(16px);
   background-color: transparent;
 }
 
-@mixin number {
+@mixin btn-newsletter {
+  background: v.$white;
+  box-shadow: v.$shadow;
+  border-radius: f.calculateRem(6px);
   font-style: normal;
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 80px;
-  letter-spacing: -2px;
+  font-weight: 900;
+  font-size: f.calculateRem(14px);
+  line-height: f.calculateRem(14px);
+  text-align: center;
+  text-transform: uppercase;
   color: v.$brown;
-}
+  padding: f.calculateRem(18px) f.calculateRem(124px) f.calculateRem(16px);
+  border: none;
 
-@mixin list-txt {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: v.$brown;
-  max-width: 257px;
-
-  @include sm {
-    max-width: 100%;
+  @include md {
+    padding: f.calculateRem(18px) f.calculateRem(45px) f.calculateRem(16px);
   }
 }
 
+@mixin btn-small {
+  background: v.$white;
+  border-radius: f.calculateRem(19px);
+  padding: f.calculateRem(5px) f.calculateRem(15px) f.calculateRem(1px);
+  max-width: f.calculateRem(84px);
+  font-style: normal;
+  font-weight: 400;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
+  color: v.$brown;
+  border: none;
+}
+
+// INPUTS
+
 @mixin input {
   background: v.$white;
-  border-radius: 6px;
+  border-radius: f.calculateRem(6px);
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$shadow-brown;
-}
-
-@mixin number-white {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 80px;
-  letter-spacing: -2px;
-  color: v.$white;
-}
-
-@mixin name {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  color: v.$white;
-}
-
-@mixin name-small {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: v.$shadow-white;
 }
 
 @mixin input-orange {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: #ffffff;
-  background: #ef6d58;
-  border-radius: 19px;
-  max-width: 92px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
+  color: v.$white;
+  background: v.$orange;
+  border-radius: f.calculateRem(19px);
+  max-width: f.calculateRem(92px);
   text-align: center;
   border: none;
 }
 
 @mixin input-newsletter {
   background: v.$white;
-  border: 1px solid v.$lightorange;
-  border-radius: 6px;
+  border: f.calculateRem(1px) solid v.$lightorange;
+  border-radius: f.calculateRem(6px);
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$shadow-brown;
-  padding: 9px 0 7px 16px;
+  padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(16px);
 }
 
-@mixin btn-newsletter {
+@mixin input-oval {
   background: v.$white;
-  box-shadow: v.$shadow;
-  border-radius: 6px;
+  border-radius: f.calculateRem(19px);
+  padding: f.calculateRem(5px) f.calculateRem(15px) f.calculateRem(1px) f.calculateRem(16px);
   font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  text-transform: uppercase;
+  font-weight: 400;
+  font-size: f.calculateRem(16px);
+  line-height: f.calculateRem(32px);
   color: v.$brown;
-  padding: 18px 124px 16px;
   border: none;
+}
+
+// IMAGES
+
+@mixin img-main {
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include sm {
+    max-width: 70%;
+  }
 
   @include md {
-    padding: 18px 45px 16px;
+    max-width: 50%;
+    object-fit: contain;
+    order: 2;
+  }
+
+  @include lg {
+    max-width: 35%;
   }
 }
 
-@mixin btn-small {
-  background: v.$white;
-  border-radius: 19px;
-  padding: 5px 15px 1px;
-  max-width: 84px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: v.$brown;
-  border: none;
+@mixin img-light {
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include sm {
+    max-width: 70%;
+  }
+
+  @include md {
+    max-width: 50%;
+  }
+
+  @include lg {
+    max-width: 40%;
+  }
+
+  @include xl {
+    max-width: 35%;
+  }
 }
 
-@mixin title-tag {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 48px;
-  color: v.$white;
-  text-transform: uppercase;
+@mixin img-dark {
+  max-width: 90%;
+
+  @include sm {
+    max-width: 75%;
+  }
+}
+
+@mixin img-video {
+  margin: 0 auto;
+  width: 80%;
+
+  @include sm {
+    width: 70%;
+  }
+
+  @include md {
+    width: 50%;
+  }
+}
+
+@mixin img-blog {
+  max-width: 90%;
+  margin-bottom: f.calculateRem(26px);
+
+  @include sm {
+    max-width: 75%;
+  }
+
+  @include md {
+    max-width: 80%;
+  }
+}
+
+@mixin img-map {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin img-small {
+  max-width: f.calculateRem(156px);
+
+  @include md {
+    max-width: 35%;
+  }
+}
+
+@mixin img-scene {
+  position: relative;
+  height: f.calculateRem(416px);
+  width: f.calculateRem(470px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin img-person {
+  border: f.calculateRem(1px) solid v.$blue;
+  border-radius: f.calculateRem(6px);
+  height: f.calculateRem(272px);
+  width: f.calculateRem(270px);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include md {
+    width: f.calculateRem(240px);
+  }
+
+  @include lg {
+    width: f.calculateRem(270px);
+  }
+
+  @include xl {
+    width: f.calculateRem(290px); 
+  }
+}
+
+@mixin img-man {
+  max-width: 80%;
+
+  @include sm {
+    max-width: 65%;
+  }
+
+  @include md {
+    max-width: 50%;
+  }
+
+  @include lg {
+    max-width: 40%;
+  }
+}
+
+@mixin img-woman {
+  margin: 0 auto;
+  max-width: f.calculateRem(191px);
+}
+
+@mixin img-banner {
+  max-width: f.calculateRem(351px);
+  width: 100%;
+
+  @include md {
+    max-width: f.calculateRem(338px);
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@mixin img-banner-orange {
+  max-width: 80%;
+  margin-bottom: f.calculateRem(37px);
+
+  @include sm {
+    max-width: 50%;
+  }
+
+  @include md {
+    max-width: 35%;
+    order: 2;
+  }
+}
+
+// ICONS, AVATARS
+
+@mixin avatar {
+  width: f.calculateRem(48px);
+  height: f.calculateRem(48px);
+}
+
+@mixin avatar-big {
+  width: f.calculateRem(64px);
+  height: f.calculateRem(64px);
+}
+
+@mixin logo {
+  max-width: f.calculateRem(147px);
+  width: 100%;
+}
+
+@mixin icon {
+  width: f.calculateRem(80px);
+  height: f.calculateRem(80px);
+}
+
+@mixin icon-small {
+  width: f.calculateRem(32px);
+  height: f.calculateRem(32px);
+}
+
+@mixin icon-micro {
+  width: f.calculateRem(12px);
+  height: f.calculateRem(12px);
+}
+
+@mixin icon-banner {
+  width: f.calculateRem(148px);
+  height: f.calculateRem(148px);
+  position: absolute;
+  top: -75;
+
+  @include md {
+    left: 200;
+  }
+
+  @include xl {
+    left: 400;
+  }
+}
+
+@mixin icon-map {
+  width: f.calculateRem(72px);
+  height: f.calculateRem(72px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@mixin award-img {
+  width: f.calculateRem(120px);
+  height: f.calculateRem(80px);
+  border-radius: f.calculateRem(6px);
+  margin-bottom: f.calculateRem(26px);
+}
+
+@mixin award-logo {
+  width: f.calculateRem(38px);
+  height: f.calculateRem(48px);
 }

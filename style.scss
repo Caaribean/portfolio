@@ -13,7 +13,7 @@
 }
 
 .page {
-  // HEADER  
+  // HEADER    
 
   .header {
     @include m.header;
@@ -385,7 +385,7 @@
       &__box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         @include m.md {
           gap: f.calculateRem(30px);
@@ -399,6 +399,7 @@
         &__txt {
           @include m.list-txt;
           margin: auto 0;
+          max-width: f.calculateRem(290px);
         }
       }
 
@@ -581,8 +582,13 @@
     }
 
     &__box-offer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       @include m.md {
         display: flex;
+        flex-direction: unset;  
         flex-wrap: wrap;
         margin: 0 auto;
       }
@@ -877,7 +883,7 @@
             }
           }
         }
-      }
+      } 
     }
 
     &__form {
@@ -1501,7 +1507,7 @@
     }
 
     .btn-center {
-      margin: 0 auto;
+      margin: 0 auto; 
     }
 
     .images {
@@ -1856,11 +1862,11 @@
     &__name--small {
       @include m.name-small;
     }
-
+ 
     &__img {
       @include m.img-dark;
     }
-
+ 
     &__img-man {
       @include m.img-man;
     }
@@ -2015,12 +2021,9 @@
       align-items: start;
       padding-bottom: f.calculateRem(118px);
 
-      @include m.sm {
+      @include m.md {
         justify-content: center;
         align-items: center;
-      }
-
-      @include m.md {
         padding-bottom: f.calculateRem(345px);
 
         .section-dark__title--small {

@@ -551,7 +551,7 @@
   border-radius: f.calculateRem(6px);
   max-width: f.calculateRem(329px);
   padding: f.calculateRem(57px) f.calculateRem(28px) f.calculateRem(48px);
-  margin-bottom: f.calculateRem(65px);
+  margin: 0 auto f.calculateRem(65px);
 
   @include md {
     position: absolute;
@@ -719,7 +719,7 @@
   text-transform: uppercase;
   color: v.$brown;
   padding: f.calculateRem(18px) f.calculateRem(33px) f.calculateRem(16px);
-  max-width: 40%;
+  max-width: 30%;
   border: none;
 
   @include sm {
@@ -849,7 +849,6 @@
 
 @mixin img-light {
   max-width: 80%;
-  margin: 0 auto;
 
   @include sm {
     max-width: 70%;
@@ -877,7 +876,6 @@
 }
 
 @mixin img-video {
-  margin: 0 auto;
   width: 80%;
 
   @include sm {
@@ -949,11 +947,7 @@
 }
 
 @mixin img-man {
-  max-width: 80%;
-
-  @include sm {
-    max-width: 65%;
-  }
+  max-width: 90%;
 
   @include md {
     max-width: 50%;

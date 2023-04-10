@@ -7,13 +7,13 @@
 @use "functions.scss" as f;
 
 * {
-  font-family: v.$epilogue; 
+  font-family: v.$epilogue;
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
 .page {
-  // HEADER    
+  // HEADER
 
   .header {
     @include m.header;
@@ -72,6 +72,7 @@
     &__hamburger {
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       @include m.md {
         display: none;
@@ -200,7 +201,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(104px) f.calculateRem(135px) f.calculateRem(66px);
+        padding: f.calculateRem(104px) f.calculateRem(135px)
+          f.calculateRem(66px);
       }
 
       @include m.xl {
@@ -243,6 +245,10 @@
         gap: f.calculateRem(46px);
         margin: f.calculateRem(34px) f.calculateRem(0px) f.calculateRem(112px);
       }
+
+      @include m.xl {
+        margin: f.calculateRem(34px) f.calculateRem(0px) f.calculateRem(200px);
+      }
     }
   }
 
@@ -273,7 +279,8 @@
 
     &.dark {
       background-color: v.$navyblue;
-      padding: f.calculateRem(0px) f.calculateRem(49px) f.calculateRem(130px) f.calculateRem(30px);
+      padding: f.calculateRem(0px) f.calculateRem(49px) f.calculateRem(130px)
+        f.calculateRem(30px);
     }
 
     &.light {
@@ -285,7 +292,8 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(73px) f.calculateRem(135px) f.calculateRem(101px);
+        padding: f.calculateRem(73px) f.calculateRem(135px)
+          f.calculateRem(101px);
       }
 
       .section-logos__box {
@@ -388,8 +396,12 @@
         justify-content: space-between;
 
         @include m.md {
-          gap: f.calculateRem(30px);
+          gap: f.calculateRem(50px);
           justify-content: space-between;
+        }
+
+        @include m.lg {
+          gap: f.calculateRem(100px);
         }
 
         &__number {
@@ -529,6 +541,7 @@
 
         &__txt--small {
           @include m.txt-small;
+          cursor: pointer;
         }
       }
     }
@@ -588,7 +601,7 @@
 
       @include m.md {
         display: flex;
-        flex-direction: unset;  
+        flex-direction: unset;
         flex-wrap: wrap;
         margin: 0 auto;
       }
@@ -883,7 +896,7 @@
             }
           }
         }
-      } 
+      }
     }
 
     &__form {
@@ -1058,7 +1071,8 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(100px) f.calculateRem(135px) f.calculateRem(150px);
+        padding: f.calculateRem(100px) f.calculateRem(135px)
+          f.calculateRem(150px);
       }
     }
 
@@ -1093,11 +1107,13 @@
       padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(81px);
 
       @include m.md {
-        padding: f.calculateRem(127px) f.calculateRem(23px) f.calculateRem(215px);
+        padding: f.calculateRem(127px) f.calculateRem(23px)
+          f.calculateRem(215px);
       }
 
       @include m.lg {
-        padding: f.calculateRem(127px) f.calculateRem(135px) f.calculateRem(215px);
+        padding: f.calculateRem(127px) f.calculateRem(135px)
+          f.calculateRem(215px);
       }
     }
 
@@ -1105,12 +1121,18 @@
       padding: f.calculateRem(128px) f.calculateRem(23px) f.calculateRem(112px);
 
       @include m.md {
-        padding: f.calculateRem(202px) f.calculateRem(23px) f.calculateRem(213px);
+        padding: f.calculateRem(202px) f.calculateRem(23px)
+          f.calculateRem(213px);
         gap: f.calculateRem(130px);
+
+        .block-txt {
+          justify-content: center;
+        }
       }
 
       @include m.lg {
-        padding: f.calculateRem(202px) f.calculateRem(135px) f.calculateRem(213px);
+        padding: f.calculateRem(202px) f.calculateRem(135px)
+          f.calculateRem(213px);
       }
     }
 
@@ -1177,7 +1199,8 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(108px);
+        padding: f.calculateRem(92px) f.calculateRem(135px)
+          f.calculateRem(108px);
       }
     }
 
@@ -1239,11 +1262,13 @@
       padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(96px);
 
       @include m.md {
-        padding: f.calculateRem(156px) f.calculateRem(23px) f.calculateRem(112px);
+        padding: f.calculateRem(156px) f.calculateRem(23px)
+          f.calculateRem(112px);
       }
 
       @include m.lg {
-        padding: f.calculateRem(156px) f.calculateRem(135px) f.calculateRem(112px);
+        padding: f.calculateRem(156px) f.calculateRem(135px)
+          f.calculateRem(112px);
       }
 
       .section-light__title {
@@ -1255,15 +1280,10 @@
     }
 
     &.blog {
-      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(76px);
+      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(0px);  
 
       @include m.lg {
-        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(76px);
-      }
-
-      @include m.xl {
-        align-items: center;
-        justify-content: center;
+        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(0px);
       }
     }
 
@@ -1310,7 +1330,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(76px) f.calculateRem(135px) f.calculateRem(128px);
+        padding: f.calculateRem(76px) f.calculateRem(135px)
+          f.calculateRem(128px);
       }
     }
 
@@ -1351,7 +1372,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(139px);
+        padding: f.calculateRem(80px) f.calculateRem(135px)
+          f.calculateRem(139px);
       }
     }
 
@@ -1363,7 +1385,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(144px);
+        padding: f.calculateRem(80px) f.calculateRem(135px)
+          f.calculateRem(144px);
       }
     }
 
@@ -1447,6 +1470,10 @@
         max-width: f.calculateRem(470px);
       }
 
+      @include m.lg {
+        max-width: 70%; 
+      }
+
       @include m.xl {
         max-width: 50%;
       }
@@ -1507,7 +1534,7 @@
     }
 
     .btn-center {
-      margin: 0 auto; 
+      margin: 0 auto;
     }
 
     .images {
@@ -1545,7 +1572,8 @@
       @include m.md {
         display: flex;
         justify-content: center;
-        padding: f.calculateRem(161px) f.calculateRem(23px) f.calculateRem(140px);
+        padding: f.calculateRem(161px) f.calculateRem(23px)
+          f.calculateRem(140px);
       }
     }
 
@@ -1621,7 +1649,8 @@
 
     &__input {
       @include m.input;
-      padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(16px);
+      padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px)
+        f.calculateRem(16px);
       width: 100%;
 
       @include m.sm {
@@ -1644,10 +1673,13 @@
 
       &__txt--light {
         @include m.txt-light;
+        position: relative; 
       }
 
       &__sub {
         @include m.txt-sub;
+        position: absolute; 
+        top: f.calculateRem(-6px); 
       }
     }
 
@@ -1701,15 +1733,15 @@
       &__input {
         @include m.input-oval;
         position: absolute;
-        left: f.calculateRem(20px);
-        bottom: f.calculateRem(100px);
+        left: f.calculateRem(50px);
+        bottom: f.calculateRem(120px);
       }
 
       &__txt {
         @include m.txt-white;
         position: absolute;
-        left: f.calculateRem(20px);
-        bottom: f.calculateRem(30px);
+        left: f.calculateRem(50px);
+        bottom: f.calculateRem(50px);
       }
     }
 
@@ -1862,11 +1894,11 @@
     &__name--small {
       @include m.name-small;
     }
- 
+
     &__img {
       @include m.img-dark;
     }
- 
+
     &__img-man {
       @include m.img-man;
     }
@@ -1937,7 +1969,8 @@
       padding: f.calculateRem(55px) f.calculateRem(23px) f.calculateRem(144px);
 
       @include m.lg {
-        padding: f.calculateRem(55px) f.calculateRem(135px) f.calculateRem(144px);
+        padding: f.calculateRem(55px) f.calculateRem(135px)
+          f.calculateRem(144px);
       }
     }
 
@@ -1969,7 +2002,8 @@
       }
 
       @include m.md {
-        padding: f.calculateRem(140px) f.calculateRem(23px) f.calculateRem(180px);
+        padding: f.calculateRem(140px) f.calculateRem(23px)
+          f.calculateRem(180px);
         justify-content: start;
         align-items: start;
 
@@ -1979,7 +2013,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(140px) f.calculateRem(135px) f.calculateRem(180px);
+        padding: f.calculateRem(140px) f.calculateRem(135px)
+          f.calculateRem(180px);
       }
 
       @include m.xl {
@@ -2049,10 +2084,11 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(108px);
+        padding: f.calculateRem(92px) f.calculateRem(135px)
+          f.calculateRem(108px);
       }
     }
- 
+
     &.faq {
       justify-content: start;
       align-items: start;
@@ -2134,7 +2170,8 @@
   // SECTION WITH BANNER
 
   .section-banner {
-    padding: f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(140px) f.calculateRem(39px);
+    padding: f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(140px)
+      f.calculateRem(39px);
     background-color: v.$navyblue;
     position: relative;
 
@@ -2147,7 +2184,7 @@
 
     &__icon {
       @include m.icon-banner;
-    } 
+    }
 
     &__box {
       @include m.box-banner;
@@ -2158,7 +2195,7 @@
 
       &__title {
         @include m.title-black;
-        margin-bottom: f.calculateRem(23px); 
+        margin-bottom: f.calculateRem(23px);
         margin-top: f.calculateRem(13px);
 
         @include m.md {

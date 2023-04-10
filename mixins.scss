@@ -705,6 +705,7 @@
   text-transform: uppercase;
   color: v.$white;
   border: none;
+  cursor: pointer;
 }
 
 @mixin btn-white {
@@ -721,6 +722,7 @@
   padding: f.calculateRem(18px) f.calculateRem(33px) f.calculateRem(16px);
   max-width: 30%;
   border: none;
+  cursor: pointer;
 
   @include sm {
     max-width: f.calculateRem(170px);
@@ -743,6 +745,7 @@
   color: v.$white;
   padding: f.calculateRem(18px) f.calculateRem(30px) f.calculateRem(16px);
   background-color: transparent;
+  cursor: pointer;
 }
 
 @mixin btn-newsletter {
@@ -758,6 +761,7 @@
   color: v.$brown;
   padding: f.calculateRem(18px) f.calculateRem(124px) f.calculateRem(16px);
   border: none;
+  cursor: pointer;
 
   @include md {
     padding: f.calculateRem(18px) f.calculateRem(45px) f.calculateRem(16px);
@@ -775,6 +779,7 @@
   line-height: f.calculateRem(32px);
   color: v.$brown;
   border: none;
+  cursor: pointer;
 }
 
 // INPUTS

@@ -136,7 +136,7 @@
     &__txt--light {
       @include m.txt-light;
       max-width: f.calculateRem(329px);
- 
+
       @include m.sm {
         max-width: 100%;
       }
@@ -146,7 +146,7 @@
       @include m.txt;
       display: flex;
       align-items: center;
-      cursor: pointer; 
+      cursor: pointer;
     }
 
     &__btn {
@@ -156,7 +156,7 @@
     &__quote {
       display: flex;
 
-      @include m.md { 
+      @include m.md {
         flex-wrap: wrap;
       }
 
@@ -188,7 +188,7 @@
 
     &.main-box {
       text-align: center;
-      justify-content: center;
+      ntent: center;
       align-items: center;
       padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(87px);
 
@@ -317,6 +317,10 @@
     padding: f.calculateRem(0px) f.calculateRem(23px);
     background-color: v.$beige;
 
+    @include m.md {
+      justify-content: center;
+    }
+
     @include m.lg {
       padding: f.calculateRem(0px) f.calculateRem(135px);
     }
@@ -368,6 +372,10 @@
 
       @include m.md {
         margin: auto f.calculateRem(30px) auto auto;
+        width: f.calculateRem(270px);
+      }
+
+      @include m.lg {
         width: f.calculateRem(370px);
       }
     }
@@ -733,6 +741,10 @@
         &__title {
           @include m.list-txt;
           margin-bottom: f.calculateRem(19px);
+
+          @include m.lg {
+            margin-bottom: f.calculateRem(35px);
+          }
         }
 
         &__txt--shadow {
@@ -765,6 +777,10 @@
       &__award {
         @include m.award;
 
+        @include m.md {
+          position: relative;
+        }
+
         &__img {
           @include m.award-img;
         }
@@ -777,6 +793,21 @@
         &__txt--shadow {
           @include m.txt-shadow;
           margin-bottom: f.calculateRem(16px);
+
+          @include m.md {
+            position: absolute;
+            left: 600;
+          }
+
+          @include m.lg {
+            position: absolute;
+            left: 700;
+          }
+
+          @include m.xl {
+            position: absolute;
+            left: 900;
+          }
         }
 
         &__txt--small {
@@ -1037,6 +1068,58 @@
       }
     }
 
+    &.margins {
+      .section-light__caption {
+        margin-bottom: f.calculateRem(17px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(20px);
+        }
+      }
+
+      .section-light__title {
+        margin-bottom: f.calculateRem(29px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(26px);
+        }
+      }
+
+      .section-light__btn--white {
+        margin-top: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(34px);
+        }
+      }
+    }
+
+    &.margins-features {
+      .section-light__caption {
+        margin-bottom: f.calculateRem(17px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(20px);
+        }
+      }
+
+      .section-light__title {
+        margin-bottom: f.calculateRem(13px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(26px);
+        }
+      }
+
+      .section-light__txt--black {
+        margin-bottom: f.calculateRem(30px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(24px);
+        }
+      }
+    }
+
     &.aboutus {
       .section-light__img {
         margin-bottom: f.calculateRem(16px);
@@ -1077,6 +1160,20 @@
     }
 
     &.howwework {
+      .section-light__txt--shadow {
+        margin-top: f.calculateRem(15px);
+        margin-bottom: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(31px);
+          margin-bottom: f.calculateRem(28px);
+        }
+      }
+
+      .section-light__txt--small {
+        cursor: pointer;
+      }
+
       @include m.md {
         border-bottom: f.calculateRem(1px) solid v.$lightorange;
         padding-bottom: f.calculateRem(108px);
@@ -1106,6 +1203,14 @@
     &.video {
       padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(81px);
 
+      .section-light__title {
+        margin-bottom: f.calculateRem(16px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(28px);
+        }
+      }
+
       @include m.md {
         padding: f.calculateRem(127px) f.calculateRem(23px)
           f.calculateRem(215px);
@@ -1119,6 +1224,14 @@
 
     &.features {
       padding: f.calculateRem(128px) f.calculateRem(23px) f.calculateRem(112px);
+
+      .section-light__txt--black {
+        margin-bottom: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(28px);
+        }
+      }
 
       @include m.md {
         padding: f.calculateRem(202px) f.calculateRem(23px)
@@ -1151,6 +1264,26 @@
 
     &.service {
       padding-bottom: f.calculateRem(124px);
+
+      .section-light__title {
+        margin-top: f.calculateRem(17px);
+        margin-bottom: f.calculateRem(13px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(20px);
+          margin-bottom: f.calculateRem(26px);
+        }
+      }
+
+      .section-light__quote {
+        margin-top: f.calculateRem(30px);
+        margin-bottom: f.calculateRem(20px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(37px);
+          margin-bottom: f.calculateRem(36px);
+        }
+      }
 
       .section-light__img {
         margin-bottom: f.calculateRem(6px);
@@ -1235,6 +1368,22 @@
     }
 
     &.faq {
+      .section-light__title {
+        margin-bottom: f.calculateRem(15px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(31px);
+        }
+      }
+
+      .section-light__txt--shadow {
+        margin-bottom: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(29px);
+        }
+      }
+
       @include m.sm {
         display: flex;
         justify-content: center;
@@ -1280,7 +1429,7 @@
     }
 
     &.blog {
-      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(0px);  
+      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(0px);
 
       @include m.lg {
         padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(0px);
@@ -1317,12 +1466,14 @@
     }
 
     &.newsletter {
+
       padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(128px);
 
       @include m.md {
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding-top: f.calculateRem(60px);
 
         .section-light__title {
           margin-right: f.calculateRem(367px);
@@ -1470,12 +1621,8 @@
         max-width: f.calculateRem(470px);
       }
 
-      @include m.lg {
-        max-width: 70%; 
-      }
-
       @include m.xl {
-        max-width: 50%;
+        max-width: f.calculateRem(670px);
       }
     }
 
@@ -1673,13 +1820,13 @@
 
       &__txt--light {
         @include m.txt-light;
-        position: relative; 
+        position: relative;
       }
 
       &__sub {
         @include m.txt-sub;
-        position: absolute; 
-        top: f.calculateRem(-6px); 
+        position: absolute;
+        top: f.calculateRem(-6px);
       }
     }
 
@@ -1924,7 +2071,7 @@
           @include m.list-txt;
           margin-bottom: f.calculateRem(19px);
         }
- 
+
         &__txt--shadow {
           @include m.txt-shadow;
         }
@@ -2180,9 +2327,9 @@
       justify-content: center;
       align-items: center;
       padding: f.calculateRem(0px) f.calculateRem(135px) f.calculateRem(60px);
-    }
-
-    &__icon {
+    } 
+  
+    &__icon { 
       @include m.icon-banner;
     }
 

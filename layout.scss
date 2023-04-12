@@ -1,11 +1,8 @@
 @use "functions.scss" as f; 
+@use "mixins.scss" as m;
 
 .mb-3 {
   margin-bottom: f.calculateRem(3px);
-}
-
-.mb-13 {
-  margin-bottom: f.calculateRem(13px);
 }
 
 .mb-15 {
@@ -26,10 +23,6 @@
 
 .mb-23 {
   margin-bottom: f.calculateRem(23px);
-}
-
-.mb-24 {
-  margin-bottom: f.calculateRem(24px);
 }
 
 .mb-26 {
@@ -78,6 +71,10 @@
 
 .mt-4 {
   margin-top: f.calculateRem(4px);
+  
+  @include m.md {
+    margin-top: 0; 
+  }
 }
 
 .mt-18 {
@@ -86,10 +83,10 @@
 
 .mt-24 {
   margin-top: f.calculateRem(24px);
-}
 
-.mt-32 {
-  margin-top: f.calculateRem(32px);
+  @include m.md {
+    margin-top: 0; 
+  }
 }
 
 .mr-8 {

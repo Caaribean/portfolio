@@ -284,22 +284,28 @@
   background-color: v.$white;
   border: f.calculateRem(1px) solid v.$lightorange;
   box-shadow: v.$shadow-cell;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
-  padding: f.calculateRem(48px) f.calculateRem(41px) f.calculateRem(46px) f.calculateRem(48px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
+  padding: f.calculateRem(48px) f.calculateRem(41px) f.calculateRem(46px)
+    f.calculateRem(48px);
 
   @include md {
-    border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(6px);
+    border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+      f.calculateRem(6px);
     padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(46px);
   }
 }
 
 @mixin cell-orange {
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px);
-  padding: f.calculateRem(105px) f.calculateRem(41px) f.calculateRem(46px) f.calculateRem(48px);
+  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px)
+    f.calculateRem(6px);
+  padding: f.calculateRem(105px) f.calculateRem(41px) f.calculateRem(46px)
+    f.calculateRem(48px);
 
   @include md {
-    border-radius: f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px);
+    border-radius: f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px)
+      f.calculateRem(0px);
     padding: f.calculateRem(105px) f.calculateRem(48px) f.calculateRem(46px);
   }
 }
@@ -309,11 +315,14 @@
   flex-wrap: wrap;
   flex-direction: column;
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px);
-  padding: f.calculateRem(48px) f.calculateRem(35px) f.calculateRem(52px) f.calculateRem(28px);
+  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px)
+    f.calculateRem(6px);
+  padding: f.calculateRem(48px) f.calculateRem(35px) f.calculateRem(52px)
+    f.calculateRem(28px);
 
   @include md {
-    padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(52px) f.calculateRem(48px);
+    padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(52px)
+      f.calculateRem(48px);
     max-width: f.calculateRem(391px);
     width: 100%;
   }
@@ -324,8 +333,10 @@
   flex-wrap: wrap;
   flex-direction: column;
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
-  padding: f.calculateRem(32px) f.calculateRem(0px) f.calculateRem(37px) f.calculateRem(28px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
+  padding: f.calculateRem(32px) f.calculateRem(0px) f.calculateRem(37px)
+    f.calculateRem(28px);
 
   @include md {
     width: f.calculateRem(321px);
@@ -338,12 +349,16 @@
 
 @mixin cell-number {
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
-  padding: f.calculateRem(48px) f.calculateRem(0px) f.calculateRem(38px) f.calculateRem(48px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
+  padding: f.calculateRem(48px) f.calculateRem(0px) f.calculateRem(38px)
+    f.calculateRem(48px);
 
   @include md {
-    border-radius: f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(0px);
-    padding: f.calculateRem(45px) f.calculateRem(105px) f.calculateRem(38px) f.calculateRem(48px);
+    border-radius: f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px)
+      f.calculateRem(0px);
+    padding: f.calculateRem(45px) f.calculateRem(105px) f.calculateRem(38px)
+      f.calculateRem(48px);
   }
 
   @include lg {
@@ -389,7 +404,8 @@
   background: v.$white;
   border: f.calculateRem(1px) solid v.$lightorange;
   box-shadow: v.$shadow-cell;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(49px) f.calculateRem(28px) f.calculateRem(48px);
   max-width: f.calculateRem(329px);
 
@@ -408,7 +424,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(44px) f.calculateRem(28px) f.calculateRem(47px);
   max-width: f.calculateRem(329px);
 
@@ -457,7 +474,8 @@
   background: v.$white;
   border: f.calculateRem(1px) solid v.$lightorange;
   box-shadow: v.$shadow-cell;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(38px);
   max-width: f.calculateRem(329px);
 
@@ -483,12 +501,17 @@
   background: v.$white;
   border: f.calculateRem(1px) solid v.$blue;
   box-shadow: v.$shadow-tab;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(38px);
   max-width: f.calculateRem(329px);
 
   @include sm {
     max-width: f.calculateRem(529px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(770px);
   }
 }
 
@@ -499,6 +522,10 @@
 
   @include sm {
     max-width: f.calculateRem(529px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(770px);
   }
 }
 
@@ -604,7 +631,8 @@
   background: v.$beige;
   border-radius: f.calculateRem(6px);
   max-width: f.calculateRem(329px);
-  padding: f.calculateRem(92px) f.calculateRem(53px) f.calculateRem(0px) f.calculateRem(28px);
+  padding: f.calculateRem(92px) f.calculateRem(53px) f.calculateRem(0px)
+    f.calculateRem(28px);
 
   @include md {
     flex-wrap: nowrap;
@@ -612,7 +640,8 @@
     max-width: f.calculateRem(1000px);
     width: 100%;
     gap: f.calculateRem(60px);
-    padding: f.calculateRem(80px) f.calculateRem(83px) f.calculateRem(0px) f.calculateRem(100px);
+    padding: f.calculateRem(80px) f.calculateRem(83px) f.calculateRem(0px)
+      f.calculateRem(100px);
   }
 
   @include lg {
@@ -816,13 +845,15 @@
   font-size: f.calculateRem(16px);
   line-height: f.calculateRem(32px);
   color: v.$shadow-brown;
-  padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(16px);
+  padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px)
+    f.calculateRem(16px);
 }
 
 @mixin input-oval {
   background: v.$white;
   border-radius: f.calculateRem(19px);
-  padding: f.calculateRem(5px) f.calculateRem(15px) f.calculateRem(1px) f.calculateRem(16px);
+  padding: f.calculateRem(5px) f.calculateRem(15px) f.calculateRem(1px)
+    f.calculateRem(16px);
   font-style: normal;
   font-weight: 400;
   font-size: f.calculateRem(16px);
@@ -889,6 +920,7 @@
 
   @include md {
     width: 50%;
+    object-fit: cover;
   }
 }
 
@@ -919,6 +951,10 @@
   @include md {
     max-width: 35%;
   }
+
+  @include lg {
+    max-width: 45%;
+  }
 }
 
 @mixin img-scene {
@@ -947,7 +983,7 @@
   }
 
   @include xl {
-    width: f.calculateRem(290px); 
+    width: f.calculateRem(290px);
   }
 }
 

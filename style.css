@@ -708,6 +708,7 @@ table {
   color: #ffffff;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .page .section-main__btn {
   background-color: #EF6D58;
@@ -929,6 +930,8 @@ table {
 @media (min-width: 1152px) {
   .page .section-light__img-video {
     width: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .page .section-light__caption {
@@ -2070,7 +2073,6 @@ table {
 .page .section-light__box-img {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   gap: 1.0625rem;
   margin-top: 1.0625rem;
@@ -2086,6 +2088,11 @@ table {
 @media (min-width: 1152px) {
   .page .section-light__box-img__img-small {
     max-width: 35%;
+  }
+}
+@media (min-width: 1440px) {
+  .page .section-light__box-img__img-small {
+    max-width: 45%;
   }
 }
 .page .section-light__icon-tab {
@@ -3228,6 +3235,11 @@ table {
     max-width: 33.0625rem;
   }
 }
+@media (min-width: 1440px) {
+  .page .section-dark__tabs__tab--big {
+    max-width: 48.125rem;
+  }
+}
 .page .section-dark__tabs__tab--big__img {
   width: 2rem;
   height: 2rem;
@@ -3261,6 +3273,11 @@ table {
 @media (min-width: 768px) {
   .page .section-dark__tabs__tab {
     max-width: 33.0625rem;
+  }
+}
+@media (min-width: 1440px) {
+  .page .section-dark__tabs__tab {
+    max-width: 48.125rem;
   }
 }
 .page .section-dark__tabs__tab__img {

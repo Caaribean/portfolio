@@ -136,7 +136,7 @@
     &__txt--light {
       @include m.txt-light;
       max-width: f.calculateRem(329px);
-
+ 
       @include m.sm {
         max-width: 100%;
       }
@@ -146,6 +146,7 @@
       @include m.txt;
       display: flex;
       align-items: center;
+      cursor: pointer; 
     }
 
     &__btn {
@@ -155,7 +156,7 @@
     &__quote {
       display: flex;
 
-      @include m.md {
+      @include m.md { 
         flex-wrap: wrap;
       }
 
@@ -980,7 +981,6 @@
     &__box-img {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
       gap: f.calculateRem(17px);
       margin-top: f.calculateRem(17px);
@@ -1924,7 +1924,7 @@
           @include m.list-txt;
           margin-bottom: f.calculateRem(19px);
         }
-
+ 
         &__txt--shadow {
           @include m.txt-shadow;
         }

@@ -29,6 +29,14 @@
   margin-bottom: f.calculateRem(26px);
 }
 
+.mb-28 {
+  margin-bottom: f.calculateRem(28px);
+
+  @include m.md {
+    margin-bottom: 0;
+  }
+}
+
 .mb-29 {
   margin-bottom: f.calculateRem(29px);
 }
@@ -39,10 +47,18 @@
 
 .mb-31 {
   margin-bottom: f.calculateRem(31px);
+
+  @include m.md {
+    margin-bottom: 0;
+  }
 }
 
 .mb-32 {
   margin-bottom: f.calculateRem(32px);
+}
+
+.mb-33 {
+  margin-bottom: f.calculateRem(33px);
 }
 
 .mb-35 {

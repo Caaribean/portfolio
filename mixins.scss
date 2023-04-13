@@ -956,10 +956,16 @@
 @mixin img-scene {
   position: relative;
   height: f.calculateRem(416px);
-  width: f.calculateRem(470px);
+  width: f.calculateRem(430px);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  mix-blend-mode: normal;
+  border-radius: f.calculateRem(6px);
+
+  @include sm {
+    width: f.calculateRem(470px);
+  }
 }
 
 @mixin img-person {
@@ -1072,7 +1078,7 @@
   }
 
   @include xl {
-    left: 350;
+    left: 400;
   }
 }
 

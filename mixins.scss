@@ -639,14 +639,12 @@
     flex-direction: row;
     max-width: f.calculateRem(1000px);
     width: 100%;
-    gap: f.calculateRem(60px);
     padding: f.calculateRem(80px) f.calculateRem(83px) f.calculateRem(0px)
       f.calculateRem(100px);
   }
 
   @include lg {
     max-width: f.calculateRem(1170px);
-    gap: f.calculateRem(100px);
   }
 }
 
@@ -1011,8 +1009,20 @@
 }
 
 @mixin img-woman {
-  margin: 0 auto;
-  max-width: f.calculateRem(191px);
+  max-width: 13rem; 
+  margin: 0 auto; 
+
+  @include md {
+    position: absolute; 
+    max-width: 15rem;
+    right: 0;
+    bottom: 0;
+  }
+  
+  @include lg { 
+    max-width: 20rem;
+    right: 10;
+  }
 }
 
 @mixin img-banner {
@@ -1020,9 +1030,8 @@
   width: 100%;
 
   @include md {
-    max-width: f.calculateRem(338px);
-    width: 100%;
-    object-fit: cover;
+    max-width: 50%;
+    object-fit: contain;
   }
 }
 

@@ -3793,14 +3793,12 @@ table {
     flex-direction: row;
     max-width: 62.5rem;
     width: 100%;
-    gap: 3.75rem;
     padding: 5rem 5.1875rem 0rem 6.25rem;
   }
 }
 @media (min-width: 1440px) {
   .page .section-banner__box {
     max-width: 73.125rem;
-    gap: 6.25rem;
   }
 }
 .page .section-banner__box__icon {
@@ -3860,15 +3858,28 @@ table {
 }
 @media (min-width: 1152px) {
   .page .section-banner__box__img {
-    max-width: 21.125rem;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    max-width: 50%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 .page .section-banner__box__img-woman {
+  max-width: 13rem;
   margin: 0 auto;
-  max-width: 11.9375rem;
+}
+@media (min-width: 1152px) {
+  .page .section-banner__box__img-woman {
+    position: absolute;
+    max-width: 15rem;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .page .section-banner__box__img-woman {
+    max-width: 20rem;
+    right: 10;
+  }
 }
 .page .banner-orange {
   background: #EF6D58;

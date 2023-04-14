@@ -2410,12 +2410,12 @@
       &__icon {
         @include m.icon-banner;
       }
-
+ 
       &__caption {
-        @include m.caption;
+        @include m.caption; 
       }
-
-      &__title {
+  
+      &__title { 
         @include m.title-black;
         margin-bottom: f.calculateRem(23px);
         margin-top: f.calculateRem(13px);
@@ -2430,23 +2430,23 @@
         max-width: f.calculateRem(154px);
         margin-bottom: f.calculateRem(29px);
       }
-
-      &__img {
+ 
+      &__img { 
         @include m.img-banner;
-      }
+      }   
 
       &__img-woman {
         @include m.img-woman;
-      }
-    }
-  }
+      } 
+    }  
+  }    
 
   // SECTION WITH ORANGE BANNER
 
   .banner-orange {
     @include m.banner-orange;
 
-    &__img {
+    &__img { 
       @include m.img-banner-orange;
     }
 

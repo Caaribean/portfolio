@@ -12,7 +12,7 @@ class Header extends HTMLElement {
         </div>
         <nav class="header__navmenu">
           <ul class="header__navmenu__list">
-            <li><a class="header__navmenu__list__txt" href="aboutus.html">About</a></li>
+            <li><a class="header__navmenu__list__txt" href="about-us.html">About</a></li>
             <li><a class="header__navmenu__list__txt" href="services.html">Services</a></li>
             <li><a class="header__navmenu__list__txt" href="#pricing">Pricing</a></li>
             <li><a class="header__navmenu__list__txt" href="blog.html">Blog</a></li>

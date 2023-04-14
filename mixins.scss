@@ -284,22 +284,28 @@
   background-color: v.$white;
   border: f.calculateRem(1px) solid v.$lightorange;
   box-shadow: v.$shadow-cell;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
-  padding: f.calculateRem(48px) f.calculateRem(41px) f.calculateRem(46px) f.calculateRem(48px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
+  padding: f.calculateRem(48px) f.calculateRem(41px) f.calculateRem(46px)
+    f.calculateRem(48px);
 
   @include md {
-    border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(6px);
+    border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+      f.calculateRem(6px);
     padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(46px);
   }
 }
 
 @mixin cell-orange {
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px);
-  padding: f.calculateRem(105px) f.calculateRem(41px) f.calculateRem(46px) f.calculateRem(48px);
+  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px)
+    f.calculateRem(6px);
+  padding: f.calculateRem(105px) f.calculateRem(41px) f.calculateRem(46px)
+    f.calculateRem(48px);
 
   @include md {
-    border-radius: f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px);
+    border-radius: f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px)
+      f.calculateRem(0px);
     padding: f.calculateRem(105px) f.calculateRem(48px) f.calculateRem(46px);
   }
 }
@@ -309,11 +315,14 @@
   flex-wrap: wrap;
   flex-direction: column;
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px) f.calculateRem(6px);
-  padding: f.calculateRem(48px) f.calculateRem(35px) f.calculateRem(52px) f.calculateRem(28px);
+  border-radius: f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(6px)
+    f.calculateRem(6px);
+  padding: f.calculateRem(48px) f.calculateRem(35px) f.calculateRem(52px)
+    f.calculateRem(28px);
 
   @include md {
-    padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(52px) f.calculateRem(48px);
+    padding: f.calculateRem(48px) f.calculateRem(48px) f.calculateRem(52px)
+      f.calculateRem(48px);
     max-width: f.calculateRem(391px);
     width: 100%;
   }
@@ -324,8 +333,10 @@
   flex-wrap: wrap;
   flex-direction: column;
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
-  padding: f.calculateRem(32px) f.calculateRem(0px) f.calculateRem(37px) f.calculateRem(28px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
+  padding: f.calculateRem(32px) f.calculateRem(0px) f.calculateRem(37px)
+    f.calculateRem(28px);
 
   @include md {
     width: f.calculateRem(321px);
@@ -338,12 +349,16 @@
 
 @mixin cell-number {
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
-  padding: f.calculateRem(48px) f.calculateRem(0px) f.calculateRem(38px) f.calculateRem(48px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
+  padding: f.calculateRem(48px) f.calculateRem(0px) f.calculateRem(38px)
+    f.calculateRem(48px);
 
   @include md {
-    border-radius: f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px) f.calculateRem(0px);
-    padding: f.calculateRem(45px) f.calculateRem(105px) f.calculateRem(38px) f.calculateRem(48px);
+    border-radius: f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px)
+      f.calculateRem(0px);
+    padding: f.calculateRem(45px) f.calculateRem(105px) f.calculateRem(38px)
+      f.calculateRem(48px);
   }
 
   @include lg {
@@ -389,7 +404,8 @@
   background: v.$white;
   border: f.calculateRem(1px) solid v.$lightorange;
   box-shadow: v.$shadow-cell;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(49px) f.calculateRem(28px) f.calculateRem(48px);
   max-width: f.calculateRem(329px);
 
@@ -408,7 +424,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   border: f.calculateRem(1px) solid v.$lightorange;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(44px) f.calculateRem(28px) f.calculateRem(47px);
   max-width: f.calculateRem(329px);
 
@@ -421,7 +438,7 @@
     max-width: f.calculateRem(320px);
   }
 
-  @include lg {
+  @include xl {
     max-width: f.calculateRem(391px);
   }
 }
@@ -445,7 +462,7 @@
     max-width: f.calculateRem(320px);
   }
 
-  @include lg {
+  @include xl {
     max-width: f.calculateRem(391px);
   }
 }
@@ -457,7 +474,8 @@
   background: v.$white;
   border: f.calculateRem(1px) solid v.$lightorange;
   box-shadow: v.$shadow-cell;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(38px);
   max-width: f.calculateRem(329px);
 
@@ -483,12 +501,17 @@
   background: v.$white;
   border: f.calculateRem(1px) solid v.$blue;
   box-shadow: v.$shadow-tab;
-  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px) f.calculateRem(0px);
+  border-radius: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(0px)
+    f.calculateRem(0px);
   padding: f.calculateRem(41px) f.calculateRem(28px) f.calculateRem(38px);
   max-width: f.calculateRem(329px);
 
   @include sm {
     max-width: f.calculateRem(529px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(770px);
   }
 }
 
@@ -499,6 +522,10 @@
 
   @include sm {
     max-width: f.calculateRem(529px);
+  }
+
+  @include lg {
+    max-width: f.calculateRem(770px);
   }
 }
 
@@ -551,7 +578,7 @@
   border-radius: f.calculateRem(6px);
   max-width: f.calculateRem(329px);
   padding: f.calculateRem(57px) f.calculateRem(28px) f.calculateRem(48px);
-  margin-bottom: f.calculateRem(65px);
+  margin: 0 auto f.calculateRem(65px);
 
   @include md {
     position: absolute;
@@ -604,20 +631,20 @@
   background: v.$beige;
   border-radius: f.calculateRem(6px);
   max-width: f.calculateRem(329px);
-  padding: f.calculateRem(92px) f.calculateRem(53px) f.calculateRem(0px) f.calculateRem(28px);
+  padding: f.calculateRem(92px) f.calculateRem(53px) f.calculateRem(0px)
+    f.calculateRem(28px);
 
   @include md {
     flex-wrap: nowrap;
     flex-direction: row;
     max-width: f.calculateRem(1000px);
     width: 100%;
-    gap: f.calculateRem(60px);
-    padding: f.calculateRem(80px) f.calculateRem(83px) f.calculateRem(0px) f.calculateRem(100px);
+    padding: f.calculateRem(80px) f.calculateRem(83px) f.calculateRem(0px)
+      f.calculateRem(100px);
   }
 
   @include lg {
     max-width: f.calculateRem(1170px);
-    gap: f.calculateRem(100px);
   }
 }
 
@@ -705,6 +732,7 @@
   text-transform: uppercase;
   color: v.$white;
   border: none;
+  cursor: pointer;
 }
 
 @mixin btn-white {
@@ -719,8 +747,9 @@
   text-transform: uppercase;
   color: v.$brown;
   padding: f.calculateRem(18px) f.calculateRem(33px) f.calculateRem(16px);
-  max-width: 40%;
+  max-width: 30%;
   border: none;
+  cursor: pointer;
 
   @include sm {
     max-width: f.calculateRem(170px);
@@ -743,6 +772,7 @@
   color: v.$white;
   padding: f.calculateRem(18px) f.calculateRem(30px) f.calculateRem(16px);
   background-color: transparent;
+  cursor: pointer;
 }
 
 @mixin btn-newsletter {
@@ -758,6 +788,7 @@
   color: v.$brown;
   padding: f.calculateRem(18px) f.calculateRem(124px) f.calculateRem(16px);
   border: none;
+  cursor: pointer;
 
   @include md {
     padding: f.calculateRem(18px) f.calculateRem(45px) f.calculateRem(16px);
@@ -775,6 +806,7 @@
   line-height: f.calculateRem(32px);
   color: v.$brown;
   border: none;
+  cursor: pointer;
 }
 
 // INPUTS
@@ -811,13 +843,15 @@
   font-size: f.calculateRem(16px);
   line-height: f.calculateRem(32px);
   color: v.$shadow-brown;
-  padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(16px);
+  padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px)
+    f.calculateRem(16px);
 }
 
 @mixin input-oval {
   background: v.$white;
   border-radius: f.calculateRem(19px);
-  padding: f.calculateRem(5px) f.calculateRem(15px) f.calculateRem(1px) f.calculateRem(16px);
+  padding: f.calculateRem(5px) f.calculateRem(15px) f.calculateRem(1px)
+    f.calculateRem(16px);
   font-style: normal;
   font-weight: 400;
   font-size: f.calculateRem(16px);
@@ -843,28 +877,27 @@
   }
 
   @include lg {
+    max-width: 40%;
+  }
+
+  @include lg {
     max-width: 35%;
   }
 }
 
 @mixin img-light {
   max-width: 80%;
-  margin: 0 auto;
 
   @include sm {
     max-width: 70%;
   }
 
   @include md {
-    max-width: 50%;
-  }
-
-  @include lg {
-    max-width: 40%;
+    max-width: 45%;
   }
 
   @include xl {
-    max-width: 35%;
+    max-width: 40%;
   }
 }
 
@@ -877,7 +910,6 @@
 }
 
 @mixin img-video {
-  margin: 0 auto;
   width: 80%;
 
   @include sm {
@@ -886,6 +918,7 @@
 
   @include md {
     width: 50%;
+    object-fit: cover;
   }
 }
 
@@ -899,6 +932,10 @@
 
   @include md {
     max-width: 80%;
+  }
+
+  @include lg {
+    max-width: 90%; 
   }
 }
 
@@ -916,15 +953,25 @@
   @include md {
     max-width: 35%;
   }
+
+  @include lg {
+    max-width: 45%;
+  }
 }
 
 @mixin img-scene {
   position: relative;
   height: f.calculateRem(416px);
-  width: f.calculateRem(470px);
+  width: f.calculateRem(430px);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  mix-blend-mode: normal;
+  border-radius: f.calculateRem(6px);
+
+  @include sm {
+    width: f.calculateRem(470px);
+  }
 }
 
 @mixin img-person {
@@ -934,6 +981,7 @@
   width: f.calculateRem(270px);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   @include md {
     width: f.calculateRem(240px);
@@ -944,16 +992,12 @@
   }
 
   @include xl {
-    width: f.calculateRem(290px); 
+    width: f.calculateRem(290px);
   }
 }
 
 @mixin img-man {
-  max-width: 80%;
-
-  @include sm {
-    max-width: 65%;
-  }
+  max-width: 90%;
 
   @include md {
     max-width: 50%;
@@ -965,8 +1009,20 @@
 }
 
 @mixin img-woman {
-  margin: 0 auto;
-  max-width: f.calculateRem(191px);
+  max-width: 13rem; 
+  margin: 0 auto; 
+
+  @include md {
+    position: absolute; 
+    max-width: 15rem;
+    right: 0;
+    bottom: 0;
+  }
+  
+  @include lg { 
+    max-width: 20rem;
+    right: 10;
+  }
 }
 
 @mixin img-banner {
@@ -974,9 +1030,8 @@
   width: 100%;
 
   @include md {
-    max-width: f.calculateRem(338px);
-    width: 100%;
-    object-fit: cover;
+    max-width: 50%;
+    object-fit: contain;
   }
 }
 
@@ -1031,13 +1086,10 @@
   height: f.calculateRem(148px);
   position: absolute;
   top: -75;
+  left: 10;
 
   @include md {
-    left: 200;
-  }
-
-  @include xl {
-    left: 400;
+    left: 70;
   }
 }
 

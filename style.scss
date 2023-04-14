@@ -7,13 +7,13 @@
 @use "functions.scss" as f;
 
 * {
-  font-family: v.$epilogue; 
+  font-family: v.$epilogue;
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
 .page {
-  // HEADER  
+  // HEADER
 
   .header {
     @include m.header;
@@ -72,6 +72,7 @@
     &__hamburger {
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       @include m.md {
         display: none;
@@ -145,6 +146,7 @@
       @include m.txt;
       display: flex;
       align-items: center;
+      cursor: pointer;
     }
 
     &__btn {
@@ -186,7 +188,7 @@
 
     &.main-box {
       text-align: center;
-      justify-content: center;
+      ntent: center;
       align-items: center;
       padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(87px);
 
@@ -200,7 +202,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(104px) f.calculateRem(135px) f.calculateRem(66px);
+        padding: f.calculateRem(104px) f.calculateRem(135px)
+          f.calculateRem(66px);
       }
 
       @include m.xl {
@@ -243,6 +246,10 @@
         gap: f.calculateRem(46px);
         margin: f.calculateRem(34px) f.calculateRem(0px) f.calculateRem(112px);
       }
+
+      @include m.xl {
+        margin: f.calculateRem(34px) f.calculateRem(0px) f.calculateRem(200px);
+      }
     }
   }
 
@@ -273,7 +280,8 @@
 
     &.dark {
       background-color: v.$navyblue;
-      padding: f.calculateRem(0px) f.calculateRem(49px) f.calculateRem(130px) f.calculateRem(30px);
+      padding: f.calculateRem(0px) f.calculateRem(49px) f.calculateRem(130px)
+        f.calculateRem(30px);
     }
 
     &.light {
@@ -285,7 +293,8 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(73px) f.calculateRem(135px) f.calculateRem(101px);
+        padding: f.calculateRem(73px) f.calculateRem(135px)
+          f.calculateRem(101px);
       }
 
       .section-logos__box {
@@ -307,6 +316,10 @@
     flex-direction: column;
     padding: f.calculateRem(0px) f.calculateRem(23px);
     background-color: v.$beige;
+
+    @include m.md {
+      justify-content: center;
+    }
 
     @include m.lg {
       padding: f.calculateRem(0px) f.calculateRem(135px);
@@ -359,6 +372,10 @@
 
       @include m.md {
         margin: auto f.calculateRem(30px) auto auto;
+        width: f.calculateRem(270px);
+      }
+
+      @include m.lg {
         width: f.calculateRem(370px);
       }
     }
@@ -385,11 +402,15 @@
       &__box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         @include m.md {
-          gap: f.calculateRem(30px);
+          gap: f.calculateRem(50px);
           justify-content: space-between;
+        }
+
+        @include m.lg {
+          gap: f.calculateRem(100px);
         }
 
         &__number {
@@ -399,6 +420,7 @@
         &__txt {
           @include m.list-txt;
           margin: auto 0;
+          max-width: f.calculateRem(290px);
         }
       }
 
@@ -460,6 +482,7 @@
 
         &__title {
           @include m.list-txt;
+          margin-bottom: f.calculateRem(19px);
         }
 
         &__txt {
@@ -528,6 +551,7 @@
 
         &__txt--small {
           @include m.txt-small;
+          cursor: pointer;
         }
       }
     }
@@ -581,8 +605,13 @@
     }
 
     &__box-offer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       @include m.md {
         display: flex;
+        flex-direction: unset;
         flex-wrap: wrap;
         margin: 0 auto;
       }
@@ -638,6 +667,7 @@
         &__btn--white {
           @include m.btn-white;
           margin-top: f.calculateRem(36px);
+          max-width: f.calculateRem(154px);
         }
       }
 
@@ -713,6 +743,10 @@
         &__title {
           @include m.list-txt;
           margin-bottom: f.calculateRem(19px);
+
+          @include m.lg {
+            margin-bottom: f.calculateRem(35px);
+          }
         }
 
         &__txt--shadow {
@@ -745,6 +779,10 @@
       &__award {
         @include m.award;
 
+        @include m.md {
+          position: relative;
+        }
+
         &__img {
           @include m.award-img;
         }
@@ -757,6 +795,21 @@
         &__txt--shadow {
           @include m.txt-shadow;
           margin-bottom: f.calculateRem(16px);
+
+          @include m.md {
+            position: absolute;
+            left: 600;
+          }
+
+          @include m.lg {
+            position: absolute;
+            left: 700;
+          }
+
+          @include m.xl {
+            position: absolute;
+            left: 900;
+          }
         }
 
         &__txt--small {
@@ -780,12 +833,13 @@
 
       &__txt--small {
         @include m.txt-small;
+        cursor: pointer;
       }
     }
 
     &__box-blog {
       @include m.box-blog;
-
+ 
       &__post {
         @include m.blog-post;
 
@@ -840,6 +894,14 @@
             }
             .section-light__box-blog__post__title--black {
               max-width: 80%;
+            }
+
+            .section-light__box-blog__post__title--black {
+              margin: f.calculateRem(15px) 0;
+
+              @include m.lg {
+                margin: f.calculateRem(19px) 0 f.calculateRem(12px);
+              }
             }
           }
 
@@ -961,7 +1023,6 @@
     &__box-img {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
       gap: f.calculateRem(17px);
       margin-top: f.calculateRem(17px);
@@ -1018,17 +1079,84 @@
       }
     }
 
-    &.aboutus {
+    &.margins {
+      .section-light__caption {
+        margin-bottom: f.calculateRem(17px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(20px);
+        }
+      }
+
+      .section-light__title {
+        margin-bottom: f.calculateRem(29px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(26px);
+        }
+      }
+
+      .section-light__btn--white {
+        margin-top: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(34px);
+        }
+      }
+    }
+
+    &.margins-features {
+
+      @include m.md {
+        gap: f.calculateRem(50px);
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(170px);
+      }
+
+      .section-light__caption {
+        margin-bottom: f.calculateRem(17px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(20px);
+        }
+      }
+
+      .section-light__title {
+        margin-bottom: f.calculateRem(13px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(26px);
+        }
+      }
+
+      .section-light__txt--black {
+        margin-bottom: f.calculateRem(30px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(24px);
+        }
+      }
+    }
+
+    &.aboutus { 
+
       .section-light__img {
         margin-bottom: f.calculateRem(16px);
       }
 
       @include m.md {
+        gap: f.calculateRem(50px); 
         margin-bottom: f.calculateRem(0px);
 
         .section-light__title {
           @include m.title-big;
         }
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(130px); 
       }
     }
 
@@ -1037,6 +1165,14 @@
 
       @include m.md {
         padding: f.calculateRem(76px) f.calculateRem(23px) f.calculateRem(128px);
+      }
+
+      .section-light__caption {
+        margin-bottom: f.calculateRem(17px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(20px);
+        }
       }
 
       .section-light__txt--shadow {
@@ -1052,11 +1188,26 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(100px) f.calculateRem(135px) f.calculateRem(150px);
+        padding: f.calculateRem(100px) f.calculateRem(135px)
+          f.calculateRem(150px);
       }
     }
 
     &.howwework {
+      .section-light__txt--shadow {
+        margin-top: f.calculateRem(15px);
+        margin-bottom: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(31px);
+          margin-bottom: f.calculateRem(28px);
+        }
+      }
+
+      .section-light__txt--small {
+        cursor: pointer;
+      }
+
       @include m.md {
         border-bottom: f.calculateRem(1px) solid v.$lightorange;
         padding-bottom: f.calculateRem(108px);
@@ -1086,30 +1237,64 @@
     &.video {
       padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(81px);
 
+      .section-light__title {
+        margin-bottom: f.calculateRem(16px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(28px);
+        }
+      }
+
       @include m.md {
-        padding: f.calculateRem(127px) f.calculateRem(23px) f.calculateRem(215px);
+        padding: f.calculateRem(127px) f.calculateRem(23px)
+          f.calculateRem(215px);
+          gap: f.calculateRem(50px); 
       }
 
       @include m.lg {
-        padding: f.calculateRem(127px) f.calculateRem(135px) f.calculateRem(215px);
+        padding: f.calculateRem(127px) f.calculateRem(135px)
+          f.calculateRem(215px);
+          gap: f.calculateRem(130px); 
       }
     }
 
     &.features {
       padding: f.calculateRem(128px) f.calculateRem(23px) f.calculateRem(112px);
 
+      .section-light__txt--black {
+        margin-bottom: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(28px);
+        }
+      }
+
       @include m.md {
-        padding: f.calculateRem(202px) f.calculateRem(23px) f.calculateRem(213px);
+        padding: f.calculateRem(202px) f.calculateRem(23px)
+          f.calculateRem(213px);
         gap: f.calculateRem(130px);
+
+        .block-txt {
+          justify-content: center;
+        }
       }
 
       @include m.lg {
-        padding: f.calculateRem(202px) f.calculateRem(135px) f.calculateRem(213px);
+        padding: f.calculateRem(202px) f.calculateRem(135px)
+          f.calculateRem(213px);
       }
     }
 
     &.features2 {
       padding-bottom: f.calculateRem(81px);
+
+      .section-light__txt--shadow {
+        padding: f.calculateRem(16px) 0 f.calculateRem(32px);
+
+        @include m.lg {
+          padding: f.calculateRem(12px) 0 0;
+        }
+      }
 
       @include m.md {
         padding-bottom: f.calculateRem(144px);
@@ -1123,6 +1308,34 @@
 
     &.service {
       padding-bottom: f.calculateRem(124px);
+
+      @include m.md {
+        gap: f.calculateRem(50px);
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(120px);
+      }
+
+      .section-light__title {
+        margin-top: f.calculateRem(17px);
+        margin-bottom: f.calculateRem(13px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(20px);
+          margin-bottom: f.calculateRem(26px);
+        }
+      }
+
+      .section-light__quote {
+        margin-top: f.calculateRem(30px);
+        margin-bottom: f.calculateRem(20px);
+
+        @include m.lg {
+          margin-top: f.calculateRem(37px);
+          margin-bottom: f.calculateRem(36px);
+        }
+      }
 
       .section-light__img {
         margin-bottom: f.calculateRem(6px);
@@ -1142,10 +1355,6 @@
 
       @include m.md {
         padding-bottom: f.calculateRem(128px);
-
-        .section-light__title {
-          max-width: f.calculateRem(336px);
-        }
       }
 
       @include m.xl {
@@ -1153,7 +1362,7 @@
 
         .section-light__title {
           max-width: max-content;
-        }
+        } 
       }
     }
 
@@ -1171,7 +1380,8 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(108px);
+        padding: f.calculateRem(92px) f.calculateRem(135px)
+          f.calculateRem(108px);
       }
     }
 
@@ -1183,15 +1393,8 @@
         align-items: center;
       }
 
-      @include m.md {
-        justify-content: start;
-        align-items: start;
+      @include m.md { 
         padding-bottom: f.calculateRem(156px);
-
-        .section-light__title {
-          @include m.title-big;
-          max-width: f.calculateRem(358px);
-        }
       }
 
       @include m.xl {
@@ -1206,6 +1409,26 @@
     }
 
     &.faq {
+      .section-light__title {
+        margin-bottom: f.calculateRem(15px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(31px);
+        }
+      }
+
+      .section-light__txt--shadow {
+        margin-bottom: f.calculateRem(32px);
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(29px);
+        }
+      }
+
+      .section-light__txt--small {
+        cursor: pointer;
+      }
+
       @include m.sm {
         display: flex;
         justify-content: center;
@@ -1233,11 +1456,13 @@
       padding: f.calculateRem(92px) f.calculateRem(23px) f.calculateRem(96px);
 
       @include m.md {
-        padding: f.calculateRem(156px) f.calculateRem(23px) f.calculateRem(112px);
+        padding: f.calculateRem(156px) f.calculateRem(23px)
+          f.calculateRem(112px);
       }
 
       @include m.lg {
-        padding: f.calculateRem(156px) f.calculateRem(135px) f.calculateRem(112px);
+        padding: f.calculateRem(156px) f.calculateRem(135px)
+          f.calculateRem(112px);
       }
 
       .section-light__title {
@@ -1249,15 +1474,10 @@
     }
 
     &.blog {
-      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(76px);
+      padding: f.calculateRem(80px) f.calculateRem(23px) f.calculateRem(0px);
 
       @include m.lg {
-        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(76px);
-      }
-
-      @include m.xl {
-        align-items: center;
-        justify-content: center;
+        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(0px);
       }
     }
 
@@ -1291,12 +1511,17 @@
     }
 
     &.newsletter {
-      padding: f.calculateRem(0px) f.calculateRem(23px) f.calculateRem(128px);
+      padding: f.calculateRem(76px) f.calculateRem(23px) f.calculateRem(128px);
+
+      @include m.sm {
+        padding-top: f.calculateRem(350px);
+      }
 
       @include m.md {
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding-top: f.calculateRem(60px);
 
         .section-light__title {
           margin-right: f.calculateRem(367px);
@@ -1304,7 +1529,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(76px) f.calculateRem(135px) f.calculateRem(128px);
+        padding: f.calculateRem(76px) f.calculateRem(135px)
+          f.calculateRem(128px);
       }
     }
 
@@ -1345,7 +1571,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(139px);
+        padding: f.calculateRem(80px) f.calculateRem(135px)
+          f.calculateRem(139px);
       }
     }
 
@@ -1357,7 +1584,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(80px) f.calculateRem(135px) f.calculateRem(144px);
+        padding: f.calculateRem(80px) f.calculateRem(135px)
+          f.calculateRem(144px);
       }
     }
 
@@ -1392,6 +1620,10 @@
 
         @include m.sm {
           max-width: 100%;
+        }
+
+        @include m.lg {
+          margin-bottom: f.calculateRem(36px);
         }
       }
 
@@ -1433,6 +1665,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      max-width: 80%; 
 
       @include m.md {
         display: flex;
@@ -1442,7 +1675,7 @@
       }
 
       @include m.xl {
-        max-width: 50%;
+        max-width: f.calculateRem(670px);
       }
     }
 
@@ -1539,7 +1772,8 @@
       @include m.md {
         display: flex;
         justify-content: center;
-        padding: f.calculateRem(161px) f.calculateRem(23px) f.calculateRem(140px);
+        padding: f.calculateRem(161px) f.calculateRem(23px)
+          f.calculateRem(140px);
       }
     }
 
@@ -1615,7 +1849,8 @@
 
     &__input {
       @include m.input;
-      padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(16px);
+      padding: f.calculateRem(9px) f.calculateRem(0px) f.calculateRem(7px)
+        f.calculateRem(16px);
       width: 100%;
 
       @include m.sm {
@@ -1638,10 +1873,13 @@
 
       &__txt--light {
         @include m.txt-light;
+        position: relative;
       }
 
       &__sub {
         @include m.txt-sub;
+        position: absolute;
+        top: f.calculateRem(-6px);
       }
     }
 
@@ -1695,15 +1933,15 @@
       &__input {
         @include m.input-oval;
         position: absolute;
-        left: f.calculateRem(20px);
-        bottom: f.calculateRem(100px);
+        left: f.calculateRem(50px);
+        bottom: f.calculateRem(120px);
       }
 
       &__txt {
         @include m.txt-white;
         position: absolute;
-        left: f.calculateRem(20px);
-        bottom: f.calculateRem(30px);
+        left: f.calculateRem(50px);
+        bottom: f.calculateRem(50px);
       }
     }
 
@@ -1765,6 +2003,7 @@
 
         &__txt {
           @include m.txt;
+          cursor: pointer;
         }
 
         &__title--small {
@@ -1931,7 +2170,8 @@
       padding: f.calculateRem(55px) f.calculateRem(23px) f.calculateRem(144px);
 
       @include m.lg {
-        padding: f.calculateRem(55px) f.calculateRem(135px) f.calculateRem(144px);
+        padding: f.calculateRem(55px) f.calculateRem(135px)
+          f.calculateRem(144px);
       }
     }
 
@@ -1963,7 +2203,8 @@
       }
 
       @include m.md {
-        padding: f.calculateRem(140px) f.calculateRem(23px) f.calculateRem(180px);
+        padding: f.calculateRem(140px) f.calculateRem(23px)
+          f.calculateRem(180px);
         justify-content: start;
         align-items: start;
 
@@ -1973,7 +2214,8 @@
       }
 
       @include m.lg {
-        padding: f.calculateRem(140px) f.calculateRem(135px) f.calculateRem(180px);
+        padding: f.calculateRem(140px) f.calculateRem(135px)
+          f.calculateRem(180px);
       }
 
       @include m.xl {
@@ -2015,12 +2257,9 @@
       align-items: start;
       padding-bottom: f.calculateRem(118px);
 
-      @include m.sm {
+      @include m.md {
         justify-content: center;
         align-items: center;
-      }
-
-      @include m.md {
         padding-bottom: f.calculateRem(345px);
 
         .section-dark__title--small {
@@ -2046,14 +2285,23 @@
       }
 
       @include m.xl {
-        padding: f.calculateRem(92px) f.calculateRem(135px) f.calculateRem(108px);
+        padding: f.calculateRem(92px) f.calculateRem(135px)
+          f.calculateRem(108px);
       }
     }
- 
+
     &.faq {
       justify-content: start;
       align-items: start;
       padding: f.calculateRem(112px) f.calculateRem(23px) f.calculateRem(118px);
+
+      .section-dark__txt--light {
+        margin: f.calculateRem(15px) 0 f.calculateRem(32px);
+
+        @include m.lg {
+          margin: f.calculateRem(31px) 0 f.calculateRem(65px);
+        }
+      }
 
       .section-dark__title {
         max-width: f.calculateRem(329px);
@@ -2062,6 +2310,20 @@
       @include m.sm {
         justify-content: center;
         align-items: center;
+      }
+
+      .faq-wrap {
+        display: flex;
+        flex-direction: column;
+        max-width: f.calculateRem(329px);
+
+        @include m.sm {
+          max-width: f.calculateRem(529px);
+        }
+
+        @include m.lg {
+          max-width: f.calculateRem(770px);
+        }
       }
     }
 
@@ -2133,8 +2395,7 @@
   .section-banner {
     padding: f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(140px) f.calculateRem(39px);
     background-color: v.$navyblue;
-    position: relative;
-
+ 
     @include m.sm {
       display: flex;
       justify-content: center;
@@ -2142,20 +2403,21 @@
       padding: f.calculateRem(0px) f.calculateRem(135px) f.calculateRem(60px);
     }
 
-    &__icon {
-      @include m.icon-banner;
-    } 
-
     &__box {
       @include m.box-banner;
-
-      &__caption {
-        @include m.caption;
+      position: relative;
+ 
+      &__icon {
+        @include m.icon-banner;
       }
-
-      &__title {
+ 
+      &__caption {
+        @include m.caption; 
+      }
+  
+      &__title { 
         @include m.title-black;
-        margin-bottom: f.calculateRem(23px); 
+        margin-bottom: f.calculateRem(23px);
         margin-top: f.calculateRem(13px);
 
         @include m.md {
@@ -2168,23 +2430,23 @@
         max-width: f.calculateRem(154px);
         margin-bottom: f.calculateRem(29px);
       }
-
-      &__img {
+ 
+      &__img { 
         @include m.img-banner;
-      }
+      }   
 
       &__img-woman {
         @include m.img-woman;
-      }
-    }
-  }
+      } 
+    }  
+  }    
 
   // SECTION WITH ORANGE BANNER
 
   .banner-orange {
     @include m.banner-orange;
 
-    &__img {
+    &__img { 
       @include m.img-banner-orange;
     }
 
@@ -2245,7 +2507,7 @@
         @include m.title-black;
         margin-bottom: f.calculateRem(51px);
       }
-
+  
       &__list {
         text-align: center;
 
@@ -2260,12 +2522,14 @@
 
         &__txt {
           @include m.txt-small;
+          cursor: pointer;
         }
       }
 
       &__socialmedia {
         &__icon {
           @include m.avatar;
+          cursor: pointer;
         }
       }
     }
@@ -2285,6 +2549,7 @@
 
       &__txt--small {
         @include m.txt-small;
+        cursor: pointer;
       }
 
       .txt-box {

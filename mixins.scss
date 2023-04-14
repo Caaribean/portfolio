@@ -438,7 +438,7 @@
     max-width: f.calculateRem(320px);
   }
 
-  @include lg {
+  @include xl {
     max-width: f.calculateRem(391px);
   }
 }
@@ -462,7 +462,7 @@
     max-width: f.calculateRem(320px);
   }
 
-  @include lg {
+  @include xl {
     max-width: f.calculateRem(391px);
   }
 }
@@ -879,6 +879,10 @@
   }
 
   @include lg {
+    max-width: 40%;
+  }
+
+  @include lg {
     max-width: 35%;
   }
 }
@@ -891,7 +895,7 @@
   }
 
   @include md {
-    max-width: 50%;
+    max-width: 45%;
   }
 
   @include xl {
@@ -930,6 +934,10 @@
 
   @include md {
     max-width: 80%;
+  }
+
+  @include lg {
+    max-width: 90%; 
   }
 }
 
@@ -975,6 +983,7 @@
   width: f.calculateRem(270px);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   @include md {
     width: f.calculateRem(240px);
@@ -1068,17 +1077,10 @@
   height: f.calculateRem(148px);
   position: absolute;
   top: -75;
+  left: 10;
 
   @include md {
-    left: 200;
-  }
-
-  @include lg {
-    left: 300;
-  }
-
-  @include xl {
-    left: 400;
+    left: 70;
   }
 }
 

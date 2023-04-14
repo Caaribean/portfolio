@@ -833,12 +833,13 @@
 
       &__txt--small {
         @include m.txt-small;
+        cursor: pointer;
       }
     }
 
     &__box-blog {
       @include m.box-blog;
-
+ 
       &__post {
         @include m.blog-post;
 
@@ -1105,6 +1106,15 @@
     }
 
     &.margins-features {
+
+      @include m.md {
+        gap: f.calculateRem(50px);
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(170px);
+      }
+
       .section-light__caption {
         margin-bottom: f.calculateRem(17px);
 
@@ -1130,17 +1140,23 @@
       }
     }
 
-    &.aboutus {
+    &.aboutus { 
+
       .section-light__img {
         margin-bottom: f.calculateRem(16px);
       }
 
       @include m.md {
+        gap: f.calculateRem(50px); 
         margin-bottom: f.calculateRem(0px);
 
         .section-light__title {
           @include m.title-big;
         }
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(130px); 
       }
     }
 
@@ -1232,11 +1248,13 @@
       @include m.md {
         padding: f.calculateRem(127px) f.calculateRem(23px)
           f.calculateRem(215px);
+          gap: f.calculateRem(50px); 
       }
 
       @include m.lg {
         padding: f.calculateRem(127px) f.calculateRem(135px)
           f.calculateRem(215px);
+          gap: f.calculateRem(130px); 
       }
     }
 
@@ -1291,6 +1309,14 @@
     &.service {
       padding-bottom: f.calculateRem(124px);
 
+      @include m.md {
+        gap: f.calculateRem(50px);
+      }
+
+      @include m.lg {
+        gap: f.calculateRem(120px);
+      }
+
       .section-light__title {
         margin-top: f.calculateRem(17px);
         margin-bottom: f.calculateRem(13px);
@@ -1329,10 +1355,6 @@
 
       @include m.md {
         padding-bottom: f.calculateRem(128px);
-
-        .section-light__title {
-          max-width: f.calculateRem(336px);
-        }
       }
 
       @include m.xl {
@@ -1340,7 +1362,7 @@
 
         .section-light__title {
           max-width: max-content;
-        }
+        } 
       }
     }
 
@@ -1371,15 +1393,8 @@
         align-items: center;
       }
 
-      @include m.md {
-        justify-content: start;
-        align-items: start;
+      @include m.md { 
         padding-bottom: f.calculateRem(156px);
-
-        .section-light__title {
-          @include m.title-big;
-          max-width: f.calculateRem(358px);
-        }
       }
 
       @include m.xl {
@@ -1650,6 +1665,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      max-width: 80%; 
 
       @include m.md {
         display: flex;
@@ -1987,6 +2003,7 @@
 
         &__txt {
           @include m.txt;
+          cursor: pointer;
         }
 
         &__title--small {
@@ -2378,8 +2395,7 @@
   .section-banner {
     padding: f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(140px) f.calculateRem(39px);
     background-color: v.$navyblue;
-    position: relative;
-
+ 
     @include m.sm {
       display: flex;
       justify-content: center;
@@ -2387,12 +2403,13 @@
       padding: f.calculateRem(0px) f.calculateRem(135px) f.calculateRem(60px);
     }
 
-    &__icon {
-      @include m.icon-banner;
-    }
-
     &__box {
       @include m.box-banner;
+      position: relative;
+ 
+      &__icon {
+        @include m.icon-banner;
+      }
 
       &__caption {
         @include m.caption;
@@ -2490,7 +2507,7 @@
         @include m.title-black;
         margin-bottom: f.calculateRem(51px);
       }
-
+  
       &__list {
         text-align: center;
 

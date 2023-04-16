@@ -2396,12 +2396,12 @@
     padding: f.calculateRem(0px) f.calculateRem(7px) f.calculateRem(140px) f.calculateRem(39px);
     background-color: v.$navyblue;
  
-    @include m.sm {
+    @include m.sm { 
       display: flex;
       justify-content: center;
       align-items: center;
       padding: f.calculateRem(0px) f.calculateRem(135px) f.calculateRem(60px);
-    }
+    } 
 
     &__box {
       @include m.box-banner;

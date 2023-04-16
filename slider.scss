@@ -6,6 +6,7 @@ $carousel-height: 460px;
         overflow: hidden;
         position: relative;
         height: 500px;
+        width: 100%;
 
         .section-dark__container {
             position: absolute;
@@ -17,12 +18,22 @@ $carousel-height: 460px;
             transition: 1s ease-in-out all;
             flex-wrap: nowrap !important;
             justify-content: flex-start !important;
-            gap: unset!important;
+            gap: unset !important;
+            width: fit-content;
 
             .section-dark__container__person {
-                min-width: 100%;
                 min-height: $carousel-height;
                 height: auto;
+                width: 100%;
+                text-align: center;
+
+                &__img {
+                    margin: 0 auto;
+                }
+
+                &__title--small {
+                    margin-top: 8px;
+                }
             }
         }
 

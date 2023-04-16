@@ -487,6 +487,7 @@ table {
     overflow: hidden;
     position: relative;
     height: 500px;
+    width: 100%;
   }
   .section-dark__wrapper .section-dark__container {
     position: absolute;
@@ -499,11 +500,20 @@ table {
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
     gap: unset !important;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .section-dark__wrapper .section-dark__container .section-dark__container__person {
-    min-width: 100%;
     min-height: 460px;
     height: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .section-dark__wrapper .section-dark__container .section-dark__container__person__img {
+    margin: 0 auto;
+  }
+  .section-dark__wrapper .section-dark__container .section-dark__container__person__title--small {
+    margin-top: 8px;
   }
 }
 * {
